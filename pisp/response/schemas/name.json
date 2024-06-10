@@ -1,0 +1,7 @@
+{
+  "maxLength": 140,
+  "minLength": 1,
+  "type": "string",
+  "description": "Name by which an agent is known and which is usually used to identify that agent.",
+  "$schema": "http://json-schema.org/schema#"
+}

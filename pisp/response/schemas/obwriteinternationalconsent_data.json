@@ -1,0 +1,26 @@
+{
+  "required": [
+    "Initiation"
+  ],
+  "type": "object",
+  "properties": {
+    "ReadRefundAccount": {
+      "type": "string",
+      "description": "Specifies to share the refund account details with PISP",
+      "enum": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Initiation": {
+      "$ref": "OBInternationalPaymentInitiation.json"
+    },
+    "Authorisation": {
+      "$ref": "OBWriteDomesticPaymentConsentRequest_Data_Authorisation.json"
+    },
+    "SCASupportData": {
+      "$ref": "OBWriteDomesticPaymentConsentRequest_Data_SCASupportData.json"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#"
+}

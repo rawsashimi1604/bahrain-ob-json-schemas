@@ -1,0 +1,151 @@
+{
+  "oneOf": [
+    {
+      "$ref": "ActiveOrHistoricCurrencyCode.json"
+    },
+    {
+      "$ref": "BuildingNumber.json"
+    },
+    {
+      "$ref": "CountryCode.json"
+    },
+    {
+      "$ref": "Department.json"
+    },
+    {
+      "$ref": "ISODateTime.json"
+    },
+    {
+      "$ref": "Identification.json"
+    },
+    {
+      "$ref": "IdentificationFinancial.json"
+    },
+    {
+      "$ref": "Links.json"
+    },
+    {
+      "$ref": "Meta.json"
+    },
+    {
+      "$ref": "OBAmount.json"
+    },
+    {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmount.json"
+    },
+    {
+      "$ref": "OBActiveCurrencyAndAmount.json"
+    },
+    {
+      "$ref": "OBAddressTypeCode.json"
+    },
+    {
+      "$ref": "OBChargeBearerTypeCode.json"
+    },
+    {
+      "$ref": "OBError.json"
+    },
+    {
+      "$ref": "OBErrorResponse.json"
+    },
+    {
+      "$ref": "OBExternalAccountIdentificationCode.json"
+    },
+    {
+      "$ref": "OBExternalPaymentChargeTypeCode.json"
+    },
+    {
+      "$ref": "OBExternalLocalInstrumentCodeInternational.json"
+    },
+    {
+      "$ref": "OBExternalLocalInstrumentCode.json"
+    },
+    {
+      "$ref": "OBPostalAddress.json"
+    },
+    {
+      "$ref": "CountrySubDivision.json"
+    },
+    {
+      "$ref": "OBRisk.json"
+    },
+    {
+      "$ref": "OBSupplementaryData.json"
+    },
+    {
+      "$ref": "OBWriteFundsConfirmationResponse.json"
+    },
+    {
+      "$ref": "PostCode.json"
+    },
+    {
+      "$ref": "StreetName.json"
+    },
+    {
+      "$ref": "SubDepartment.json"
+    },
+    {
+      "$ref": "TownName.json"
+    },
+    {
+      "$ref": "OBExchangeRateResponse.json"
+    },
+    {
+      "$ref": "OBDomesticStandingOrderInitiation.json"
+    },
+    {
+      "$ref": "OBInternationalFutureDatedInitiation.json"
+    },
+    {
+      "$ref": "OBWriteDomesticStandingOrderConsent.json"
+    },
+    {
+      "$ref": "OBWriteDomesticStandingOrderConsentResponse.json"
+    },
+    {
+      "$ref": "OBWriteDomesticStandingOrder.json"
+    },
+    {
+      "$ref": "OBWriteDomesticStandingOrderResponse.json"
+    },
+    {
+      "$ref": "OBWritePaymentDetailsResponse.json"
+    },
+    {
+      "$ref": "OBExternalFinancialInstitutionIdentificationCode.json"
+    },
+    {
+      "$ref": "OBWriteInternationalFutureDatedConsent.json"
+    },
+    {
+      "$ref": "OBWriteInternationalFutureDatedConsentResponse.json"
+    },
+    {
+      "$ref": "OBWriteInternationalFutureDated.json"
+    },
+    {
+      "$ref": "OBWriteInternationalFutureDatedResponse.json"
+    },
+    {
+      "$ref": "OBInternationalStandingOrder.json"
+    },
+    {
+      "$ref": "OBWriteInternationalStandingOrderConsent.json"
+    },
+    {
+      "$ref": "OBWriteInternationalStandingOrderConsentResponse.json"
+    },
+    {
+      "$ref": "OBWriteInternationalStandingOrder.json"
+    },
+    {
+      "$ref": "OBWriteInternationalStandingOrderResponse.json"
+    },
+    {
+      "$ref": "Name.json"
+    },
+    {
+      "$ref": "OBDebtorIdentification.json"
+    }
+  ]
+}

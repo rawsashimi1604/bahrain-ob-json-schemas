@@ -1,0 +1,6 @@
+{
+  "pattern": "^[A-Z]{2,2}$",
+  "type": "string",
+  "description": "Nation with its own government.",
+  "$schema": "http://json-schema.org/schema#"
+}

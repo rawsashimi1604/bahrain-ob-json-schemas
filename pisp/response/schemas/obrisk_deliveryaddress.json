@@ -1,0 +1,51 @@
+{
+  "required": [
+    "Country",
+    "TownName"
+  ],
+  "type": "object",
+  "properties": {
+    "AddressLine": {
+      "maxItems": 2,
+      "minItems": 0,
+      "type": "array",
+      "items": {
+        "maxLength": 70,
+        "minLength": 1,
+        "type": "string",
+        "description": "Information that locates and identifies a specific address, as defined by postal services, that is presented in free format text."
+      }
+    },
+    "StreetName": {
+      "$ref": "StreetName.json"
+    },
+    "BuildingNumber": {
+      "$ref": "BuildingNumber.json"
+    },
+    "PostCode": {
+      "$ref": "PostCode.json"
+    },
+    "TownName": {
+      "$ref": "TownName.json"
+    },
+    "CountrySubDivision": {
+      "maxItems": 2,
+      "minItems": 0,
+      "type": "array",
+      "items": {
+        "maxLength": 35,
+        "minLength": 1,
+        "type": "string",
+        "description": "Identifies a subdivision of a country, for instance state, region, county."
+      }
+    },
+    "Country": {
+      "pattern": "^[A-Z]{2,2}$",
+      "type": "string",
+      "description": "Nation with its own government, occupying a particular territory."
+    }
+  },
+  "description": "Information that locates and identifies a specific address, as defined by postal services or in free format text.",
+  "example": null,
+  "$schema": "http://json-schema.org/schema#"
+}

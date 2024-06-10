@@ -1,0 +1,61 @@
+{
+  "minProperties": 1,
+  "required": [
+    "ErrorCode",
+    "Message"
+  ],
+  "type": "object",
+  "properties": {
+    "ErrorCode": {
+      "type": "string",
+      "description": "Low level textual error code, e.g., XYZ.OBF.Field.Missing",
+      "x-namespaced-enum": [
+        "XYZ.OBF.Field.Expected",
+        "XYZ.OBF.Field.Invalid",
+        "XYZ.OBF.Field.InvalidDate",
+        "XYZ.OBF.Field.Missing",
+        "XYZ.OBF.Field.Unexpected",
+        "XYZ.OBF.Header.Invalid",
+        "XYZ.OBF.Header.Missing",
+        "XYZ.OBF.Reauthenticate",
+        "XYZ.OBF.Resource.ConsentMismatch",
+        "XYZ.OBF.Resource.InvalidConsentStatus",
+        "XYZ.OBF.Resource.InvalidFormat",
+        "XYZ.OBF.Resource.NotFound",
+        "XYZ.OBF.Rules.AfterCutOffDateTime",
+        "XYZ.OBF.Rules.DuplicateReference",
+        "XYZ.OBF.Signature.Invalid",
+        "XYZ.OBF.Signature.InvalidClaim",
+        "XYZ.OBF.Signature.Malformed",
+        "XYZ.OBF.Signature.Missing",
+        "XYZ.OBF.Signature.MissingClaim",
+        "XYZ.OBF.Signature.Unexpected",
+        "XYZ.OBF.UnexpectedError",
+        "XYZ.OBF.Unsupported.AccountIdentifier",
+        "XYZ.OBF.Unsupported.AccountSecondaryIdentifier",
+        "XYZ.OBF.Unsupported.Currency",
+        "XYZ.OBF.Unsupported.Frequency",
+        "XYZ.OBF.Unsupported.LocalInstrument",
+        "XYZ.OBF.Unsupported.Scheme"
+      ]
+    },
+    "Message": {
+      "maxLength": 500,
+      "minLength": 1,
+      "type": "string",
+      "description": "A description of the error that occurred. e.g., 'A mandatory field isn't supplied' or 'RequestedExecutionDateTime must be in future'\nOBF doesn't standardise this field"
+    },
+    "Path": {
+      "maxLength": 500,
+      "minLength": 1,
+      "type": "string",
+      "description": "Recommended but optional reference to the JSON Path of the field with error, e.g., Data.Initiation.InstructedAmount.Currency"
+    },
+    "Url": {
+      "type": "string",
+      "description": "URL to help remediate the problem, or provide more information, or to API Reference, or help etc"
+    }
+  },
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/schema#"
+}

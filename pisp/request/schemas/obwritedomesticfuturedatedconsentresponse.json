@@ -1,0 +1,171 @@
+{
+  "type": "object",
+  "required": [
+    "Data",
+    "Risk"
+  ],
+  "properties": {
+    "Data": {
+      "type": "object",
+      "required": [
+        "ConsentId",
+        "CreationDateTime",
+        "Status",
+        "StatusUpdateDateTime",
+        "Permission",
+        "Initiation"
+      ],
+      "properties": {
+        "ConsentId": {
+          "description": "OB: Unique identification as assigned by the ASPSP to uniquely identify the consent resource.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "CreationDateTime": {
+          "description": "Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+          "type": "string",
+          "format": "date-time"
+        },
+        "Status": {
+          "description": "Specifies the status of consent resource in code form.",
+          "type": "string",
+          "enum": [
+            "Authorised",
+            "AwaitingAuthorisation",
+            "Consumed",
+            "Rejected"
+          ]
+        },
+        "StatusUpdateDateTime": {
+          "description": "Date and time at which the consent resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+          "type": "string",
+          "format": "date-time"
+        },
+        "Permission": {
+          "description": "Specifies the Open Banking service request types.",
+          "type": "string",
+          "enum": [
+            "Create"
+          ]
+        },
+        "ReadRefundAccount": {
+          "description": "Specifies to share the refund account details with PISP",
+          "type": "string",
+          "enum": [
+            "No",
+            "Yes"
+          ]
+        },
+        "CutOffDateTime": {
+          "description": "Specified cut-off date and time for the payment consent.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+          "type": "string",
+          "format": "date-time"
+        },
+        "ExpectedExecutionDateTime": {
+          "description": "Expected execution date and time for the payment resource.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+          "type": "string",
+          "format": "date-time"
+        },
+        "ExpectedSettlementDateTime": {
+          "description": "Expected settlement date and time for the payment resource.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+          "type": "string",
+          "format": "date-time"
+        },
+        "Charges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "Set of elements used to provide details of a charge for the payment initiation.",
+            "required": [
+              "ChargeBearer",
+              "Type",
+              "Amount"
+            ],
+            "properties": {
+              "ChargeBearer": {
+                "$ref": "OBChargeBearerTypeCode.json"
+              },
+              "Type": {
+                "$ref": "OBExternalPaymentChargeTypeCode.json"
+              },
+              "Amount": {
+                "$ref": "OBActiveOrHistoricCurrencyAndAmount.json"
+              }
+            }
+          }
+        },
+        "Initiation": {
+          "$ref": "OBDomesticFutureDatedInitiation.json"
+        },
+        "Authorisation": {
+          "type": "object",
+          "required": [
+            "AuthorisationType"
+          ],
+          "description": "The authorisation type request from the TPP.",
+          "properties": {
+            "AuthorisationType": {
+              "description": "Type of authorisation flow requested.",
+              "type": "string",
+              "enum": [
+                "Single"
+              ]
+            },
+            "CompletionDateTime": {
+              "description": "Date and time at which the requested authorisation flow must be completed.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "SCASupportData": {
+          "type": "object",
+          "description": "Supporting Data provided by TPP, when requesting SCA Exemption.",
+          "properties": {
+            "RequestedSCAExemptionType": {
+              "description": "This field allows a PISP to request specific SCA Exemption for a Payment Initiation",
+              "type": "string",
+              "enum": [
+                "BillPayment",
+                "ContactlessTravel",
+                "EcommerceGoods",
+                "EcommerceServices",
+                "Kiosk",
+                "Parking",
+                "PartyToParty"
+              ]
+            },
+            "AppliedAuthenticationApproach": {
+              "description": "Specifies a character string with a maximum length of 40 characters.\nUsage: This field indicates whether the PSU was subject to SCA performed by the TPP",
+              "type": "string",
+              "enum": [
+                "CA",
+                "SCA"
+              ]
+            },
+            "ReferencePaymentOrderId": {
+              "description": "Specifies a character string with a maximum length of 140 characters.\nUsage: If the payment is recurring then the transaction identifier of the previous payment occurrence so that the ASPSP can verify that the PISP, amount and the payee are the same as the previous occurrence.",
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          }
+        },
+        "Debtor": {
+          "$ref": "OBDebtorIdentification.json"
+        }
+      }
+    },
+    "Risk": {
+      "$ref": "OBRisk.json"
+    },
+    "Links": {
+      "$ref": "Links.json"
+    },
+    "Meta": {
+      "$ref": "Meta.json"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#"
+}

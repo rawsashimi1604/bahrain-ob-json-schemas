@@ -1,0 +1,62 @@
+{
+  "required": [
+    "ConsentId",
+    "CreationDateTime",
+    "DomesticStandingOrderId",
+    "Initiation",
+    "Status",
+    "StatusUpdateDateTime"
+  ],
+  "type": "object",
+  "properties": {
+    "DomesticStandingOrderId": {
+      "maxLength": 40,
+      "minLength": 1,
+      "type": "string",
+      "description": "OB: Unique identification as assigned by the ASPSP to uniquely identify the domestic standing order resource."
+    },
+    "ConsentId": {
+      "maxLength": 128,
+      "minLength": 1,
+      "type": "string",
+      "description": "OB: Unique identification as assigned by the ASPSP to uniquely identify the consent resource."
+    },
+    "CreationDateTime": {
+      "type": "string",
+      "description": "Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+      "format": "date-time"
+    },
+    "Status": {
+      "type": "string",
+      "description": "Specifies the status of the payment order resource.",
+      "enum": [
+        "Cancelled",
+        "InitiationCompleted",
+        "InitiationFailed",
+        "InitiationPending"
+      ]
+    },
+    "StatusUpdateDateTime": {
+      "type": "string",
+      "description": "Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+      "format": "date-time"
+    },
+    "Debtor": {
+      "$ref": "OBDebtorIdentification.json"
+    },
+    "Refund": {
+      "$ref": "OBWriteDomesticStandingOrderResponse_Data_Refund.json"
+    },
+    "Charges": {
+      "type": "array",
+      "items": {
+        "$ref": "OBWriteDomesticStandingOrderConsentResponse_Data_Charges.json"
+      }
+    },
+    "Initiation": {
+      "$ref": "OBDomesticStandingOrderInitiation.json"
+    }
+  },
+  "example": null,
+  "$schema": "http://json-schema.org/schema#"
+}

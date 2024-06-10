@@ -1,0 +1,7 @@
+{
+  "maxLength": 70,
+  "minLength": 1,
+  "type": "string",
+  "description": "Name of a street or thoroughfare.",
+  "$schema": "http://json-schema.org/schema#"
+}

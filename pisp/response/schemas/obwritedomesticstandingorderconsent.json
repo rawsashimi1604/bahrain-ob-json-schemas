@@ -1,0 +1,16 @@
+{
+  "required": [
+    "Data",
+    "Risk"
+  ],
+  "type": "object",
+  "properties": {
+    "Data": {
+      "$ref": "OBWriteDomesticStandingOrderConsent_Data.json"
+    },
+    "Risk": {
+      "$ref": "OBRisk.json"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#"
+}

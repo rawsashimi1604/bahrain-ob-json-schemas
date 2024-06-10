@@ -1,0 +1,9 @@
+{
+  "type": "string",
+  "description": "User community specific instrument.\nUsage: This element is used to specify a local instrument, local clearing option and/or further qualify the service or service level.",
+  "x-namespaced-enum": [
+    "XYZ.OBF.SWIFT",
+    "XYZ.OBF.GCCNET"
+  ],
+  "$schema": "http://json-schema.org/schema#"
+}

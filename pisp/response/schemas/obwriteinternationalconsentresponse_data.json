@@ -1,0 +1,83 @@
+{
+  "required": [
+    "ConsentId",
+    "CreationDateTime",
+    "Initiation",
+    "Status",
+    "StatusUpdateDateTime"
+  ],
+  "type": "object",
+  "properties": {
+    "ConsentId": {
+      "maxLength": 128,
+      "minLength": 1,
+      "type": "string",
+      "description": "OB: Unique identification as assigned by the ASPSP to uniquely identify the consent resource."
+    },
+    "CreationDateTime": {
+      "type": "string",
+      "description": "Date and time at which the resource was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+      "format": "date-time"
+    },
+    "Status": {
+      "type": "string",
+      "description": "Specifies the status of consent resource in code form.",
+      "enum": [
+        "Authorised",
+        "AwaitingAuthorisation",
+        "Consumed",
+        "Rejected"
+      ]
+    },
+    "StatusUpdateDateTime": {
+      "type": "string",
+      "description": "Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+      "format": "date-time"
+    },
+    "ReadRefundAccount": {
+      "type": "string",
+      "description": "Specifies to share the refund account details with PISP",
+      "enum": [
+        "No",
+        "Yes"
+      ]
+    },
+    "CutOffDateTime": {
+      "type": "string",
+      "description": "Specified cut-off date and time for the payment consent.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+      "format": "date-time"
+    },
+    "ExpectedExecutionDateTime": {
+      "type": "string",
+      "description": "Expected execution date and time for the payment resource.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+      "format": "date-time"
+    },
+    "ExpectedSettlementDateTime": {
+      "type": "string",
+      "description": "Expected settlement date and time for the payment resource.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+      "format": "date-time"
+    },
+    "Charges": {
+      "type": "array",
+      "items": {
+        "$ref": "OBWriteDomesticPaymentConsentResponse_Data_Charges.json"
+      }
+    },
+    "ExchangeRateInformation": {
+      "$ref": "OBExchangeRateResponse.json"
+    },
+    "Initiation": {
+      "$ref": "OBInternationalPaymentInitiation.json"
+    },
+    "Authorisation": {
+      "$ref": "OBWriteDomesticPaymentConsentRequest_Data_Authorisation.json"
+    },
+    "SCASupportData": {
+      "$ref": "OBWriteDomesticPaymentConsentRequest_Data_SCASupportData.json"
+    },
+    "Debtor": {
+      "$ref": "OBDebtorIdentification.json"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#"
+}

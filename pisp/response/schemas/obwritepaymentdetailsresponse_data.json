@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "PaymentStatus": {
+      "type": "array",
+      "items": {
+        "$ref": "OBWritePaymentDetailsResponse_Data_PaymentStatus.json"
+      }
+    }
+  },
+  "example": null,
+  "$schema": "http://json-schema.org/schema#"
+}

@@ -1,0 +1,8 @@
+{
+  "description": "User community specific instrument.\nUsage: This element is used to specify a local instrument, local clearing option and/or further qualify the service or service level.",
+  "type": "string",
+  "x-namespaced-enum": [
+    "XYZ.OBF.DNS"
+  ],
+  "$schema": "http://json-schema.org/schema#"
+}

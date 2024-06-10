@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "Name": {
+      "maxLength": 140,
+      "minLength": 1,
+      "type": "string",
+      "description": "Name by which a party is known and which is usually used to identify that party."
+    },
+    "PostalAddress": {
+      "$ref": "OBPostalAddress.json"
+    }
+  },
+  "description": "Party to which an amount of money is due.",
+  "$schema": "http://json-schema.org/schema#"
+}

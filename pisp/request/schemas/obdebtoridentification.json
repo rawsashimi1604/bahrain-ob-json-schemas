@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "description": "Set of elements used to identify a person or an organisation.",
+  "properties": {
+    "Name": {
+      "type": "string",
+      "description": "The account name is the name or names of the account owner(s) represented at an account level, as displayed by the ASPSP's online channels. Note, the account name is not the product name or the nickname of the account.",
+      "minLength": 0,
+      "maxLength": 140
+    }
+  },
+  "$schema": "http://json-schema.org/schema#"
+}

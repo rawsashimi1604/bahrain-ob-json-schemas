@@ -1,0 +1,18 @@
+{
+  "required": [
+    "Amount",
+    "Currency"
+  ],
+  "type": "object",
+  "properties": {
+    "Amount": {
+      "$ref": "OBActiveCurrencyAndAmount.json"
+    },
+    "Currency": {
+      "$ref": "ActiveOrHistoricCurrencyCode.json"
+    }
+  },
+  "description": "The amount of the recurring Standing Order",
+  "example": null,
+  "$schema": "http://json-schema.org/schema#"
+}

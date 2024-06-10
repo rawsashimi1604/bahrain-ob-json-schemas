@@ -1,0 +1,20 @@
+{
+  "required": [
+    "ConsentId",
+    "Initiation"
+  ],
+  "type": "object",
+  "properties": {
+    "ConsentId": {
+      "maxLength": 128,
+      "minLength": 1,
+      "type": "string",
+      "description": "OB: Unique identification as assigned by the ASPSP to uniquely identify the consent resource."
+    },
+    "Initiation": {
+      "$ref": "OBInternationalStandingOrder.json"
+    }
+  },
+  "example": null,
+  "$schema": "http://json-schema.org/schema#"
+}

@@ -1,0 +1,42 @@
+{
+  "type": "object",
+  "required": [
+    "Data"
+  ],
+  "properties": {
+    "Data": {
+      "type": "object",
+      "properties": {
+        "FundsAvailableResult": {
+          "type": "object",
+          "required": [
+            "FundsAvailableDateTime",
+            "FundsAvailable"
+          ],
+          "description": "Result of a funds availability check.",
+          "properties": {
+            "FundsAvailableDateTime": {
+              "description": "Date and time at which the funds availability check was generated.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+              "type": "string",
+              "format": "date-time"
+            },
+            "FundsAvailable": {
+              "description": "Flag to indicate the availability of funds given the Amount in the consent request.",
+              "type": "boolean"
+            }
+          }
+        },
+        "SupplementaryData": {
+          "$ref": "OBSupplementaryData.json"
+        }
+      }
+    },
+    "Links": {
+      "$ref": "Links.json"
+    },
+    "Meta": {
+      "$ref": "Meta.json"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#"
+}

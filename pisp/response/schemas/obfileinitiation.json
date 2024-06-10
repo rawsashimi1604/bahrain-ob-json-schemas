@@ -1,0 +1,56 @@
+{
+  "required": [
+    "FileContextFormat",
+    "FileHash"
+  ],
+  "type": "object",
+  "properties": {
+    "FileContextFormat": {
+      "type": "string",
+      "description": "Specifies the payment file format.",
+      "x-namespaced-enum": [
+        "BH.OBF.pain.001.001.08"
+      ]
+    },
+    "FileHash": {
+      "maxLength": 44,
+      "minLength": 1,
+      "type": "string",
+      "description": "A base64 encoding of a SHA256 hash of the file to be uploaded."
+    },
+    "FileReference": {
+      "maxLength": 40,
+      "minLength": 1,
+      "type": "string",
+      "description": "Reference for the file."
+    },
+    "NumberOfTransactions": {
+      "pattern": "[0-9]{1,15}",
+      "type": "string",
+      "description": "Number of individual transactions contained in the payment information group."
+    },
+    "ControlSum": {
+      "type": "number",
+      "description": "Total of all individual amounts included in the group, irrespective of currencies."
+    },
+    "RequestedExecutionDateTime": {
+      "type": "string",
+      "description": "Date at which the initiating party requests the clearing agent to process the payment. \nUsage: This is the date on which the debtor's account is to be debited.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+      "format": "date-time"
+    },
+    "LocalInstrument": {
+      "$ref": "OBExternalLocalInstrumentCodeDomestic.json"
+    },
+    "DebtorAccount": {
+      "$ref": "OBDomesticPaymentInitiation_DebtorAccount.json"
+    },
+    "RemittanceInformation": {
+      "$ref": "OBDomesticFutureDatedInitiation_RemittanceInformation.json"
+    },
+    "SupplementaryData": {
+      "$ref": "OBSupplementaryData.json"
+    }
+  },
+  "description": "The Initiation payload is sent by the initiating party to the ASPSP. It is used to request movement of funds using a payment file.",
+  "$schema": "http://json-schema.org/schema#"
+}

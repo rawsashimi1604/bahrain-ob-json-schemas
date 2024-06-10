@@ -1,0 +1,14 @@
+{
+  "required": [
+    "Account"
+  ],
+  "type": "object",
+  "properties": {
+    "Account": {
+      "$ref": "OBWriteDomesticStandingOrderResponse_Data_Refund_Account.json"
+    }
+  },
+  "description": "Unambiguous identification of the refund account to which a refund will be made as a result of the transaction.",
+  "example": null,
+  "$schema": "http://json-schema.org/schema#"
+}

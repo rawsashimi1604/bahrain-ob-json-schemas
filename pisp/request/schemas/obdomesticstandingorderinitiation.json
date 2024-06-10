@@ -1,0 +1,141 @@
+{
+  "type": "object",
+  "required": [
+    "Frequency",
+    "FirstPaymentDateTime",
+    "FirstPaymentAmount",
+    "CreditorAccount"
+  ],
+  "description": "The Initiation payload is sent by the initiating party to the ASPSP. It is used to request movement of funds from the debtor account to a creditor for a domestic standing order.",
+  "properties": {
+    "Frequency": {
+      "description": "Individual Definitions:\n\n  NotKnown - Not known\n  EvryDay - Every day\n  EvryWorkgDay - Every working day\n  IntrvlDay - An interval specified in number of calendar days (02 to 31)\n  IntrvlWkDay - An interval specified in weeks (01 to 09), and the day within the week (01 to 07)\n  WkInMnthDay - A monthly interval, specifying the week of the month (01 to 05) and day within the week (01 to 07)\n  IntrvlMnthDay - An interval specified in months (between 01 to 06, 12, 24), specifying the day within the month (-05 to -01, 01 to 31)\n  QtrDay - Quarterly (ENGLISH)\n  ENGLISH = Paid on the 25th March, 24th June, 29th September and 25th December.\n\n\nIndividual Patterns:\nNotKnown (ScheduleCode) EvryDay (ScheduleCode) EvryWorkgDay (ScheduleCode) IntrvlDay:NoOfDay (ScheduleCode + NoOfDay) IntrvlWkDay:IntervalInWeeks:DayInWeek (ScheduleCode + IntervalInWeeks + DayInWeek) WkInMnthDay:WeekInMonth:DayInWeek (ScheduleCode + WeekInMonth + DayInWeek) IntrvlMnthDay:IntervalInMonths:DayInMonth (ScheduleCode + IntervalInMonths + DayInMonth)\nQtrDay: + either (ENGLISH) ScheduleCode + QuarterDay\nThe regular expression for this element combines five smaller versions for each permitted pattern. To aid legibility - the components are presented individually here:\nNotKnown EvryDay EvryWorkgDay IntrvlDay:((0[2-9])\\|([1-2][0-9])\\|3[0-1]) IntrvlWkDay:0[1-9]:0[1-7] WkInMnthDay:0[1-5]:0[1-7] IntrvlMnthDay:(0[1-6]\\|12\\|24):(-0[1-5]\\|0[1-9]\\|[12][0-9]\\|3[01]) QtrDay:(ENGLISH)\nFull Regular Expression:\n^(NotKnown)$|^(EvryDay)$|^(EvryWorkgDay)$|^(IntrvlDay:((0[2-9])|([1-2][0-9])|3[0-1]))$|^(IntrvlWkDay:0[1-9]:0[1-7])$|^(WkInMnthDay:0[1-5]:0[1-7])$|^(IntrvlMnthDay:(0[1-6]|12|24):(-0[1-5]|0[1-9]|[12][0-9]|3[01]))$|^(QtrDay:(ENGLISH))$",
+      "type": "string",
+      "pattern": "^(NotKnown)$|^(EvryDay)$|^(EvryWorkgDay)$|^(IntrvlDay:((0[2-9])|([1-2][0-9])|3[0-1]))$|^(IntrvlWkDay:0[1-9]:0[1-7])$|^(WkInMnthDay:0[1-5]:0[1-7])$|^(IntrvlMnthDay:(0[1-6]|12|24):(-0[1-5]|0[1-9]|[12][0-9]|3[01]))$|^(QtrDay:(ENGLISH))$"
+    },
+    "Reference": {
+      "description": "Unique reference, as assigned by the creditor, to unambiguously refer to the payment transaction.\nUsage: If available, the initiating party should provide this reference in the structured remittance information, to enable reconciliation by the creditor upon receipt of the amount of money.\nIf the business context requires the use of a creditor reference or a payment remit identification, and only one identifier can be passed through the end-to-end chain, the creditor's reference or payment remittance identification should be quoted in the end-to-end transaction identification.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 35
+    },
+    "NumberOfPayments": {
+      "description": "Number of the payments that will be made in completing this frequency sequence including any executed since the sequence start date.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 35
+    },
+    "FirstPaymentDateTime": {
+      "description": "The date on which the first payment for a Standing Order schedule will be made.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+      "type": "string",
+      "format": "date-time"
+    },
+    "RecurringPaymentDateTime": {
+      "description": "The date on which the first recurring payment for a Standing Order schedule will be made. \nUsage: This must be populated only if the first recurring date is different to the first payment date.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+      "type": "string",
+      "format": "date-time"
+    },
+    "FinalPaymentDateTime": {
+      "description": "The date on which the final payment for a Standing Order schedule will be made.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+      "type": "string",
+      "format": "date-time"
+    },
+    "FirstPaymentAmount": {
+      "type": "object",
+      "required": [
+        "Amount",
+        "Currency"
+      ],
+      "description": "The amount of the first Standing Order",
+      "properties": {
+        "Amount": {
+          "$ref": "OBActiveCurrencyAndAmount.json"
+        },
+        "Currency": {
+          "$ref": "ActiveOrHistoricCurrencyCode.json"
+        }
+      }
+    },
+    "RecurringPaymentAmount": {
+      "type": "object",
+      "required": [
+        "Amount",
+        "Currency"
+      ],
+      "description": "The amount of the recurring Standing Order",
+      "properties": {
+        "Amount": {
+          "$ref": "OBActiveCurrencyAndAmount.json"
+        },
+        "Currency": {
+          "$ref": "ActiveOrHistoricCurrencyCode.json"
+        }
+      }
+    },
+    "FinalPaymentAmount": {
+      "type": "object",
+      "required": [
+        "Amount",
+        "Currency"
+      ],
+      "description": "The amount of the final Standing Order",
+      "properties": {
+        "Amount": {
+          "$ref": "OBActiveCurrencyAndAmount.json"
+        },
+        "Currency": {
+          "$ref": "ActiveOrHistoricCurrencyCode.json"
+        }
+      }
+    },
+    "DebtorAccount": {
+      "type": "object",
+      "required": [
+        "SchemeName",
+        "Identification"
+      ],
+      "description": "Provides the details to identify the debtor account.",
+      "properties": {
+        "SchemeName": {
+          "$ref": "OBExternalAccountIdentificationCode.json"
+        },
+        "Identification": {
+          "$ref": "Identification.json"
+        },
+        "Name": {
+          "description": "The account name is the name or names of the account owner(s) represented at an account level, as displayed by the ASPSP's online channels.\nNote, the account name is not the product name or the nickname of the account.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 70
+        }
+      }
+    },
+    "CreditorAccount": {
+      "type": "object",
+      "required": [
+        "SchemeName",
+        "Identification",
+        "Name"
+      ],
+      "description": "Identification assigned by an institution to identify an account. This identification is known by the account owner.",
+      "properties": {
+        "SchemeName": {
+          "$ref": "OBExternalAccountIdentificationCode.json"
+        },
+        "Identification": {
+          "$ref": "Identification.json"
+        },
+        "Name": {
+          "description": "The account name is the name or names of the account owner(s) represented at an account level.\nNote, the account name is not the product name or the nickname of the account.\nOB: ASPSPs may carry out name validation for Confirmation of Payee, but it is not mandatory.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 70
+        }
+      }
+    },
+    "SupplementaryData": {
+      "$ref": "OBSupplementaryData.json"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#"
+}

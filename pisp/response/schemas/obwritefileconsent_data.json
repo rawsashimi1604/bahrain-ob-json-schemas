@@ -1,0 +1,18 @@
+{
+  "required": [
+    "Initiation"
+  ],
+  "type": "object",
+  "properties": {
+    "Initiation": {
+      "$ref": "OBFileInitiation.json"
+    },
+    "Authorisation": {
+      "$ref": "OBWriteDomesticPaymentConsentRequest_Data_Authorisation.json"
+    },
+    "SCASupportData": {
+      "$ref": "OBWriteDomesticPaymentConsentRequest_Data_SCASupportData.json"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#"
+}

@@ -1,0 +1,9 @@
+{
+  "description": "Name of the identification scheme, in a coded form as published in an external list.",
+  "type": "string",
+  "x-namespaced-enum": [
+    "XYZ.OBF.BICFI",
+    "XYZ.OBF.NCC"
+  ],
+  "$schema": "http://json-schema.org/schema#"
+}

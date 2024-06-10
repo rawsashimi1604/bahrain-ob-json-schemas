@@ -1,0 +1,109 @@
+{
+  "type": "object",
+  "required": [
+    "Data"
+  ],
+  "properties": {
+    "Data": {
+      "type": "object",
+      "properties": {
+        "PaymentStatus": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "Payment status details.",
+            "required": [
+              "PaymentTransactionId",
+              "Status",
+              "StatusUpdateDateTime"
+            ],
+            "properties": {
+              "PaymentTransactionId": {
+                "description": "Unique identifier for the transaction within an servicing institution. This identifier is both unique and immutable.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 210
+              },
+              "Status": {
+                "description": "Status of a transfe, as assigned by the transaction administrator.",
+                "type": "string",
+                "enum": [
+                  "Accepted",
+                  "AcceptedCancellationRequest",
+                  "AcceptedCreditSettlementCompleted",
+                  "AcceptedCustomerProfile",
+                  "AcceptedFundsChecked",
+                  "AcceptedSettlementCompleted",
+                  "AcceptedSettlementInProcess",
+                  "AcceptedTechnicalValidation",
+                  "AcceptedWithChange",
+                  "AcceptedWithoutPosting",
+                  "Cancelled",
+                  "NoCancellationProcess",
+                  "PartiallyAcceptedCancellationRequest",
+                  "PartiallyAcceptedTechnicalCorrect",
+                  "PaymentCancelled",
+                  "Pending",
+                  "PendingCancellationRequest",
+                  "Received",
+                  "Rejected",
+                  "RejectedCancellationRequest"
+                ]
+              },
+              "StatusUpdateDateTime": {
+                "description": "Date and time at which the status was assigned to the transfer.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+                "type": "string",
+                "format": "date-time"
+              },
+              "StatusDetail": {
+                "type": "object",
+                "required": [
+                  "Status",
+                  "LocalInstrument"
+                ],
+                "description": "Payment status details as per underlying Payment Rail.",
+                "properties": {
+                  "LocalInstrument": {
+                    "$ref": "OBExternalLocalInstrumentCode.json"
+                  },
+                  "Status": {
+                    "description": "Status of a transfer, as assigned by the transaction administrator.",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 128
+                  },
+                  "StatusReason": {
+                    "description": "Reason Code provided for the status of a transfer.",
+                    "type": "string",
+                    "enum": [
+                      "Cancelled",
+                      "PendingFailingSettlement",
+                      "PendingSettlement",
+                      "Proprietary",
+                      "ProprietaryRejection",
+                      "Suspended",
+                      "Unmatched"
+                    ]
+                  },
+                  "StatusReasonDescription": {
+                    "description": "Reason provided for the status of a transfer.",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 256
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Links": {
+      "$ref": "Links.json"
+    },
+    "Meta": {
+      "$ref": "Meta.json"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#"
+}

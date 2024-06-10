@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "properties": {
+    "AddressType": {
+      "$ref": "OBAddressTypeCode.json"
+    },
+    "Department": {
+      "$ref": "Department.json"
+    },
+    "SubDepartment": {
+      "$ref": "SubDepartment.json"
+    },
+    "AddressLine": {
+      "maxItems": 7,
+      "minItems": 0,
+      "type": "array",
+      "items": {
+        "maxLength": 70,
+        "minLength": 1,
+        "type": "string",
+        "description": "Information that locates and identifies a specific address, as defined by postal services, presented in free format text."
+      }
+    },
+    "StreetName": {
+      "$ref": "StreetName.json"
+    },
+    "BuildingNumber": {
+      "$ref": "BuildingNumber.json"
+    },
+    "PostCode": {
+      "$ref": "PostCode.json"
+    },
+    "TownName": {
+      "$ref": "TownName.json"
+    },
+    "CountrySubDivision": {
+      "$ref": "CountrySubDivision.json"
+    },
+    "Country": {
+      "$ref": "CountryCode.json"
+    }
+  },
+  "description": "Information that locates and identifies a specific address, as defined by postal services.",
+  "$schema": "http://json-schema.org/schema#"
+}

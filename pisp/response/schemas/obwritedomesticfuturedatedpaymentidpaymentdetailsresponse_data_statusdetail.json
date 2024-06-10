@@ -1,0 +1,38 @@
+{
+  "required": [
+    "Status"
+  ],
+  "type": "object",
+  "properties": {
+    "LocalInstrument": {
+      "$ref": "OBExternalLocalInstrumentCodeDomestic.json"
+    },
+    "Status": {
+      "maxLength": 128,
+      "minLength": 1,
+      "type": "string",
+      "description": "Status of a transfer, as assigned by the transaction administrator."
+    },
+    "StatusReason": {
+      "type": "string",
+      "description": "Reason Code provided for the status of a transfer.",
+      "enum": [
+        "Cancelled",
+        "PendingFailingSettlement",
+        "PendingSettlement",
+        "Proprietary",
+        "ProprietaryRejection",
+        "Suspended",
+        "Unmatched"
+      ]
+    },
+    "StatusReasonDescription": {
+      "maxLength": 256,
+      "minLength": 1,
+      "type": "string",
+      "description": "Reason provided for the status of a transfer."
+    }
+  },
+  "description": "Payment status details as per underlying Payment Rail.",
+  "$schema": "http://json-schema.org/schema#"
+}

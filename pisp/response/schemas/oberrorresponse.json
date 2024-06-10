@@ -1,0 +1,38 @@
+{
+  "required": [
+    "Code",
+    "Errors",
+    "Message"
+  ],
+  "type": "object",
+  "properties": {
+    "Code": {
+      "maxLength": 40,
+      "minLength": 1,
+      "type": "string",
+      "description": "High level textual error code, to help categorize the errors."
+    },
+    "Id": {
+      "maxLength": 40,
+      "minLength": 1,
+      "type": "string",
+      "description": "A unique reference for the error instance, for audit purposes, in case of unknown/unclassified errors."
+    },
+    "Message": {
+      "maxLength": 500,
+      "minLength": 1,
+      "type": "string",
+      "description": "Brief Error message, e.g., 'There is something wrong with the request parameters provided'"
+    },
+    "Errors": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "$ref": "OBError.json"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "description": "An array of detail error codes, and messages, and URLs to documentation to help remediation.",
+  "$schema": "http://json-schema.org/schema#"
+}

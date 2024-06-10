@@ -1,0 +1,90 @@
+{
+  "type": "object",
+  "required": [
+    "FileContextFormat",
+    "FileHash"
+  ],
+  "description": "The Initiation payload is sent by the initiating party to the ASPSP. It is used to request movement of funds using a payment file.",
+  "properties": {
+    "FileContextFormat": {
+      "description": "Specifies the payment file format.",
+      "type": "string",
+      "x-namespaced-enum": [
+        "BH.OBF.pain.001.001.08"
+      ]
+    },
+    "FileHash": {
+      "description": "A base64 encoding of a SHA256 hash of the file to be uploaded.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 44
+    },
+    "FileReference": {
+      "description": "Reference for the file.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40
+    },
+    "NumberOfTransactions": {
+      "description": "Number of individual transactions contained in the payment information group.",
+      "type": "string",
+      "pattern": "[0-9]{1,15}"
+    },
+    "ControlSum": {
+      "description": "Total of all individual amounts included in the group, irrespective of currencies.",
+      "type": "number"
+    },
+    "RequestedExecutionDateTime": {
+      "description": "Date at which the initiating party requests the clearing agent to process the payment. \nUsage: This is the date on which the debtor's account is to be debited.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+      "type": "string",
+      "format": "date-time"
+    },
+    "LocalInstrument": {
+      "$ref": "OBExternalLocalInstrumentCodeDomestic.json"
+    },
+    "DebtorAccount": {
+      "type": "object",
+      "required": [
+        "SchemeName",
+        "Identification"
+      ],
+      "description": "Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.",
+      "properties": {
+        "SchemeName": {
+          "$ref": "OBExternalAccountIdentificationCode.json"
+        },
+        "Identification": {
+          "$ref": "Identification.json"
+        },
+        "Name": {
+          "description": "The account name is the name or names of the account owner(s) represented at an account level, as displayed by the ASPSP's online channels.\nNote, the account name is not the product name or the nickname of the account.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 70
+        }
+      }
+    },
+    "RemittanceInformation": {
+      "type": "object",
+      "description": "Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system.",
+      "properties": {
+        "RemittanceDescription": {
+          "description": "Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in an unstructured form.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 140
+        },
+        "Reference": {
+          "description": "Unique reference, as assigned by the creditor, to unambiguously refer to the payment transaction.\nUsage: If available, the initiating party should provide this reference in the structured remittance information, to enable reconciliation by the creditor upon receipt of the amount of money.\nIf the business context requires the use of a creditor reference or a payment remit identification, and only one identifier can be passed through the end-to-end chain, the creditor's reference or payment remittance identification should be quoted in the end-to-end transaction identification.\nOB: The Faster Payments Scheme can only accept 18 characters for the ReferenceInformation field - which is where this ISO field will be mapped.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 35
+        }
+      }
+    },
+    "SupplementaryData": {
+      "$ref": "OBSupplementaryData.json"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#"
+}

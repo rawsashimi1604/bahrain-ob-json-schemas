@@ -1,0 +1,19 @@
+{
+  "required": [
+    "Account"
+  ],
+  "type": "object",
+  "properties": {
+    "Creditor": {
+      "$ref": "OBWriteInternationalFutureDatedResponse_Data_Refund_Creditor.json"
+    },
+    "Agent": {
+      "$ref": "OBWriteInternationalFutureDatedResponse_Data_Refund_Agent.json"
+    },
+    "Account": {
+      "$ref": "OBWriteDomesticStandingOrderResponse_Data_Refund_Account.json"
+    }
+  },
+  "example": null,
+  "$schema": "http://json-schema.org/schema#"
+}

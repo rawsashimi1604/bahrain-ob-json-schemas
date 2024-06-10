@@ -1,0 +1,35 @@
+{
+  "required": [
+    "Initiation",
+    "Permission"
+  ],
+  "type": "object",
+  "properties": {
+    "Permission": {
+      "type": "string",
+      "description": "Specifies the Open Banking service request types.",
+      "enum": [
+        "Create"
+      ]
+    },
+    "ReadRefundAccount": {
+      "type": "string",
+      "description": "Specifies to share the refund account details with PISP",
+      "enum": [
+        "No",
+        "Yes"
+      ]
+    },
+    "Initiation": {
+      "$ref": "OBDomesticStandingOrderInitiation.json"
+    },
+    "Authorisation": {
+      "$ref": "OBWriteDomesticStandingOrderConsent_Data_Authorisation.json"
+    },
+    "SCASupportData": {
+      "$ref": "OBWriteDomesticStandingOrderConsent_Data_SCASupportData.json"
+    }
+  },
+  "example": null,
+  "$schema": "http://json-schema.org/schema#"
+}

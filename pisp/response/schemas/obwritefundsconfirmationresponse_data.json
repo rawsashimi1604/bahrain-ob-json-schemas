@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "FundsAvailableResult": {
+      "$ref": "OBWriteFundsConfirmationResponse_Data_FundsAvailableResult.json"
+    },
+    "SupplementaryData": {
+      "$ref": "OBSupplementaryData.json"
+    }
+  },
+  "example": null,
+  "$schema": "http://json-schema.org/schema#"
+}

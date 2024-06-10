@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "properties": {
+    "SchemeName": {
+      "$ref": "OBExternalFinancialInstitutionIdentificationCode.json"
+    },
+    "Identification": {
+      "maxLength": 35,
+      "minLength": 1,
+      "type": "string",
+      "description": "Unique and unambiguous identification of the servicing institution."
+    },
+    "Name": {
+      "$ref": "Name.json"
+    },
+    "PostalAddress": {
+      "$ref": "OBPostalAddress.json"
+    }
+  },
+  "description": "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\nThis is the servicer of the beneficiary account.",
+  "example": null,
+  "$schema": "http://json-schema.org/schema#"
+}

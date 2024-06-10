@@ -1,0 +1,166 @@
+{
+  "type": "object",
+  "required": [
+    "Data"
+  ],
+  "properties": {
+    "Data": {
+      "type": "object",
+      "required": [
+        "InternationalFutureDatedPaymentId",
+        "ConsentId",
+        "CreationDateTime",
+        "Status",
+        "StatusUpdateDateTime",
+        "Initiation"
+      ],
+      "properties": {
+        "InternationalFutureDatedPaymentId": {
+          "description": "OB: Unique identification as assigned by the ASPSP to uniquely identify the international future dated payment resource.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "ConsentId": {
+          "description": "OB: Unique identification as assigned by the ASPSP to uniquely identify the consent resource.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "CreationDateTime": {
+          "description": "Date and time at which the message was created.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+          "type": "string",
+          "format": "date-time"
+        },
+        "Status": {
+          "description": "Specifies the status of the payment order resource.",
+          "type": "string",
+          "enum": [
+            "Cancelled",
+            "InitiationCompleted",
+            "InitiationFailed",
+            "InitiationPending"
+          ]
+        },
+        "StatusUpdateDateTime": {
+          "description": "Date and time at which the resource status was updated.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+          "type": "string",
+          "format": "date-time"
+        },
+        "ExpectedExecutionDateTime": {
+          "description": "Expected execution date and time for the payment resource.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+          "type": "string",
+          "format": "date-time"
+        },
+        "ExpectedSettlementDateTime": {
+          "description": "Expected settlement date and time for the payment resource.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+          "type": "string",
+          "format": "date-time"
+        },
+        "Debtor": {
+          "$ref": "OBDebtorIdentification.json"
+        },
+        "Refund": {
+          "type": "object",
+          "required": [
+            "Account"
+          ],
+          "properties": {
+            "Creditor": {
+              "type": "object",
+              "description": "Set of elements used to identify a person or an organisation.",
+              "properties": {
+                "Name": {
+                  "description": "Name by which a party is known and which is usually used to identify that party.",
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 140
+                },
+                "PostalAddress": {
+                  "$ref": "OBPostalAddress.json"
+                }
+              }
+            },
+            "Agent": {
+              "type": "object",
+              "description": "Set of elements used to uniquely and unambiguously identify a financial institution or a branch of a financial institution.",
+              "properties": {
+                "SchemeName": {
+                  "$ref": "OBExternalFinancialInstitutionIdentificationCode.json"
+                },
+                "Identification": {
+                  "$ref": "IdentificationFinancial.json"
+                },
+                "Name": {
+                  "$ref": "Name.json"
+                },
+                "PostalAddress": {
+                  "$ref": "OBPostalAddress.json"
+                }
+              }
+            },
+            "Account": {
+              "type": "object",
+              "required": [
+                "SchemeName",
+                "Identification",
+                "Name"
+              ],
+              "description": "Provides the details to identify an account.",
+              "properties": {
+                "SchemeName": {
+                  "$ref": "OBExternalAccountIdentificationCode.json"
+                },
+                "Identification": {
+                  "$ref": "Identification.json"
+                },
+                "Name": {
+                  "description": "Name of the account, as assigned by the account servicing institution.\nUsage: The account name is the name or names of the account owner(s) represented at an account level. The account name is not the product name or the nickname of the account.\nOB: ASPSPs may carry out name validation for Confirmation of Payee, but it is not mandatory.",
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 70
+                }
+              }
+            }
+          }
+        },
+        "Charges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "Set of elements used to provide details of a charge for the payment initiation.",
+            "required": [
+              "ChargeBearer",
+              "Type",
+              "Amount"
+            ],
+            "properties": {
+              "ChargeBearer": {
+                "$ref": "OBChargeBearerTypeCode.json"
+              },
+              "Type": {
+                "$ref": "OBExternalPaymentChargeTypeCode.json"
+              },
+              "Amount": {
+                "$ref": "OBActiveOrHistoricCurrencyAndAmount.json"
+              }
+            }
+          }
+        },
+        "ExchangeRateInformation": {
+          "$ref": "OBExchangeRateResponse.json"
+        },
+        "Initiation": {
+          "$ref": "OBInternationalFutureDatedInitiation.json"
+        }
+      }
+    },
+    "Links": {
+      "$ref": "Links.json"
+    },
+    "Meta": {
+      "$ref": "Meta.json"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#"
+}

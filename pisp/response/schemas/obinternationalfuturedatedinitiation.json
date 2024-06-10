@@ -1,0 +1,92 @@
+{
+  "required": [
+    "CreditorAccount",
+    "CurrencyOfTransfer",
+    "InstructedAmount",
+    "InstructionIdentification",
+    "LocalInstrument",
+    "RequestedExecutionDateTime"
+  ],
+  "type": "object",
+  "properties": {
+    "InstructionIdentification": {
+      "maxLength": 35,
+      "minLength": 1,
+      "type": "string",
+      "description": "Unique identification as assigned by an instructing party for an instructed party to unambiguously identify the instruction.\nUsage: the  instruction identification is a point to point reference that can be used between the instructing party and the instructed party to refer to the individual instruction. It can be included in several messages related to the instruction."
+    },
+    "EndToEndIdentification": {
+      "maxLength": 35,
+      "minLength": 1,
+      "type": "string",
+      "description": "Unique identification assigned by the initiating party to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.\nUsage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction. It can be included in several messages related to the transaction.\nOB: The Faster Payments Scheme can only access 31 characters for the EndToEndIdentification field."
+    },
+    "LocalInstrument": {
+      "$ref": "OBExternalLocalInstrumentCodeInternational.json"
+    },
+    "InstructionPriority": {
+      "type": "string",
+      "description": "Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the instruction.",
+      "enum": [
+        "Normal",
+        "Urgent"
+      ]
+    },
+    "Purpose": {
+      "maxLength": 4,
+      "minLength": 1,
+      "type": "string",
+      "description": "Specifies the external purpose code in the format of character string with a maximum length of 4 characters.\nThe list of valid codes is an external code list published separately.\nExternal code sets can be downloaded from www.iso20022.org."
+    },
+    "ExtendedPurpose": {
+      "maxLength": 140,
+      "minLength": 1,
+      "type": "string",
+      "description": "Specifies the purpose of an international payment, when there is no corresponding 4 character code available in the ISO20022 list of Purpose Codes."
+    },
+    "ChargeBearer": {
+      "$ref": "OBChargeBearerTypeCode.json"
+    },
+    "RequestedExecutionDateTime": {
+      "type": "string",
+      "description": "Date at which the initiating party requests the clearing agent to process the payment. \nUsage: This is the date on which the debtor's account is to be debited.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+      "format": "date-time"
+    },
+    "CurrencyOfTransfer": {
+      "pattern": "^[A-Z]{3,3}$",
+      "type": "string",
+      "description": "Specifies the currency of the to be transferred amount, which is different from the currency of the debtor's account."
+    },
+    "DestinationCountryCode": {
+      "pattern": "[A-Z]{2,2}",
+      "type": "string",
+      "description": "Country in which Credit Account is domiciled. Code to identify a country, a dependency, or another area of particular geopolitical interest, on the basis of country names obtained from the United Nations (ISO 3166, Alpha-2 code)."
+    },
+    "InstructedAmount": {
+      "$ref": "OBInternationalFutureDatedInitiation_InstructedAmount.json"
+    },
+    "ExchangeRateInformation": {
+      "$ref": "OBInternationalFutureDatedInitiation_ExchangeRateInformation.json"
+    },
+    "DebtorAccount": {
+      "$ref": "OBInternationalFutureDatedInitiation_DebtorAccount.json"
+    },
+    "Creditor": {
+      "$ref": "OBInternationalFutureDatedInitiation_Creditor.json"
+    },
+    "CreditorAgent": {
+      "$ref": "OBInternationalFutureDatedInitiation_CreditorAgent.json"
+    },
+    "CreditorAccount": {
+      "$ref": "OBInternationalFutureDatedInitiation_CreditorAccount.json"
+    },
+    "RemittanceInformation": {
+      "$ref": "OBInternationalFutureDatedInitiation_RemittanceInformation.json"
+    },
+    "SupplementaryData": {
+      "$ref": "OBSupplementaryData.json"
+    }
+  },
+  "description": "The Initiation payload is sent by the initiating party to the ASPSP. It is used to request movement of funds from the debtor account to a creditor for a single future-dated international payment.",
+  "$schema": "http://json-schema.org/schema#"
+}

@@ -1,0 +1,52 @@
+{
+  "required": [
+    "PaymentTransactionId",
+    "Status",
+    "StatusUpdateDateTime"
+  ],
+  "type": "object",
+  "properties": {
+    "PaymentTransactionId": {
+      "maxLength": 210,
+      "minLength": 1,
+      "type": "string",
+      "description": "Unique identifier for the transaction within an servicing institution. This identifier is both unique and immutable."
+    },
+    "Status": {
+      "type": "string",
+      "description": "Status of a transfe, as assigned by the transaction administrator.",
+      "enum": [
+        "Accepted",
+        "AcceptedCancellationRequest",
+        "AcceptedCreditSettlementCompleted",
+        "AcceptedCustomerProfile",
+        "AcceptedFundsChecked",
+        "AcceptedSettlementCompleted",
+        "AcceptedSettlementInProcess",
+        "AcceptedTechnicalValidation",
+        "AcceptedWithChange",
+        "AcceptedWithoutPosting",
+        "Cancelled",
+        "NoCancellationProcess",
+        "PartiallyAcceptedCancellationRequest",
+        "PartiallyAcceptedTechnicalCorrect",
+        "PaymentCancelled",
+        "Pending",
+        "PendingCancellationRequest",
+        "Received",
+        "Rejected",
+        "RejectedCancellationRequest"
+      ]
+    },
+    "StatusUpdateDateTime": {
+      "type": "string",
+      "description": "Date and time at which the status was assigned to the transfer.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+      "format": "date-time"
+    },
+    "StatusDetail": {
+      "$ref": "OBWriteDomesticPaymentDetailsResponse_Data_StatusDetail.json"
+    }
+  },
+  "description": "Payment status details.",
+  "$schema": "http://json-schema.org/schema#"
+}

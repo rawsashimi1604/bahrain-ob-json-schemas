@@ -1,0 +1,7 @@
+{
+  "maxLength": 70,
+  "minLength": 1,
+  "type": "string",
+  "description": "Identification of a sub-division of a large organisation or building.",
+  "$schema": "http://json-schema.org/schema#"
+}

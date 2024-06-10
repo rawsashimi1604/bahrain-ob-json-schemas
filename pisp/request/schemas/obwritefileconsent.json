@@ -1,0 +1,74 @@
+{
+  "type": "object",
+  "required": [
+    "Data"
+  ],
+  "properties": {
+    "Data": {
+      "type": "object",
+      "required": [
+        "Initiation"
+      ],
+      "properties": {
+        "Initiation": {
+          "$ref": "OBFileInitiation.json"
+        },
+        "Authorisation": {
+          "type": "object",
+          "required": [
+            "AuthorisationType"
+          ],
+          "description": "The authorisation type request from the TPP.",
+          "properties": {
+            "AuthorisationType": {
+              "description": "Type of authorisation flow requested.",
+              "type": "string",
+              "enum": [
+                "Single"
+              ]
+            },
+            "CompletionDateTime": {
+              "description": "Date and time at which the requested authorisation flow must be completed.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "SCASupportData": {
+          "type": "object",
+          "description": "Supporting Data provided by TPP, when requesting SCA Exemption.",
+          "properties": {
+            "RequestedSCAExemptionType": {
+              "description": "This field allows a PISP to request specific SCA Exemption for a Payment Initiation",
+              "type": "string",
+              "enum": [
+                "BillPayment",
+                "ContactlessTravel",
+                "EcommerceGoods",
+                "EcommerceServices",
+                "Kiosk",
+                "Parking",
+                "PartyToParty"
+              ]
+            },
+            "AppliedAuthenticationApproach": {
+              "description": "Specifies a character string with a maximum length of 40 characters.\nUsage: This field indicates whether the PSU was subject to SCA performed by the TPP",
+              "type": "string",
+              "enum": [
+                "CA",
+                "SCA"
+              ]
+            },
+            "ReferencePaymentOrderId": {
+              "description": "Specifies a character string with a maximum length of 140 characters.\nUsage: If the payment is recurring then the transaction identifier of the previous payment occurrence so that the ASPSP can verify that the PISP, amount and the payee are the same as the previous occurrence.",
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128
+            }
+          }
+        }
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/schema#"
+}

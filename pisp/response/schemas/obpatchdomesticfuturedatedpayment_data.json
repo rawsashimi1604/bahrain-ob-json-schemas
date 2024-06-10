@@ -1,0 +1,25 @@
+{
+  "required": [
+    "ConsentId",
+    "Status"
+  ],
+  "type": "object",
+  "properties": {
+    "ConsentId": {
+      "maxLength": 128,
+      "minLength": 1,
+      "type": "string",
+      "description": "OB: Unique identification as assigned by the ASPSP to uniquely identify the consent resource."
+    },
+    "Status": {
+      "type": "string",
+      "description": "Specifies the status of the payment order resource.",
+      "enum": [
+        "RejectedCancellationRequest",
+        "AcceptedCancellationRequest",
+        "PendingCancellationRequest"
+      ]
+    }
+  },
+  "$schema": "http://json-schema.org/schema#"
+}

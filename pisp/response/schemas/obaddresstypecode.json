@@ -1,0 +1,15 @@
+{
+  "type": "string",
+  "description": "Identifies the nature of the postal address.",
+  "enum": [
+    "Business",
+    "Correspondence",
+    "DeliveryTo",
+    "MailTo",
+    "POBox",
+    "Postal",
+    "Residential",
+    "Statement"
+  ],
+  "$schema": "http://json-schema.org/schema#"
+}

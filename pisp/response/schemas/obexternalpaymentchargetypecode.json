@@ -1,0 +1,8 @@
+{
+  "type": "string",
+  "description": "Charge type, in a coded form.",
+  "x-namespaced-enum": [
+    "XYZ.OBF.DNS"
+  ],
+  "$schema": "http://json-schema.org/schema#"
+}

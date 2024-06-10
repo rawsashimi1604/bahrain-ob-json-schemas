@@ -1,0 +1,7 @@
+{
+  "maxLength": 16,
+  "minLength": 1,
+  "type": "string",
+  "description": "Number that identifies the position of a building on a street.",
+  "$schema": "http://json-schema.org/schema#"
+}

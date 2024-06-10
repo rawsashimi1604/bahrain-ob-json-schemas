@@ -1,0 +1,24 @@
+{
+  "required": [
+    "Identification",
+    "SchemeName"
+  ],
+  "type": "object",
+  "properties": {
+    "SchemeName": {
+      "$ref": "OBExternalAccountIdentificationCode.json"
+    },
+    "Identification": {
+      "$ref": "Identification.json"
+    },
+    "Name": {
+      "maxLength": 70,
+      "minLength": 1,
+      "type": "string",
+      "description": "The account name is the name or names of the account owner(s) represented at an account level, as displayed by the ASPSP's online channels.\nNote, the account name is not the product name or the nickname of the account."
+    }
+  },
+  "description": "Provides the details to identify the debtor account.",
+  "example": null,
+  "$schema": "http://json-schema.org/schema#"
+}

@@ -1,0 +1,79 @@
+{
+  "type": "object",
+  "description": "The Risk section is sent by the initiating party to the ASPSP. It is used to specify additional details for risk scoring for Payments.",
+  "properties": {
+    "PaymentContextCode": {
+      "description": "Specifies the payment context",
+      "type": "string",
+      "enum": [
+        "BillPayment",
+        "EcommerceGoods",
+        "EcommerceServices",
+        "Other",
+        "PartyToParty"
+      ]
+    },
+    "MerchantCategoryCode": {
+      "description": "Category code conform to ISO 18245, related to the type of services or goods the merchant provides for the transaction.",
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 4
+    },
+    "MerchantCustomerIdentification": {
+      "description": "The unique customer identifier of the PSU with the merchant.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 70
+    },
+    "DeliveryAddress": {
+      "type": "object",
+      "required": [
+        "TownName",
+        "Country"
+      ],
+      "description": "Information that locates and identifies a specific address, as defined by postal services or in free format text.",
+      "properties": {
+        "AddressLine": {
+          "type": "array",
+          "items": {
+            "description": "Information that locates and identifies a specific address, as defined by postal services, that is presented in free format text.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 70
+          },
+          "minItems": 0,
+          "maxItems": 2
+        },
+        "StreetName": {
+          "$ref": "StreetName.json"
+        },
+        "BuildingNumber": {
+          "$ref": "BuildingNumber.json"
+        },
+        "PostCode": {
+          "$ref": "PostCode.json"
+        },
+        "TownName": {
+          "$ref": "TownName.json"
+        },
+        "CountrySubDivision": {
+          "type": "array",
+          "items": {
+            "description": "Identifies a subdivision of a country, for instance state, region, county.",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 35
+          },
+          "minItems": 0,
+          "maxItems": 2
+        },
+        "Country": {
+          "description": "Nation with its own government, occupying a particular territory.",
+          "type": "string",
+          "pattern": "^[A-Z]{2,2}$"
+        }
+      }
+    }
+  },
+  "$schema": "http://json-schema.org/schema#"
+}

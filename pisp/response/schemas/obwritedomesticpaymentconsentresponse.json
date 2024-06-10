@@ -1,0 +1,22 @@
+{
+  "required": [
+    "Data",
+    "Risk"
+  ],
+  "type": "object",
+  "properties": {
+    "Data": {
+      "$ref": "OBWriteDomesticPaymentConsentResponse_Data.json"
+    },
+    "Risk": {
+      "$ref": "OBRisk.json"
+    },
+    "Links": {
+      "$ref": "Links.json"
+    },
+    "Meta": {
+      "$ref": "Meta.json"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#"
+}

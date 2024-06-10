@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": [
+    "Amount",
+    "Currency"
+  ],
+  "description": "Amount of money associated with the charge type.",
+  "properties": {
+    "Amount": {
+      "$ref": "OBAmount.json"
+    },
+    "Currency": {
+      "$ref": "ActiveOrHistoricCurrencyCode.json"
+    }
+  },
+  "$schema": "http://json-schema.org/schema#"
+}
