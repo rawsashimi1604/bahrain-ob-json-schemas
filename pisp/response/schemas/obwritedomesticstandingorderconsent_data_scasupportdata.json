@@ -21,5 +21,5 @@
   },
   "description": "Supporting Data provided by TPP, when requesting SCA Exemption.",
   "example": null,
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
 }

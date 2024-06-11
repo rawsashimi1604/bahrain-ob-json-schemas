@@ -20,5 +20,5 @@
   },
   "description": "Provides the details to identify the debtor account.",
   "example": null,
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
 }

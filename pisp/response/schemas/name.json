@@ -3,5 +3,5 @@
   "minLength": 1,
   "type": "string",
   "description": "Name by which an agent is known and which is usually used to identify that agent.",
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
 }

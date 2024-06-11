@@ -14,5 +14,5 @@
   },
   "description": "The amount of the recurring Standing Order",
   "example": null,
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
 }

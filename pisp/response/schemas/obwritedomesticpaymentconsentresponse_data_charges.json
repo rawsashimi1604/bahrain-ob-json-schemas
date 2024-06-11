@@ -17,5 +17,5 @@
     }
   },
   "description": "Set of elements used to provide details of a charge for the payment initiation.",
-  "$schema": "http://json-schema.org/schema#"
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
 }
