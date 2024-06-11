@@ -3,5 +3,5 @@
   "properties": {},
   "additionalProperties": true,
   "description": "Additional information that can not be captured in the structured fields and/or any other specific block.",
-  "$schema": "https://json-schema.org/draft/2020-12/schema"
+  "$schema": "https://json-schema.org/draft-07/schema"
 }

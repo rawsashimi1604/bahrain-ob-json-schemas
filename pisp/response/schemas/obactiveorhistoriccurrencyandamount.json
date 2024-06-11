@@ -13,5 +13,5 @@
     }
   },
   "description": "Amount of money associated with the charge type.",
-  "$schema": "https://json-schema.org/draft/2020-12/schema"
+  "$schema": "https://json-schema.org/draft-07/schema"
 }

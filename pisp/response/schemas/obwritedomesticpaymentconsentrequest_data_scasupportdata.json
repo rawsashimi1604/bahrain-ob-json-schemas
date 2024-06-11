@@ -30,5 +30,5 @@
     }
   },
   "description": "Supporting Data provided by TPP, when requesting SCA Exemption.",
-  "$schema": "https://json-schema.org/draft/2020-12/schema"
+  "$schema": "https://json-schema.org/draft-07/schema"
 }

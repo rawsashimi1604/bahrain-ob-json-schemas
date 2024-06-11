@@ -2,5 +2,5 @@
   "description": "Nation with its own government.",
   "type": "string",
   "pattern": "^[A-Z]{2,2}$",
-  "$schema": "https://json-schema.org/draft/2020-12/schema"
+  "$schema": "https://json-schema.org/draft-07/schema"
 }

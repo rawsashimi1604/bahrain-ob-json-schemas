@@ -20,5 +20,5 @@
   },
   "description": "Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.",
   "example": null,
-  "$schema": "https://json-schema.org/draft/2020-12/schema"
+  "$schema": "https://json-schema.org/draft-07/schema"
 }

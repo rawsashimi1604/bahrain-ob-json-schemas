@@ -15,5 +15,5 @@
     }
   },
   "description": "Set of elements used to uniquely and unambiguously identify a financial institution or a branch of a financial institution.",
-  "$schema": "https://json-schema.org/draft/2020-12/schema"
+  "$schema": "https://json-schema.org/draft-07/schema"
 }

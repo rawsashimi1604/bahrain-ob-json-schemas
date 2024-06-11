@@ -34,5 +34,5 @@
     }
   },
   "description": "Payment status details as per underlying Payment Rail.",
-  "$schema": "https://json-schema.org/draft/2020-12/schema"
+  "$schema": "https://json-schema.org/draft-07/schema"
 }

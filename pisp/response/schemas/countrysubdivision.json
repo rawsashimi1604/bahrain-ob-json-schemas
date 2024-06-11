@@ -3,5 +3,5 @@
   "minLength": 1,
   "type": "string",
   "description": "Identifies a subdivision of a country such as state, region, county.",
-  "$schema": "https://json-schema.org/draft/2020-12/schema"
+  "$schema": "https://json-schema.org/draft-07/schema"
 }

@@ -31,5 +31,5 @@
     }
   },
   "description": "Provides details on the currency exchange rate and contract.",
-  "$schema": "https://json-schema.org/draft/2020-12/schema"
+  "$schema": "https://json-schema.org/draft-07/schema"
 }
