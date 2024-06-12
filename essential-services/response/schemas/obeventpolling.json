@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "properties": {
+    "maxEvents": {
+      "type": "integer",
+      "description": "Maximum number of events to be returned. A value of zero indicates the ASPSP should not return events even if available"
+    },
+    "returnImmediately": {
+      "type": "boolean",
+      "description": "Indicates whether an ASPSP should return a response immediately or provide a long poll"
+    },
+    "ack": {
+      "type": "array",
+      "items": {
+        "maxLength": 128,
+        "minLength": 1,
+        "type": "string",
+        "description": "An array of jti\u00a0values indicating event notifications positively acknowledged by the TPP"
+      }
+    },
+    "setErrs": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": {
+        "$ref": "OBEventPolling_setErrs.json"
+      },
+      "description": "An object that encapsulates all negative acknowledgements transmitted by the TPP"
+    }
+  },
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

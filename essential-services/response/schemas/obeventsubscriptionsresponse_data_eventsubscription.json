@@ -1,0 +1,36 @@
+{
+  "required": [
+    "EventSubscriptionId",
+    "Version"
+  ],
+  "type": "object",
+  "properties": {
+    "EventSubscriptionId": {
+      "maxLength": 40,
+      "minLength": 1,
+      "type": "string",
+      "description": "Unique identification as assigned by the ASPSP to uniquely identify the callback url resource."
+    },
+    "CallbackUrl": {
+      "type": "string",
+      "description": "'Callback URL for a TPP hosted service. Will be used by ASPSPs, in conjunction with the resource name, \nto construct a URL to send event notifications to.'",
+      "format": "uri"
+    },
+    "Version": {
+      "$ref": "Version.json"
+    },
+    "EventTypes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Array of event types the subscription applies to.",
+        "enum": [
+          "urn:bh:org:openbanking:events:resource-update",
+          "urn:bh:org:openbanking:events:account-access-consent-linked-account-update",
+          "urn:bh:org:openbanking:events:consent-authorization-revoked"
+        ]
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

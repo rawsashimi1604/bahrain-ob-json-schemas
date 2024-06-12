@@ -1,0 +1,19 @@
+{
+  "title": "MetaData",
+  "type": "object",
+  "description": "Meta Data relevant to the payload",
+  "properties": {
+    "TotalPages": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "FirstAvailableDateTime": {
+      "$ref": "ISODateTime.json"
+    },
+    "LastAvailableDateTime": {
+      "$ref": "ISODateTime.json"
+    }
+  },
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

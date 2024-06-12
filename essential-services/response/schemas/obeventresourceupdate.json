@@ -1,0 +1,13 @@
+{
+  "required": [
+    "subject"
+  ],
+  "type": "object",
+  "properties": {
+    "subject": {
+      "$ref": "OBEventSubject.json"
+    }
+  },
+  "description": "Resource-Update Event.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

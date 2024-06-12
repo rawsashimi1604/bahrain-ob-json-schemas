@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "urn:bh:org:openbanking:events:resource-update": {
+      "$ref": "OBEventResourceUpdate.json"
+    },
+    "urn:bh:org:openbanking:events:account-access-consent-linked-account-update": {
+      "$ref": "OBEventAccountAccessConsentLinkedAccountUpdate.json"
+    },
+    "urn:bh:org:openbanking:events:consent-authorization-revoked": {
+      "$ref": "OBEventConsentAuthorizationRevoked.json"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Events.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

@@ -1,0 +1,25 @@
+{
+  "oneOf": [
+    {
+      "$ref": "OBEvent.json"
+    },
+    {
+      "$ref": "OBEventLink.json"
+    },
+    {
+      "$ref": "OBEventNotification.json"
+    },
+    {
+      "$ref": "OBEventResourceUpdate.json"
+    },
+    {
+      "$ref": "OBEventAccountAccessConsentLinkedAccountUpdate.json"
+    },
+    {
+      "$ref": "OBEventConsentAuthorizationRevoked.json"
+    },
+    {
+      "$ref": "OBEventSubject.json"
+    }
+  ]
+}

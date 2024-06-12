@@ -1,0 +1,7 @@
+{
+  "maxLength": 10,
+  "minLength": 1,
+  "type": "string",
+  "description": "Version for the event notification.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

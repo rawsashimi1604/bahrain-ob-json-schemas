@@ -1,0 +1,40 @@
+{
+  "required": [
+    "http://openbanking.org.bh/rid",
+    "http://openbanking.org.bh/rlk",
+    "http://openbanking.org.bh/rty",
+    "subject_type"
+  ],
+  "type": "object",
+  "properties": {
+    "subject_type": {
+      "maxLength": 128,
+      "minLength": 1,
+      "type": "string",
+      "description": "Subject type for the updated resource. "
+    },
+    "http://openbanking.org.bh/rid": {
+      "maxLength": 128,
+      "minLength": 1,
+      "type": "string",
+      "description": "Resource Id for the updated resource."
+    },
+    "http://openbanking.org.bh/rty": {
+      "maxLength": 128,
+      "minLength": 1,
+      "type": "string",
+      "description": "Resource Type for the updated resource."
+    },
+    "http://openbanking.org.bh/rlk": {
+      "minItems": 1,
+      "type": "array",
+      "description": "Resource links to other available versions of the resource.",
+      "items": {
+        "$ref": "OBEventLink.json"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "description": "The resource-update event.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

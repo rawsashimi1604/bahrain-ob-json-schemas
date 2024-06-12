@@ -1,0 +1,22 @@
+{
+  "required": [
+    "description",
+    "err"
+  ],
+  "type": "object",
+  "properties": {
+    "err": {
+      "maxLength": 40,
+      "minLength": 1,
+      "type": "string",
+      "description": "A value from the IANA \"Security Event Token Delivery Error Codes\" registry that identifies the error as defined here \nhttps://tools.ietf.org/id/draft-ietf-secevent-http-push-03.html#error_codes"
+    },
+    "description": {
+      "maxLength": 256,
+      "minLength": 1,
+      "type": "string",
+      "description": "A human-readable string that provides additional diagnostic information"
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

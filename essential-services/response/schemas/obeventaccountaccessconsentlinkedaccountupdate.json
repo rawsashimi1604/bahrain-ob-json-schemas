@@ -1,0 +1,18 @@
+{
+  "required": [
+    "subject"
+  ],
+  "type": "object",
+  "properties": {
+    "reason": {
+      "type": "string",
+      "description": "Reason for the Account Access Consent Linked Account Update event."
+    },
+    "subject": {
+      "$ref": "OBEventSubject.json"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Resource-Update Event.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

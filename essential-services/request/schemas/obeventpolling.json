@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "properties": {
+    "maxEvents": {
+      "description": "Maximum number of events to be returned. A value of zero indicates the ASPSP should not return events even if available",
+      "type": "integer"
+    },
+    "returnImmediately": {
+      "description": "Indicates whether an ASPSP should return a response immediately or provide a long poll",
+      "type": "boolean"
+    },
+    "ack": {
+      "type": "array",
+      "items": {
+        "description": "An array of jti\u00a0values indicating event notifications positively acknowledged by the TPP",
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 128
+      }
+    },
+    "setErrs": {
+      "type": "object",
+      "description": "An object that encapsulates all negative acknowledgements transmitted by the TPP",
+      "properties": {},
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "err",
+          "description"
+        ],
+        "properties": {
+          "err": {
+            "description": "A value from the IANA \"Security Event Token Delivery Error Codes\" registry that identifies the error as defined here \nhttps://tools.ietf.org/id/draft-ietf-secevent-http-push-03.html#error_codes",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40
+          },
+          "description": {
+            "description": "A human-readable string that provides additional diagnostic information",
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 256
+          }
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

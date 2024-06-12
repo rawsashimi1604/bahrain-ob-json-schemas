@@ -1,0 +1,23 @@
+{
+  "minProperties": 1,
+  "required": [
+    "link",
+    "version"
+  ],
+  "type": "object",
+  "properties": {
+    "version": {
+      "maxLength": 10,
+      "minLength": 1,
+      "type": "string",
+      "description": "Resource version."
+    },
+    "link": {
+      "type": "string",
+      "description": "Resource link."
+    }
+  },
+  "additionalProperties": false,
+  "description": "Resource links to other available versions of the resource.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

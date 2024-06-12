@@ -1,0 +1,60 @@
+{
+  "required": [
+    "aud",
+    "events",
+    "iat",
+    "iss",
+    "jti",
+    "sub",
+    "toe",
+    "txn"
+  ],
+  "type": "object",
+  "properties": {
+    "iss": {
+      "type": "string",
+      "description": "Issuer."
+    },
+    "iat": {
+      "minimum": 0,
+      "type": "integer",
+      "description": "Issued At. ",
+      "format": "int32"
+    },
+    "jti": {
+      "maxLength": 128,
+      "minLength": 1,
+      "type": "string",
+      "description": "JWT ID."
+    },
+    "aud": {
+      "maxLength": 128,
+      "minLength": 1,
+      "type": "string",
+      "description": "Audience."
+    },
+    "sub": {
+      "type": "string",
+      "description": "Subject",
+      "format": "uri"
+    },
+    "txn": {
+      "maxLength": 128,
+      "minLength": 1,
+      "type": "string",
+      "description": "Transaction Identifier."
+    },
+    "toe": {
+      "minimum": 0,
+      "type": "integer",
+      "description": "Time of Event.",
+      "format": "int32"
+    },
+    "events": {
+      "$ref": "OBEvent.json"
+    }
+  },
+  "additionalProperties": false,
+  "description": "The resource-update event.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

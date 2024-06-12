@@ -1,0 +1,15 @@
+{
+  "description": "Resource-Update Event.",
+  "type": "object",
+  "properties": {
+    "reason": {
+      "description": "Reason for the Consent Authorization Revoked event.",
+      "type": "string"
+    },
+    "subject": {
+      "$ref": "OBEventSubject.json"
+    }
+  },
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}
