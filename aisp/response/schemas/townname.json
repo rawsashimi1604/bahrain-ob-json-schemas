@@ -1,0 +1,7 @@
+{
+  "maxLength": 35,
+  "minLength": 1,
+  "type": "string",
+  "description": "Name of a built-up area, with defined boundaries, and a local government.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

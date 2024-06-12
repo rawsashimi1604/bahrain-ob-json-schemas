@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "DocumentsRequired": {
+      "type": "string",
+      "description": "List of documents required"
+    },
+    "Age": {
+      "type": "number",
+      "description": "Age of the applicant"
+    },
+    "EmploymentStatus": {
+      "type": "string",
+      "description": "Employment status of the applicant"
+    },
+    "Income": {
+      "type": "string",
+      "description": "Income of the applicant"
+    },
+    "CreditScore": {
+      "type": "string",
+      "description": "Credit score of the applicant"
+    }
+  },
+  "description": "'This covers nationality, age, employment status, income and credit score'                   ",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

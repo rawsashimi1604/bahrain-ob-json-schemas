@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "description": "The Party's relationships with other resources.",
+  "properties": {
+    "Account": {
+      "type": "object",
+      "required": [
+        "Related",
+        "Id"
+      ],
+      "description": "Relationship to the Account resource.",
+      "properties": {
+        "Related": {
+          "description": "Absolute URI to the related resource.",
+          "type": "string",
+          "format": "uri"
+        },
+        "Id": {
+          "description": "Unique identification as assigned by the ASPSP to uniquely identify the related resource.",
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

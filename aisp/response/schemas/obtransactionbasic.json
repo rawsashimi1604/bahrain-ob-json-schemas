@@ -1,0 +1,65 @@
+{
+  "required": [
+    "AccountId",
+    "Amount",
+    "BookingDateTime",
+    "CreditDebitIndicator",
+    "Status"
+  ],
+  "type": "object",
+  "properties": {
+    "AccountId": {
+      "$ref": "AccountId.json"
+    },
+    "TransactionId": {
+      "$ref": "TransactionId.json"
+    },
+    "TransactionReference": {
+      "$ref": "TransactionReference.json"
+    },
+    "StatementReference": {
+      "type": "array",
+      "items": {
+        "$ref": "StatementReference.json"
+      }
+    },
+    "CreditDebitIndicator": {
+      "$ref": "OBCreditDebitCodeTransaction.json"
+    },
+    "Status": {
+      "$ref": "OBEntryStatusCode.json"
+    },
+    "BookingDateTime": {
+      "$ref": "BookingDateTime.json"
+    },
+    "ValueDateTime": {
+      "$ref": "ValueDateTime.json"
+    },
+    "AddressLine": {
+      "$ref": "AddressLine.json"
+    },
+    "Amount": {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountTransaction.json"
+    },
+    "ChargeAmount": {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountTransactionCharges.json"
+    },
+    "CurrencyExchange": {
+      "$ref": "OBCurrencyExchange.json"
+    },
+    "BankTransactionCode": {
+      "$ref": "OBBankTransactionCodeStructure.json"
+    },
+    "ProprietaryBankTransactionCode": {
+      "$ref": "ProprietaryBankTransactionCodeStructure.json"
+    },
+    "CardInstrument": {
+      "$ref": "OBTransactionCardInstrument.json"
+    },
+    "SupplementaryData": {
+      "$ref": "OBSupplementaryData.json"
+    }
+  },
+  "description": "Provides further details on an entry in the report.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "string",
+  "description": "Statement type, in a coded form.",
+  "enum": [
+    "AccountClosure",
+    "AccountOpening",
+    "Annual",
+    "Interim",
+    "RegularPeriodic"
+  ],
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

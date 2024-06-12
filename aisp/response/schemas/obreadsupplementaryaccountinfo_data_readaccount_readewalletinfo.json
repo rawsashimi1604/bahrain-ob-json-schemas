@@ -1,0 +1,25 @@
+{
+  "required": [
+    "Charge",
+    "ChargeFrequency"
+  ],
+  "type": "object",
+  "properties": {
+    "Charge": {
+      "type": "string"
+    },
+    "ChargeFrequency": {
+      "type": "string",
+      "description": "How frequently the fee is applied to the Account.",
+      "x-namespaced-enum": [
+        "BH.OBF.Annually",
+        "BH.OBF.Quarterly",
+        "BH.OBF.StatementMonthly",
+        "BH.OBF.Weekly",
+        "BH.OBF.Daily"
+      ]
+    }
+  },
+  "description": "EWallet information",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

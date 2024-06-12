@@ -1,0 +1,18 @@
+{
+  "required": [
+    "Data"
+  ],
+  "type": "object",
+  "properties": {
+    "Data": {
+      "$ref": "OBReadFutureDatedPayment_Data.json"
+    },
+    "Links": {
+      "$ref": "Links.json"
+    },
+    "Meta": {
+      "$ref": "Meta.json"
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

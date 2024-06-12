@@ -1,0 +1,30 @@
+{
+  "required": [
+    "BeneficiaryType"
+  ],
+  "type": "object",
+  "properties": {
+    "AccountId": {
+      "$ref": "AccountId.json"
+    },
+    "BeneficiaryId": {
+      "$ref": "BeneficiaryId.json"
+    },
+    "BeneficiaryType": {
+      "$ref": "OBBeneficiaryTypeCode.json"
+    },
+    "Reference": {
+      "$ref": "Reference.json"
+    },
+    "SupplementaryData": {
+      "$ref": "OBSupplementaryData.json"
+    },
+    "CreditorAgent": {
+      "$ref": "OBBranchAndFinancialInstitutionIdentificationCreditorAgent.json"
+    },
+    "CreditorAccount": {
+      "$ref": "OBCashAccount.json"
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

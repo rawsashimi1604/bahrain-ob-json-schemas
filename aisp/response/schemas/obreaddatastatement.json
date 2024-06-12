@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "Statement": {
+      "type": "array",
+      "items": {
+        "$ref": "OBStatement.json"
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

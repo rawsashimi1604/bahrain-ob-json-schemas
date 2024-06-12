@@ -1,0 +1,29 @@
+{
+  "required": [
+    "ProductDetails"
+  ],
+  "type": "object",
+  "properties": {
+    "ProductDetails": {
+      "$ref": "OBReadSharingProductDetails_Data_ProductDetails.json"
+    },
+    "Features": {
+      "$ref": "OBReadSharingProductDetails_Data_Features_3.json"
+    },
+    "Eligibility": {
+      "$ref": "OBReadSharingProductDetails_Data_Eligibility_3.json"
+    },
+    "Benefits": {
+      "$ref": "OBReadSharingProductDetails_Data_Benefits_3.json"
+    },
+    "TermsAndConditions": {
+      "$ref": "OBReadSharingProductDetails_Data_TermsAndConditions.json"
+    },
+    "SupplementaryData": {
+      "$ref": "OBSupplementaryData.json"
+    }
+  },
+  "description": "'List of Investment products'",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

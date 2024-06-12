@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": [
+    "Amount",
+    "Currency"
+  ],
+  "description": "Transaction charges to be paid by the charge bearer.",
+  "properties": {
+    "Amount": {
+      "$ref": "OBActiveCurrencyAndAmount.json"
+    },
+    "Currency": {
+      "$ref": "ActiveOrHistoricCurrencyCode.json"
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

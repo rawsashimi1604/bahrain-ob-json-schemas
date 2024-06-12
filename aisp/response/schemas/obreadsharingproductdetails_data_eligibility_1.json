@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "properties": {
+    "DocumentsRequired": {
+      "type": "string",
+      "description": "List of documents required for getting a loan"
+    },
+    "Age": {
+      "type": "number",
+      "description": "Age of the loan applicant"
+    },
+    "EmploymentStatus": {
+      "type": "string",
+      "description": "Employment status of the loan applicant"
+    },
+    "Income": {
+      "type": "string",
+      "description": "Income of the loan applicant"
+    },
+    "CreditScore": {
+      "type": "string",
+      "description": "Credit score of the loan applicant"
+    },
+    "Collateral": {
+      "type": "string",
+      "description": "list of collateral accepted against loan if applicable"
+    }
+  },
+  "description": "'This covers nationality, age, employment status, income and credit score'                   ",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

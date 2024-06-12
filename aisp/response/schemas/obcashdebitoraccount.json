@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "SchemeName": {
+      "$ref": "OBExternalAccountIdentificationCode.json"
+    },
+    "Identification": {
+      "$ref": "Identification.json"
+    },
+    "Name": {
+      "$ref": "Name.json"
+    }
+  },
+  "description": "Unambiguous identification of the account of the debtor, in the case of a crebit transaction.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

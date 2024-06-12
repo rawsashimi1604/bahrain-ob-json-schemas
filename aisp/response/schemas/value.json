@@ -1,0 +1,7 @@
+{
+  "maxLength": 40,
+  "minLength": 1,
+  "type": "string",
+  "description": "Value associated with the statement value type.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

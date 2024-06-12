@@ -1,0 +1,14 @@
+{
+  "required": [
+    "Branch"
+  ],
+  "type": "object",
+  "properties": {
+    "Branch": {
+      "$ref": "OBReadSharingProductDetails_Data_Branch.json"
+    }
+  },
+  "description": "'Environment of the Branch'",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

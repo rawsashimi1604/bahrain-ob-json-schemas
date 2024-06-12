@@ -1,0 +1,51 @@
+{
+  "required": [
+    "PartyId"
+  ],
+  "type": "object",
+  "properties": {
+    "PartyId": {
+      "$ref": "PartyId.json"
+    },
+    "PartyNumber": {
+      "$ref": "PartyNumber.json"
+    },
+    "PartyType": {
+      "$ref": "OBExternalPartyTypeCode.json"
+    },
+    "Name": {
+      "$ref": "NameParty.json"
+    },
+    "FullLegalName": {
+      "$ref": "FullLegalName.json"
+    },
+    "LegalStructure": {
+      "$ref": "OBExternalLegalStructureTypeCode.json"
+    },
+    "BeneficialOwnership": {
+      "type": "boolean"
+    },
+    "AccountRole": {
+      "$ref": "OBExternalAccountRoleCode.json"
+    },
+    "EmailAddress": {
+      "$ref": "EmailAddress.json"
+    },
+    "Phone": {
+      "$ref": "PhoneNumber.json"
+    },
+    "Mobile": {
+      "$ref": "MobileNumber.json"
+    },
+    "Relationships": {
+      "$ref": "OBPartyRelationships.json"
+    },
+    "Address": {
+      "type": "array",
+      "items": {
+        "$ref": "OBPartyDetail_Address.json"
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

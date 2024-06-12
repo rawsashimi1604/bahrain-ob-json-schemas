@@ -1,0 +1,19 @@
+{
+  "type": "string",
+  "description": "Legal standing of the party.",
+  "x-namespaced-enum": [
+    "BH.OBF.CIC",
+    "BH.OBF.CIO",
+    "BH.OBF.Charity",
+    "BH.OBF.CoOp",
+    "BH.OBF.GeneralPartnership",
+    "BH.OBF.Individual",
+    "BH.OBF.LimitedLiabilityPartnership",
+    "BH.OBF.LimitedPartnership",
+    "BH.OBF.PrivateLimitedCompany",
+    "BH.OBF.PublicLimitedCompany",
+    "BH.OBF.ScottishLimitedPartnership",
+    "BH.OBF.Sole"
+  ],
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

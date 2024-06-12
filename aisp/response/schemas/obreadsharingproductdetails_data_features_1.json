@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "properties": {
+    "Currency": {
+      "type": "string",
+      "description": "Payment and transaction currency as applicable on the selected loan type"
+    },
+    "InitialDeposit": {
+      "type": "string",
+      "description": "Initial amount payable by the customer in XYZD excluding taxes"
+    },
+    "HandlingFees/Supplementary": {
+      "type": "string",
+      "description": "Loan handling fees applicable for products in XYZD excluding taxes"
+    },
+    "MinTenure": {
+      "type": "string",
+      "description": "Minimum duration of loan period in months"
+    },
+    "MaxTenure": {
+      "type": "string",
+      "description": "Maximum duration of loan period in months"
+    },
+    "InterestRates": {
+      "type": "string",
+      "description": "Interest payable on repayment of the loan amount"
+    }
+  },
+  "description": "'List of product features'                   ",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

@@ -1,0 +1,37 @@
+{
+  "required": [
+    "ContactContent",
+    "ContactDescription",
+    "ContactType"
+  ],
+  "type": "object",
+  "properties": {
+    "ContactType": {
+      "type": "string",
+      "description": "Contact type such Phone, Fax and email",
+      "enum": [
+        "AlternateEmail",
+        "AlternateFax",
+        "AlternatePhone",
+        "Email",
+        "Fax",
+        "Other",
+        "Phone"
+      ]
+    },
+    "ContactContent": {
+      "type": "string",
+      "description": "Collection of information that identifies a phone/Fax number/ email, as defined by telecom services."
+    },
+    "ContactDescription": {
+      "type": "string",
+      "description": "Description of contact such as main phone number, alternate phone number, Fax number, alternate fax number, email and alternate email"
+    },
+    "OtherContactType": {
+      "$ref": "OBReadSharingProductDetails_Data_Branch_ContactInfo_OtherContactType.json"
+    }
+  },
+  "description": "Communication device number or electronic address used for communication.",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

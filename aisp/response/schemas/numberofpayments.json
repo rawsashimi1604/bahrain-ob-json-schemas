@@ -1,0 +1,7 @@
+{
+  "maxLength": 35,
+  "minLength": 1,
+  "type": "string",
+  "description": "Number of the payments that will be made in completing this frequency sequence including any executed since the sequence start date.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

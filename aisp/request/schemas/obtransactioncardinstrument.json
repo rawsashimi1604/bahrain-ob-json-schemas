@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "required": [
+    "CardSchemeName"
+  ],
+  "description": "Set of elements to describe the card instrument used in the transaction.",
+  "properties": {
+    "CardSchemeName": {
+      "description": "Name of the card scheme.",
+      "type": "string",
+      "enum": [
+        "AmericanExpress",
+        "Diners",
+        "Discover",
+        "MasterCard",
+        "VISA"
+      ]
+    },
+    "AuthorisationType": {
+      "description": "The card authorisation type.",
+      "type": "string",
+      "enum": [
+        "ConsumerDevice",
+        "Contactless",
+        "None",
+        "PIN"
+      ]
+    },
+    "Name": {
+      "description": "Name of the cardholder using the card instrument.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 70
+    },
+    "Identification": {
+      "description": "Identification assigned by an institution to identify the card instrument used in the transaction. This identification is known by the account owner, and may be masked.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 34
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

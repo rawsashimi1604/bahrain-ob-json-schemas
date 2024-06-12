@@ -1,0 +1,86 @@
+{
+  "required": [
+    "AccountId",
+    "CreationDateTime",
+    "EndDateTime",
+    "StartDateTime",
+    "Type"
+  ],
+  "type": "object",
+  "properties": {
+    "AccountId": {
+      "$ref": "AccountId.json"
+    },
+    "StatementId": {
+      "$ref": "StatementId.json"
+    },
+    "StatementReference": {
+      "$ref": "StatementReference.json"
+    },
+    "Type": {
+      "$ref": "OBExternalStatementTypeCode.json"
+    },
+    "StartDateTime": {
+      "$ref": "StartDateTime.json"
+    },
+    "EndDateTime": {
+      "$ref": "EndDateTime.json"
+    },
+    "CreationDateTime": {
+      "$ref": "CreationDateTime.json"
+    },
+    "StatementDescription": {
+      "type": "array",
+      "items": {
+        "maxLength": 500,
+        "minLength": 1,
+        "type": "string",
+        "description": "Other descriptions that may be available for the statement resource."
+      }
+    },
+    "StatementBenefit": {
+      "type": "array",
+      "items": {
+        "$ref": "OBStatementBasic_StatementBenefit.json"
+      }
+    },
+    "StatementFee": {
+      "type": "array",
+      "items": {
+        "$ref": "OBStatementBasic_StatementFee.json"
+      }
+    },
+    "StatementInterest": {
+      "type": "array",
+      "items": {
+        "$ref": "OBStatementDetail_StatementInterest.json"
+      }
+    },
+    "StatementAmount": {
+      "type": "array",
+      "items": {
+        "$ref": "OBStatementDetail_StatementAmount.json"
+      }
+    },
+    "StatementDateTime": {
+      "type": "array",
+      "items": {
+        "$ref": "OBStatementBasic_StatementDateTime.json"
+      }
+    },
+    "StatementRate": {
+      "type": "array",
+      "items": {
+        "$ref": "OBStatementBasic_StatementRate.json"
+      }
+    },
+    "StatementValue": {
+      "type": "array",
+      "items": {
+        "$ref": "OBStatementBasic_StatementValue.json"
+      }
+    }
+  },
+  "description": "Provides further details on a statement resource.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

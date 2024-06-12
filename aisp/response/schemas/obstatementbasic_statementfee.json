@@ -1,0 +1,33 @@
+{
+  "required": [
+    "Amount",
+    "CreditDebitIndicator",
+    "Type"
+  ],
+  "type": "object",
+  "properties": {
+    "Description": {
+      "$ref": "DescriptionStatement.json"
+    },
+    "CreditDebitIndicator": {
+      "$ref": "OBCreditDebitCodeAmount.json"
+    },
+    "Type": {
+      "$ref": "OBExternalStatementFeeTypeCode.json"
+    },
+    "Rate": {
+      "$ref": "OBRate.json"
+    },
+    "RateType": {
+      "$ref": "OBExternalStatementFeeRateTypeCode.json"
+    },
+    "Frequency": {
+      "$ref": "OBExternalStatementFeeFrequencyCode.json"
+    },
+    "Amount": {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountStatementFeeType.json"
+    }
+  },
+  "description": "Set of elements used to provide details of a fee for the statement resource.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

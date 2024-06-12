@@ -1,0 +1,15 @@
+{
+  "description": "Specifies the sub type of account (product family group).",
+  "type": "string",
+  "enum": [
+    "ChargeCard",
+    "CreditCard",
+    "CurrentAccount",
+    "EMoney",
+    "Loan",
+    "Mortgage",
+    "PrePaidCard",
+    "Savings"
+  ],
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "string",
+  "description": "Specifies the future dated payment date type requested",
+  "enum": [
+    "Arrival",
+    "Execution"
+  ],
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

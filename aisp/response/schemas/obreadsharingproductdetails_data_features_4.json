@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "properties": {
+    "Currency": {
+      "type": "string",
+      "description": "Payment and transaction currency as applicable on the selected service type"
+    },
+    "MinFundTransfer": {
+      "type": "string",
+      "description": "Minimum fund transfer applicable for the type of service selected in XYZD"
+    },
+    "HandlingFees/Supplementary": {
+      "type": "string",
+      "description": "Account handling fees applicable for products in XYZD excluding taxes per annum"
+    },
+    "TypesOfFundTransfer": {
+      "type": "string",
+      "description": "This covers different type of fund transfer that banks offer to the customers"
+    }
+  },
+  "description": "'List of product features'                   ",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

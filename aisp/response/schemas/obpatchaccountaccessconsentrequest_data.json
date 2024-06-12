@@ -1,0 +1,16 @@
+{
+  "required": [
+    "Status"
+  ],
+  "type": "object",
+  "properties": {
+    "Status": {
+      "type": "string",
+      "description": "Specifies the status of consent resource in code form.",
+      "enum": [
+        "Revoked"
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

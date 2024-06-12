@@ -1,0 +1,17 @@
+{
+  "required": [
+    "Type",
+    "Value"
+  ],
+  "type": "object",
+  "properties": {
+    "Value": {
+      "$ref": "Value.json"
+    },
+    "Type": {
+      "$ref": "OBExternalStatementValueTypeCode.json"
+    }
+  },
+  "description": "Set of elements used to provide details of a generic number value related to the statement resource.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

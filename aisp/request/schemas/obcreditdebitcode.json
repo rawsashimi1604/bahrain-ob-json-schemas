@@ -1,0 +1,9 @@
+{
+  "description": "Indicates whether the balance is a credit or a debit balance. \nUsage: A zero balance is considered to be a credit balance.",
+  "type": "string",
+  "enum": [
+    "Credit",
+    "Debit"
+  ],
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

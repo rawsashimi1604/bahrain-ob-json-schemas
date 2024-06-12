@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {
+    "tnc-title": {
+      "type": "string",
+      "description": "Terms and conditions title"
+    },
+    "tnc-summary": {
+      "type": "string",
+      "description": "Any material conditions and specific features such as salary transfer, minimum equity for mortgage facility, loan to value ratio etc."
+    },
+    "tnc-url": {
+      "type": "string",
+      "description": "Terms and conditions URL"
+    }
+  },
+  "description": "'This includes a summary of the terms and conditions such as hidden charges, compliance requirements and other bank specific requirements'                   ",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

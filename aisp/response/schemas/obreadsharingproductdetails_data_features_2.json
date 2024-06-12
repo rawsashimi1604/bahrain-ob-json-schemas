@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "Currency": {
+      "type": "string",
+      "description": "Payment and transaction currency as applicable on the selected CASA type"
+    },
+    "MinBalanceMaintenance": {
+      "type": "string",
+      "description": "Minimum balance to be maintained by the account holder in XYZD"
+    },
+    "HandlingFees/Supplementary": {
+      "type": "string",
+      "description": "Account handling fees applicable for products in XYZD excluding taxes per annum"
+    },
+    "OverdraftLimit": {
+      "type": "string",
+      "description": "Limit offered by banks for the customer based on turnover and spending levels in XYZD per month"
+    },
+    "InterestRates": {
+      "type": "string",
+      "description": "Interest payable on repayment of the loan amount"
+    },
+    "DepositRate": {
+      "type": "string",
+      "description": "Interest rate applicable for deposits only"
+    },
+    "MinDepositAmount": {
+      "type": "string",
+      "description": "Minimum one time deposit amount in XYZD"
+    }
+  },
+  "description": "'List of product features'                   ",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "DocumentsRequired": {
+      "type": "string",
+      "description": "List of documents required for getting a credit card"
+    },
+    "Age": {
+      "type": "number",
+      "description": "Age"
+    },
+    "EmploymentStatus": {
+      "type": "string",
+      "description": "Employment status"
+    },
+    "Income": {
+      "type": "string",
+      "description": "Income"
+    },
+    "CreditScore": {
+      "type": "string",
+      "description": "Credit score"
+    }
+  },
+  "description": "'This covers nationality, age, employment status, income and credit score'                   ",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

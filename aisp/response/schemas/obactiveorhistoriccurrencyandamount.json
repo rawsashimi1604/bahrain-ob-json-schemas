@@ -1,0 +1,17 @@
+{
+  "required": [
+    "Amount",
+    "Currency"
+  ],
+  "type": "object",
+  "properties": {
+    "Amount": {
+      "$ref": "OBActiveCurrencyAndAmount.json"
+    },
+    "Currency": {
+      "$ref": "ActiveOrHistoricCurrencyCode.json"
+    }
+  },
+  "description": "The amount of the most recent direct debit collection.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

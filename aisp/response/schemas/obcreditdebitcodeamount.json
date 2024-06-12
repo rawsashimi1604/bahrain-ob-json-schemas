@@ -1,0 +1,9 @@
+{
+  "type": "string",
+  "description": "Indicates whether the amount is a credit or a debit. \nUsage: A zero amount is considered to be a credit amount.",
+  "enum": [
+    "Credit",
+    "Debit"
+  ],
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "required": [
+    "Data"
+  ],
+  "properties": {
+    "Data": {
+      "type": "object",
+      "properties": {
+        "Account": {
+          "type": "array",
+          "items": {
+            "$ref": "OBAccount.json"
+          }
+        }
+      }
+    },
+    "Links": {
+      "$ref": "Links.json"
+    },
+    "Meta": {
+      "$ref": "Meta.json"
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

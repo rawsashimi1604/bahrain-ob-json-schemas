@@ -1,0 +1,12 @@
+{
+  "type": "string",
+  "description": "Interest amount type, in a coded form.",
+  "x-namespaced-enum": [
+    "BH.OBF.BalanceTransfer",
+    "BH.OBF.Cash",
+    "BH.OBF.EstimatedNext",
+    "BH.OBF.Purchase",
+    "BH.OBF.Total"
+  ],
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

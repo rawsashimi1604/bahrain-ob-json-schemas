@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "SchemeName": {
+      "$ref": "OBExternalFinancialInstitutionIdentificationCode.json"
+    },
+    "Identification": {
+      "$ref": "IdentificationFinancialInstitution.json"
+    },
+    "Name": {
+      "$ref": "NameAgent.json"
+    },
+    "PostalAddress": {
+      "$ref": "OBPostalAddress.json"
+    }
+  },
+  "description": "Financial institution servicing an account for the debtor.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

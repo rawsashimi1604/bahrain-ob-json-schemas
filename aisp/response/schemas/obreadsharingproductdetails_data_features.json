@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "Currency": {
+      "type": "string",
+      "description": "Payment and transaction currency as applicable on the selected card"
+    },
+    "OnetimeFee": {
+      "type": "number",
+      "description": "First time membership or fee in XYZD payable on getting a card"
+    },
+    "AnnualFeeAndCharges": {
+      "type": "number",
+      "description": "Recurring fees and charges in XYZD payable periodically"
+    },
+    "FeeWaiver": {
+      "type": "string",
+      "description": "This includes the conditions for fee waiver if any applicable on the selected card"
+    },
+    "AddOnCards": {
+      "type": "string",
+      "description": "This includes the conditions and limit for add on cards where a card holder can apply for add-on cards for his/her family under the same account"
+    },
+    "CardLimit": {
+      "type": "string",
+      "description": "Transaction limit offered by banks for the customer. This also includes the limits for sub transaction such as ATM withdrawal limit, merchant transaction limit, etc."
+    },
+    "InterestRates": {
+      "type": "string",
+      "description": "Interest rate payable on repayment post due date"
+    }
+  },
+  "description": "'List of product features'                   ",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

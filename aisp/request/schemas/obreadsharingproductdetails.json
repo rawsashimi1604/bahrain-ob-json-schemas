@@ -1,0 +1,1285 @@
+{
+  "type": "object",
+  "required": [
+    "Data"
+  ],
+  "description": "Returns a collection of Sharing Product details.",
+  "properties": {
+    "Data": {
+      "type": "object",
+      "description": "Aligning with the read write specs structure.",
+      "properties": {
+        "CreditCards": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "'List of Credit card products'",
+            "required": [
+              "ProductDetails"
+            ],
+            "properties": {
+              "ProductDetails": {
+                "type": "object",
+                "description": "Product details associated with the all product categories.",
+                "required": [
+                  "CategoryName",
+                  "CategoryCode",
+                  "ProductDescription",
+                  "ProductCode",
+                  "SubProductCode",
+                  "Segment"
+                ],
+                "properties": {
+                  "CategoryName": {
+                    "description": "Producty category name used by ASPSPs",
+                    "type": "string"
+                  },
+                  "CategoryCode": {
+                    "description": "Product category code used by ASPSPs",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "ProductDescription": {
+                    "description": "A brief description of the product",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 350
+                  },
+                  "ProductCode": {
+                    "description": "Product Code for Banks operational purpose",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "SubProductCode": {
+                    "description": "Sub-Product Code for Banks operational purpose",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "ProductURL": {
+                    "description": "Product URL",
+                    "type": "string"
+                  },
+                  "Segment": {
+                    "description": "Product segment such as lifestyle, travel, reward points, etc.",
+                    "type": "string"
+                  }
+                }
+              },
+              "Features": {
+                "type": "object",
+                "description": "'List of product features'                   ",
+                "properties": {
+                  "Currency": {
+                    "description": "Payment and transaction currency as applicable on the selected card",
+                    "type": "string"
+                  },
+                  "OnetimeFee": {
+                    "description": "First time membership or fee in XYZD payable on getting a card",
+                    "type": "number"
+                  },
+                  "AnnualFeeAndCharges": {
+                    "description": "Recurring fees and charges in XYZD payable periodically",
+                    "type": "number"
+                  },
+                  "FeeWaiver": {
+                    "description": "This includes the conditions for fee waiver if any applicable on the selected card",
+                    "type": "string"
+                  },
+                  "AddOnCards": {
+                    "description": "This includes the conditions and limit for add on cards where a card holder can apply for add-on cards for his/her family under the same account",
+                    "type": "string"
+                  },
+                  "CardLimit": {
+                    "description": "Transaction limit offered by banks for the customer. This also includes the limits for sub transaction such as ATM withdrawal limit, merchant transaction limit, etc.",
+                    "type": "string"
+                  },
+                  "InterestRates": {
+                    "description": "Interest rate payable on repayment post due date",
+                    "type": "string"
+                  }
+                }
+              },
+              "Eligibility": {
+                "type": "object",
+                "description": "'This covers nationality, age, employment status, income and credit score'                   ",
+                "properties": {
+                  "DocumentsRequired": {
+                    "description": "List of documents required for getting a credit card",
+                    "type": "string"
+                  },
+                  "Age": {
+                    "description": "Age",
+                    "type": "number"
+                  },
+                  "EmploymentStatus": {
+                    "description": "Employment status",
+                    "type": "string"
+                  },
+                  "Income": {
+                    "description": "Income",
+                    "type": "string"
+                  },
+                  "CreditScore": {
+                    "description": "Credit score",
+                    "type": "string"
+                  }
+                }
+              },
+              "Benefits": {
+                "type": "object",
+                "description": "'List of Benefits offered by this product'                   ",
+                "properties": {
+                  "OffersOnTheCard": {
+                    "description": "Some cards have great offers and discounts if used with a particular vendor, website or company. Also banks have tie ups with offices, educational institutions etc. and offer them special rates",
+                    "type": "string"
+                  },
+                  "RewardType": {
+                    "description": "Some cards are specifically made to suit customers spending habits. For e.g. travel, aviation, lifestyle, shopping, cashback etc.",
+                    "type": "string"
+                  },
+                  "RewardsProgram": {
+                    "description": "Rewards program offered by Banks including cashback and redeemable options. Fuel charge waivers and airport lounge access will also be covered here",
+                    "type": "string"
+                  },
+                  "JoiningGiftsOrBonus": {
+                    "description": "To get customers to apply for their card, banks offer welcome gifts and bonuses. This could be some latest gadget or bonus points and miles.",
+                    "type": "string"
+                  },
+                  "OtherBenefits": {
+                    "description": "Additional benefits if any",
+                    "type": "string"
+                  }
+                }
+              },
+              "TermsAndConditions": {
+                "type": "object",
+                "description": "'This includes a summary of the terms and conditions such as hidden charges, compliance requirements and other bank specific requirements'                   ",
+                "properties": {
+                  "tnc-title": {
+                    "description": "Terms and conditions title",
+                    "type": "string"
+                  },
+                  "tnc-summary": {
+                    "description": "Terms and conditions summary",
+                    "type": "string"
+                  },
+                  "tnc-url": {
+                    "description": "Terms and conditions URL",
+                    "type": "string"
+                  }
+                }
+              },
+              "SupplementaryData": {
+                "$ref": "OBSupplementaryData.json"
+              }
+            }
+          }
+        },
+        "Loans": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "'List of Loans products'",
+            "required": [
+              "ProductDetails"
+            ],
+            "properties": {
+              "ProductDetails": {
+                "type": "object",
+                "description": "Product details associated with the all product categories.",
+                "required": [
+                  "CategoryName",
+                  "CategoryCode",
+                  "ProductDescription",
+                  "ProductCode",
+                  "SubProductCode",
+                  "Segment"
+                ],
+                "properties": {
+                  "CategoryName": {
+                    "description": "Producty category name used by ASPSPs",
+                    "type": "string"
+                  },
+                  "CategoryCode": {
+                    "description": "Product category code used by ASPSPs",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "ProductDescription": {
+                    "description": "A brief description of the product",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 350
+                  },
+                  "ProductCode": {
+                    "description": "Product Code for Banks operational purpose",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "SubProductCode": {
+                    "description": "Sub-Product Code for Banks operational purpose",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "ProductURL": {
+                    "description": "Product URL",
+                    "type": "string"
+                  },
+                  "Segment": {
+                    "description": "Product segment such as lifestyle, travel, reward points, etc.",
+                    "type": "string"
+                  }
+                }
+              },
+              "Features": {
+                "type": "object",
+                "description": "'List of product features'                   ",
+                "properties": {
+                  "Currency": {
+                    "description": "Payment and transaction currency as applicable on the selected loan type",
+                    "type": "string"
+                  },
+                  "InitialDeposit": {
+                    "description": "Initial amount payable by the customer in XYZD excluding taxes",
+                    "type": "string"
+                  },
+                  "HandlingFees/Supplementary": {
+                    "description": "Loan handling fees applicable for products in XYZD excluding taxes",
+                    "type": "string"
+                  },
+                  "MinTenure": {
+                    "description": "Minimum duration of loan period in months",
+                    "type": "string"
+                  },
+                  "MaxTenure": {
+                    "description": "Maximum duration of loan period in months",
+                    "type": "string"
+                  },
+                  "InterestRates": {
+                    "description": "Interest payable on repayment of the loan amount",
+                    "type": "string"
+                  }
+                }
+              },
+              "Eligibility": {
+                "type": "object",
+                "description": "'This covers nationality, age, employment status, income and credit score'                   ",
+                "properties": {
+                  "DocumentsRequired": {
+                    "description": "List of documents required for getting a loan",
+                    "type": "string"
+                  },
+                  "Age": {
+                    "description": "Age of the loan applicant",
+                    "type": "number"
+                  },
+                  "EmploymentStatus": {
+                    "description": "Employment status of the loan applicant",
+                    "type": "string"
+                  },
+                  "Income": {
+                    "description": "Income of the loan applicant",
+                    "type": "string"
+                  },
+                  "CreditScore": {
+                    "description": "Credit score of the loan applicant",
+                    "type": "string"
+                  },
+                  "Collateral": {
+                    "description": "list of collateral accepted against loan if applicable",
+                    "type": "string"
+                  }
+                }
+              },
+              "Benefits": {
+                "type": "object",
+                "description": "'List of Benefits offered by this product'                   ",
+                "properties": {
+                  "BonusPack": {
+                    "description": "Free Priority/ Premium/ Easy Banking plan with credit card, 360\u00b0 reward and welcome offers",
+                    "type": "string"
+                  },
+                  "FreeMortgageValueAssessment": {
+                    "description": "Free assessment of the value of the mortgage",
+                    "type": "string"
+                  },
+                  "AutoPaySetup": {
+                    "description": "One stop pay",
+                    "type": "string"
+                  },
+                  "E-cheque": {
+                    "description": "option of e cheque clearance",
+                    "type": "string"
+                  },
+                  "EarlyEMIPaymentOptions": {
+                    "description": "Benefit of early payment options",
+                    "type": "string"
+                  },
+                  "OtherBenefits": {
+                    "description": "Additional benefits if any",
+                    "type": "string"
+                  }
+                }
+              },
+              "TermsAndConditions": {
+                "type": "object",
+                "description": "'This includes a summary of the terms and conditions such as hidden charges, compliance requirements and other bank specific requirements'                   ",
+                "properties": {
+                  "tnc-title": {
+                    "description": "Terms and conditions title",
+                    "type": "string"
+                  },
+                  "tnc-summary": {
+                    "description": "Any material conditions and specific features such as salary transfer, minimum equity for mortgage facility, loan to value ratio etc.",
+                    "type": "string"
+                  },
+                  "tnc-url": {
+                    "description": "Terms and conditions URL",
+                    "type": "string"
+                  }
+                }
+              },
+              "SupplementaryData": {
+                "$ref": "OBSupplementaryData.json"
+              }
+            }
+          }
+        },
+        "CASA": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "'List of CASA products'",
+            "required": [
+              "ProductDetails"
+            ],
+            "properties": {
+              "ProductDetails": {
+                "type": "object",
+                "description": "Product details associated with the all product categories.",
+                "required": [
+                  "CategoryName",
+                  "CategoryCode",
+                  "ProductDescription",
+                  "ProductCode",
+                  "SubProductCode",
+                  "Segment"
+                ],
+                "properties": {
+                  "CategoryName": {
+                    "description": "Producty category name used by ASPSPs",
+                    "type": "string"
+                  },
+                  "CategoryCode": {
+                    "description": "Product category code used by ASPSPs",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "ProductDescription": {
+                    "description": "A brief description of the product",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 350
+                  },
+                  "ProductCode": {
+                    "description": "Product Code for Banks operational purpose",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "SubProductCode": {
+                    "description": "Sub-Product Code for Banks operational purpose",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "ProductURL": {
+                    "description": "Product URL",
+                    "type": "string"
+                  },
+                  "Segment": {
+                    "description": "Product segment such as lifestyle, travel, reward points, etc.",
+                    "type": "string"
+                  }
+                }
+              },
+              "Features": {
+                "type": "object",
+                "description": "'List of product features'                   ",
+                "properties": {
+                  "Currency": {
+                    "description": "Payment and transaction currency as applicable on the selected CASA type",
+                    "type": "string"
+                  },
+                  "MinBalanceMaintenance": {
+                    "description": "Minimum balance to be maintained by the account holder in XYZD",
+                    "type": "string"
+                  },
+                  "HandlingFees/Supplementary": {
+                    "description": "Account handling fees applicable for products in XYZD excluding taxes per annum",
+                    "type": "string"
+                  },
+                  "OverdraftLimit": {
+                    "description": "Limit offered by banks for the customer based on turnover and spending levels in XYZD per month",
+                    "type": "string"
+                  },
+                  "InterestRates": {
+                    "description": "Interest payable on repayment of the loan amount",
+                    "type": "string"
+                  },
+                  "DepositRate": {
+                    "description": "Interest rate applicable for deposits only",
+                    "type": "string"
+                  },
+                  "MinDepositAmount": {
+                    "description": "Minimum one time deposit amount in XYZD",
+                    "type": "string"
+                  }
+                }
+              },
+              "Eligibility": {
+                "type": "object",
+                "description": "'This covers nationality, age, employment status, income and credit score'                   ",
+                "properties": {
+                  "DocumentsRequired": {
+                    "description": "List of documents required for opening a current account",
+                    "type": "string"
+                  },
+                  "Age": {
+                    "description": "Age of the applicant",
+                    "type": "number"
+                  },
+                  "EmploymentStatus": {
+                    "description": "Employment status of the applicant",
+                    "type": "string"
+                  },
+                  "Income": {
+                    "description": "Income of the applicant",
+                    "type": "string"
+                  },
+                  "CreditScore": {
+                    "description": "Credit score of the applicant",
+                    "type": "string"
+                  }
+                }
+              },
+              "Benefits": {
+                "type": "object",
+                "description": "'List of Benefits offered by this product'                   ",
+                "properties": {
+                  "RelationshipManager": {
+                    "description": "This covers the benefits of availing RM under few conditions",
+                    "type": "string"
+                  },
+                  "ODprotection": {
+                    "description": "Enjoy Current Account Overdraft Protection for clearing cheques",
+                    "type": "string"
+                  },
+                  "MinBalance": {
+                    "description": "This describes the minimum balance required to keep the account active",
+                    "type": "string"
+                  },
+                  "AutoPaySetup": {
+                    "description": "One stop pay",
+                    "type": "string"
+                  },
+                  "MultipleDebitCards": {
+                    "description": "This includes details of add on debit cards where a account holder can apply for add-on cards for his/her employees under the same account",
+                    "type": "string"
+                  },
+                  "E-cheque": {
+                    "description": "Option of e cheque clearance",
+                    "type": "string"
+                  },
+                  "OtherBenefits": {
+                    "description": "Additional benefits if any",
+                    "type": "string"
+                  }
+                }
+              },
+              "TermsAndConditions": {
+                "type": "object",
+                "description": "'This includes a summary of the terms and conditions such as hidden charges, compliance requirements and other bank specific requirements'                   ",
+                "properties": {
+                  "tnc-title": {
+                    "description": "Terms and conditions title",
+                    "type": "string"
+                  },
+                  "tnc-summary": {
+                    "description": "Terms and conditions summary",
+                    "type": "string"
+                  },
+                  "tnc-url": {
+                    "description": "Terms and conditions URL",
+                    "type": "string"
+                  }
+                }
+              },
+              "SupplementaryData": {
+                "$ref": "OBSupplementaryData.json"
+              }
+            }
+          }
+        },
+        "Investment": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "'List of Investment products'",
+            "required": [
+              "ProductDetails"
+            ],
+            "properties": {
+              "ProductDetails": {
+                "type": "object",
+                "description": "Product details associated with the all product categories.",
+                "required": [
+                  "CategoryName",
+                  "CategoryCode",
+                  "ProductDescription",
+                  "ProductCode",
+                  "SubProductCode",
+                  "Segment"
+                ],
+                "properties": {
+                  "CategoryName": {
+                    "description": "Producty category name used by ASPSPs",
+                    "type": "string"
+                  },
+                  "CategoryCode": {
+                    "description": "Product category code used by ASPSPs",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "ProductDescription": {
+                    "description": "A brief description of the product",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 350
+                  },
+                  "ProductCode": {
+                    "description": "Product Code for Banks operational purpose",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "SubProductCode": {
+                    "description": "Sub-Product Code for Banks operational purpose",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "ProductURL": {
+                    "description": "Product URL",
+                    "type": "string"
+                  },
+                  "Segment": {
+                    "description": "Product segment such as lifestyle, travel, reward points, etc.",
+                    "type": "string"
+                  }
+                }
+              },
+              "Features": {
+                "type": "object",
+                "description": "'List of product features'                   ",
+                "properties": {
+                  "Currency": {
+                    "description": "Payment and transaction currency as applicable on the selected Investment type",
+                    "type": "string"
+                  },
+                  "MinInvestmentRequirement": {
+                    "description": "Minimum investment required for opening the investment account in XYZD",
+                    "type": "string"
+                  },
+                  "HandlingFees/Supplementary": {
+                    "description": "Account handling fees applicable for products in XYZD excluding taxes per annum",
+                    "type": "string"
+                  },
+                  "AnnualFees": {
+                    "description": "Recurring fees and charges payable periodically in XYZD excluding of taxes",
+                    "type": "string"
+                  },
+                  "InvestmentTenure": {
+                    "description": "Duration of investment period in months",
+                    "type": "string"
+                  },
+                  "DepositRate": {
+                    "description": "Interest rate applicable for deposits only",
+                    "type": "string"
+                  },
+                  "HistoricInvestmentRate": {
+                    "description": "This covers the historic rates that are gained by the investors in the selected fund",
+                    "type": "string"
+                  }
+                }
+              },
+              "Eligibility": {
+                "type": "object",
+                "description": "'This covers nationality, age, employment status, income and credit score'                   ",
+                "properties": {
+                  "DocumentsRequired": {
+                    "description": "List of documents required",
+                    "type": "string"
+                  },
+                  "Age": {
+                    "description": "Age of the applicant",
+                    "type": "number"
+                  },
+                  "EmploymentStatus": {
+                    "description": "Employment status of the applicant",
+                    "type": "string"
+                  },
+                  "Income": {
+                    "description": "Income of the applicant",
+                    "type": "string"
+                  },
+                  "CreditScore": {
+                    "description": "Credit score of the applicant",
+                    "type": "string"
+                  }
+                }
+              },
+              "Benefits": {
+                "type": "object",
+                "description": "'List of Benefits offered by this product'                   ",
+                "properties": {
+                  "SIPOptions": {
+                    "description": "This covers the broader systematic investment plan option that a customer can opt for",
+                    "type": "string"
+                  },
+                  "QuickerInvestmentWithdrawal": {
+                    "description": "Customer can withdraw the investments within 24 hours of the request submitted",
+                    "type": "string"
+                  },
+                  "MinimumInvestment": {
+                    "description": "This describes the minimum annual investment required to keep the account active",
+                    "type": "string"
+                  },
+                  "AutoPaySetup": {
+                    "description": "One stop pay",
+                    "type": "string"
+                  },
+                  "OtherBenefits": {
+                    "description": "Additional benefits if any",
+                    "type": "string"
+                  }
+                }
+              },
+              "TermsAndConditions": {
+                "type": "object",
+                "description": "'This includes a summary of the terms and conditions such as hidden charges, compliance requirements and other bank specific requirements'                   ",
+                "properties": {
+                  "tnc-title": {
+                    "description": "Terms and conditions title",
+                    "type": "string"
+                  },
+                  "tnc-summary": {
+                    "description": "Terms and conditions summary",
+                    "type": "string"
+                  },
+                  "tnc-url": {
+                    "description": "Terms and conditions URL",
+                    "type": "string"
+                  }
+                }
+              },
+              "SupplementaryData": {
+                "$ref": "OBSupplementaryData.json"
+              }
+            }
+          }
+        },
+        "FundTransferServices": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "'List of Fund Transfer Services products'",
+            "required": [
+              "ProductDetails"
+            ],
+            "properties": {
+              "ProductDetails": {
+                "type": "object",
+                "description": "Product details associated with the all product categories.",
+                "required": [
+                  "CategoryName",
+                  "CategoryCode",
+                  "ProductDescription",
+                  "ProductCode",
+                  "SubProductCode",
+                  "Segment"
+                ],
+                "properties": {
+                  "CategoryName": {
+                    "description": "Producty category name used by ASPSPs",
+                    "type": "string"
+                  },
+                  "CategoryCode": {
+                    "description": "Product category code used by ASPSPs",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "ProductDescription": {
+                    "description": "A brief description of the product",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 350
+                  },
+                  "ProductCode": {
+                    "description": "Product Code for Banks operational purpose",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "SubProductCode": {
+                    "description": "Sub-Product Code for Banks operational purpose",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "ProductURL": {
+                    "description": "Product URL",
+                    "type": "string"
+                  },
+                  "Segment": {
+                    "description": "Product segment such as lifestyle, travel, reward points, etc.",
+                    "type": "string"
+                  }
+                }
+              },
+              "Features": {
+                "type": "object",
+                "description": "'List of product features'                   ",
+                "properties": {
+                  "Currency": {
+                    "description": "Payment and transaction currency as applicable on the selected service type",
+                    "type": "string"
+                  },
+                  "MinFundTransfer": {
+                    "description": "Minimum fund transfer applicable for the type of service selected in XYZD",
+                    "type": "string"
+                  },
+                  "HandlingFees/Supplementary": {
+                    "description": "Account handling fees applicable for products in XYZD excluding taxes per annum",
+                    "type": "string"
+                  },
+                  "TypesOfFundTransfer": {
+                    "description": "This covers different type of fund transfer that banks offer to the customers",
+                    "type": "string"
+                  }
+                }
+              },
+              "Eligibility": {
+                "type": "object",
+                "description": "'This covers nationality, age, employment status, income and credit score'                   ",
+                "properties": {
+                  "DocumentsRequired": {
+                    "description": "List of documents required",
+                    "type": "string"
+                  },
+                  "Age": {
+                    "description": "Age of the applicant",
+                    "type": "number"
+                  },
+                  "EmploymentStatus": {
+                    "description": "Employment status of the applicant",
+                    "type": "string"
+                  },
+                  "Income": {
+                    "description": "Income of the applicant",
+                    "type": "string"
+                  },
+                  "CreditScore": {
+                    "description": "Credit score of the applicant",
+                    "type": "string"
+                  }
+                }
+              },
+              "Benefits": {
+                "type": "object",
+                "description": "'List of Benefits offered by this product'                   ",
+                "properties": {
+                  "InternationalPayment": {
+                    "description": "International payment with other currency pay-outs",
+                    "type": "string"
+                  },
+                  "OtherBenefits": {
+                    "description": "Additional benefits if any",
+                    "type": "string"
+                  }
+                }
+              },
+              "TermsAndConditions": {
+                "type": "object",
+                "description": "'This includes a summary of the terms and conditions such as hidden charges, compliance requirements and other bank specific requirements'                   ",
+                "properties": {
+                  "tnc-title": {
+                    "description": "Terms and conditions title",
+                    "type": "string"
+                  },
+                  "tnc-summary": {
+                    "description": "Terms and conditions summary",
+                    "type": "string"
+                  },
+                  "tnc-url": {
+                    "description": "Terms and conditions URL",
+                    "type": "string"
+                  }
+                }
+              },
+              "SupplementaryData": {
+                "$ref": "OBSupplementaryData.json"
+              }
+            }
+          }
+        },
+        "OBATM": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "'List of ATM'",
+            "required": [
+              "ATM"
+            ],
+            "properties": {
+              "ATM": {
+                "type": "object",
+                "description": "Environment of the ATM.",
+                "properties": {
+                  "Identification": {
+                    "description": "Unique and unambiguous identification of a branch of a financial institution",
+                    "type": "string"
+                  },
+                  "ATMServices": {
+                    "description": "Describes the type of transaction available for a customer on an ATM.",
+                    "type": "string",
+                    "enum": [
+                      "Balance",
+                      "BillPayments",
+                      "CashDeposits",
+                      "CharityDonation",
+                      "ChequeDeposits",
+                      "CashWithdrawal",
+                      "EnvelopeDeposit",
+                      "FastCash",
+                      "MobileBankingRegistration",
+                      "MobilePaymentRegistration",
+                      "MobilePhoneTopUp",
+                      "OrderStatement",
+                      "Other",
+                      "PINActivation",
+                      "PINChange",
+                      "PINUnblock",
+                      "MiniStatement"
+                    ]
+                  },
+                  "Access24HoursIndicator": {
+                    "description": "Indicates that the ATM is available for use by customers 24 hours per day",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 350
+                  },
+                  "Accessibility": {
+                    "description": "Indicates Types of Accessibility",
+                    "type": "string",
+                    "enum": [
+                      "AudioCashMachine",
+                      "AutomaticDoors",
+                      "ExternalRamp",
+                      "InductionLoop",
+                      "InternalRamp",
+                      "LevelAccess",
+                      "LowerLevelCounter",
+                      "Other",
+                      "WheelchairAccess"
+                    ]
+                  },
+                  "SupportedLanguages": {
+                    "description": "Identification of the language name according to the ISO 639-1 codes. The type is validated by the list of values coded with two alphabetic characters, defined in the standard",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "SupportedCurrencies": {
+                    "description": "All ISO 4217 defined currency  supported by the ATM",
+                    "type": "string"
+                  },
+                  "MinimumPossibleAmount": {
+                    "description": "Minimum amount allowed for a transaction in the service",
+                    "type": "string"
+                  },
+                  "OtherAccessibility": {
+                    "type": "object",
+                    "required": [
+                      "Name",
+                      "Description"
+                    ],
+                    "description": "Information that describes the OtherAccessibility.",
+                    "properties": {
+                      "Name": {
+                        "type": "string",
+                        "description": "Name of the Accessibility."
+                      },
+                      "Description": {
+                        "type": "string",
+                        "description": "Description of the specified Accessibility."
+                      }
+                    }
+                  },
+                  "OtherATMServices": {
+                    "type": "object",
+                    "required": [
+                      "Name",
+                      "Description"
+                    ],
+                    "description": "Information that describes the OtherATMServices.",
+                    "properties": {
+                      "Name": {
+                        "type": "string",
+                        "description": "Name of the Accessibility."
+                      },
+                      "Description": {
+                        "type": "string",
+                        "description": "Description of the specified Accessibility."
+                      }
+                    }
+                  },
+                  "Location": {
+                    "type": "object",
+                    "description": "Information that describes the OtherATMServices.",
+                    "properties": {
+                      "LocationCategory": {
+                        "type": "string",
+                        "description": "Indicates the environment of the ATM.",
+                        "enum": [
+                          "BranchExternal",
+                          "BranchInternal",
+                          "BranchLobby",
+                          "Other",
+                          "RetailerOutlet",
+                          "RemoteUnit"
+                        ]
+                      },
+                      "OtherLocationCategory": {
+                        "type": "object",
+                        "description": "Information that describes the OtherLocationCategory.",
+                        "properties": {
+                          "Name": {
+                            "type": "string",
+                            "description": "Long name associated with the specified location category"
+                          },
+                          "Description": {
+                            "type": "string",
+                            "description": "Description to describe the purpose of the location category"
+                          }
+                        }
+                      },
+                      "PostalAddress": {
+                        "type": "object",
+                        "description": "Information that locates and identifies a specific address, as defined by postal services or in free format text.",
+                        "properties": {
+                          "AddressLine": {
+                            "type": "array",
+                            "items": {
+                              "description": "Information that locates and identifies a specific address, as defined by postal services, that is presented in free format text.",
+                              "type": "string",
+                              "minLength": 1,
+                              "maxLength": 70
+                            },
+                            "minItems": 0,
+                            "maxItems": 2
+                          },
+                          "StreetName": {
+                            "description": "Name of a street.",
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 70
+                          },
+                          "BuildingNumber": {
+                            "description": "Number that identifies the position of a building on a street.",
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 16
+                          },
+                          "PostCode": {
+                            "description": "Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.",
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 16
+                          },
+                          "TownName": {
+                            "description": "Name of a built-up area, with defined boundaries, and a local government.",
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 35
+                          },
+                          "CountrySubDivision": {
+                            "description": "Identifies a subdivision of a country such as state, region, county.",
+                            "type": "string",
+                            "minLength": 1,
+                            "maxLength": 35
+                          },
+                          "Country": {
+                            "description": "Nation with its own government, occupying a particular territory.",
+                            "type": "string",
+                            "pattern": "^[A-Z]{2,2}$"
+                          },
+                          "GeoLocation": {
+                            "type": "object",
+                            "required": [
+                              "Latitude",
+                              "Longitude"
+                            ],
+                            "description": "Geographic location of the ATM specified by geographic coordinates or UTM coordinates.",
+                            "properties": {
+                              "Latitude": {
+                                "type": "string",
+                                "description": "Latitude measured in decimal degrees"
+                              },
+                              "Longitude": {
+                                "type": "string",
+                                "description": "Angular measurement of the distance of a location on the earth east or west of the Greenwich observatory.The longitude is measured in decimal degrees."
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "OBBranch": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "'Environment of the Branch'",
+            "required": [
+              "Branch"
+            ],
+            "properties": {
+              "Branch": {
+                "type": "object",
+                "description": "Associated Branch details.",
+                "properties": {
+                  "Identification": {
+                    "description": "Unique and unambiguous identification of a branch of a financial institution",
+                    "type": "string"
+                  },
+                  "Name": {
+                    "description": "Name by which a branch is known and which is usually used to identify that branch",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "Type": {
+                    "description": "Codeset to indicate if a branch is physically in 1 location or is mobile",
+                    "type": "string",
+                    "enum": [
+                      "Mobile",
+                      "Physical"
+                    ]
+                  },
+                  "Accessibility": {
+                    "description": "Accessibility is the ability and ease a customer can access a service, good, associate, or facility. Features which make the Bank accessible to disabled people",
+                    "type": "string",
+                    "enum": [
+                      "AutomaticDoors",
+                      "AudioCashMachine",
+                      "ExternalRamp",
+                      "HelpingHandUnit",
+                      "InductionLoop",
+                      "InternalRamp",
+                      "LevelAccess",
+                      "LowerLevelCounter",
+                      "Other",
+                      "WheelchairAccess"
+                    ]
+                  },
+                  "SupportedLanguages": {
+                    "description": "Identification of the language name according to the ISO 639-1 codes. The type is validated by the list of values coded with two alphabetic characters, defined in the standard",
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 40
+                  },
+                  "SupportedCurrencies": {
+                    "description": "All ISO 4217 defined currency  supported by the Branch",
+                    "type": "string"
+                  },
+                  "OtherAccessibility": {
+                    "type": "object",
+                    "required": [
+                      "Name",
+                      "Description"
+                    ],
+                    "description": "Information that describes the OtherAccessibility.",
+                    "properties": {
+                      "Name": {
+                        "type": "string",
+                        "description": "Name of the Accessibility."
+                      },
+                      "Description": {
+                        "type": "string",
+                        "description": "Description of the specified Accessibility."
+                      }
+                    }
+                  },
+                  "OtherServiceandFacility": {
+                    "type": "object",
+                    "required": [
+                      "Name",
+                      "Description"
+                    ],
+                    "description": "Information that describes the OtherServiceandFacility.",
+                    "properties": {
+                      "Name": {
+                        "type": "string",
+                        "description": "Name of the Accessibility."
+                      },
+                      "Description": {
+                        "type": "string",
+                        "description": "Description of the specified Accessibility."
+                      }
+                    }
+                  },
+                  "ContactInfo": {
+                    "type": "object",
+                    "required": [
+                      "ContactType",
+                      "ContactContent",
+                      "ContactDescription"
+                    ],
+                    "description": "Communication device number or electronic address used for communication.",
+                    "properties": {
+                      "ContactType": {
+                        "type": "string",
+                        "description": "Contact type such Phone, Fax and email",
+                        "enum": [
+                          "AlternateEmail",
+                          "AlternateFax",
+                          "AlternatePhone",
+                          "Email",
+                          "Fax",
+                          "Other",
+                          "Phone"
+                        ]
+                      },
+                      "ContactContent": {
+                        "type": "string",
+                        "description": "Collection of information that identifies a phone/Fax number/ email, as defined by telecom services."
+                      },
+                      "ContactDescription": {
+                        "type": "string",
+                        "description": "Description of contact such as main phone number, alternate phone number, Fax number, alternate fax number, email and alternate email"
+                      },
+                      "OtherContactType": {
+                        "type": "object",
+                        "required": [
+                          "Name",
+                          "Description"
+                        ],
+                        "description": "Information that describes the OtherServiceandFacility.",
+                        "properties": {
+                          "Name": {
+                            "type": "string",
+                            "description": "Long name associated with the code"
+                          },
+                          "Description": {
+                            "type": "string",
+                            "description": "Description to describe the purpose of the code."
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "PostalAddress": {
+                    "type": "object",
+                    "description": "Information that locates and identifies a specific address, as defined by postal services or in free format text.",
+                    "properties": {
+                      "AddressLine": {
+                        "type": "array",
+                        "items": {
+                          "description": "Information that locates and identifies a specific address, as defined by postal services, that is presented in free format text.",
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 70
+                        },
+                        "minItems": 0,
+                        "maxItems": 2
+                      },
+                      "StreetName": {
+                        "description": "Name of a street.",
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 70
+                      },
+                      "BuildingNumber": {
+                        "description": "Number that identifies the position of a building on a street.",
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 16
+                      },
+                      "PostCode": {
+                        "description": "Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.",
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 16
+                      },
+                      "TownName": {
+                        "description": "Name of a built-up area, with defined boundaries, and a local government.",
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 35
+                      },
+                      "CountrySubDivision": {
+                        "description": "Identifies a subdivision of a country such as state, region, county.",
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 35
+                      },
+                      "Country": {
+                        "description": "Nation with its own government, occupying a particular territory.",
+                        "type": "string",
+                        "pattern": "^[A-Z]{2,2}$"
+                      },
+                      "GeoLocation": {
+                        "type": "object",
+                        "required": [
+                          "Latitude",
+                          "Longitude"
+                        ],
+                        "description": "Geographic location of the ATM specified by geographic coordinates or UTM coordinates.",
+                        "properties": {
+                          "Latitude": {
+                            "type": "string",
+                            "description": "Latitude measured in decimal degrees"
+                          },
+                          "Longitude": {
+                            "type": "string",
+                            "description": "Angular measurement of the distance of a location on the earth east or west of the Greenwich observatory.The longitude is measured in decimal degrees."
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

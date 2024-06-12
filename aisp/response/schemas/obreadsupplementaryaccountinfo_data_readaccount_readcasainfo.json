@@ -1,0 +1,22 @@
+{
+  "required": [
+    "Rate"
+  ],
+  "type": "object",
+  "properties": {
+    "LienAmount": {
+      "type": "string",
+      "description": "Lien amount marked"
+    },
+    "Rate": {
+      "type": "string",
+      "description": "Rate charged for the account (where it is charged in terms of a rate rather than an amount)"
+    },
+    "JointHolderName": {
+      "type": "string",
+      "description": "List of joint account holder name"
+    }
+  },
+  "description": "CASA information",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

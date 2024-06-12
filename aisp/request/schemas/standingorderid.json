@@ -1,0 +1,7 @@
+{
+  "description": "A unique and immutable identifier used to identify the standing order resource. This identifier has no meaning to the account owner.",
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 40,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

@@ -1,0 +1,5 @@
+{
+  "description": "Rate charged for Statement Fee (where it is charged in terms of a rate rather than an amount)",
+  "type": "number",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

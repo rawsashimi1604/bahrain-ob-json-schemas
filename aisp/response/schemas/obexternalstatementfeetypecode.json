@@ -1,0 +1,22 @@
+{
+  "type": "string",
+  "description": "Fee type, in a coded form.",
+  "x-namespaced-enum": [
+    "BH.OBF.Annual",
+    "BH.OBF.BalanceTransfer",
+    "BH.OBF.CashAdvance",
+    "BH.OBF.CashTransaction",
+    "BH.OBF.ForeignCashTransaction",
+    "BH.OBF.ForeignTransaction",
+    "BH.OBF.Gambling",
+    "BH.OBF.LatePayment",
+    "BH.OBF.MoneyTransfer",
+    "BH.OBF.Monthly",
+    "BH.OBF.Overlimit",
+    "BH.OBF.PostalOrder",
+    "BH.OBF.PrizeEntry",
+    "BH.OBF.StatementCopy",
+    "BH.OBF.Total"
+  ],
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

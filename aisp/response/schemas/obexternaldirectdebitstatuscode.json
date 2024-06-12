@@ -1,0 +1,9 @@
+{
+  "type": "string",
+  "description": "Specifies the status of the direct debit in code form.",
+  "enum": [
+    "Active",
+    "Inactive"
+  ],
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "required": [
+    "SchemeName",
+    "Identification"
+  ],
+  "description": "Provides the details to identify the beneficiary account.",
+  "properties": {
+    "SchemeName": {
+      "$ref": "OBExternalAccountIdentificationCode.json"
+    },
+    "Identification": {
+      "description": "Beneficiary account identification.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "Name": {
+      "$ref": "Name.json"
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

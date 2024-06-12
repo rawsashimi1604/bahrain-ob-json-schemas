@@ -1,0 +1,15 @@
+{
+  "description": "Statement value type, in a coded form.",
+  "type": "string",
+  "x-namespaced-enum": [
+    "BH.OBF.AirMilesPoints",
+    "BH.OBF.AirMilesPointsBalance",
+    "BH.OBF.Credits",
+    "BH.OBF.Debits",
+    "BH.OBF.HotelPoints",
+    "BH.OBF.HotelPointsBalance",
+    "BH.OBF.RetailShoppingPoints",
+    "BH.OBF.RetailShoppingPointsBalance"
+  ],
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

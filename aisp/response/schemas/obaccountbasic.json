@@ -1,0 +1,43 @@
+{
+  "required": [
+    "AccountId",
+    "AccountSubType",
+    "AccountType",
+    "Currency"
+  ],
+  "type": "object",
+  "properties": {
+    "AccountId": {
+      "$ref": "AccountId.json"
+    },
+    "Status": {
+      "$ref": "OBAccountStatusCode.json"
+    },
+    "StatusUpdateDateTime": {
+      "$ref": "StatusUpdateDateTime.json"
+    },
+    "Currency": {
+      "$ref": "ActiveOrHistoricCurrencyCode.json"
+    },
+    "AccountType": {
+      "$ref": "OBExternalAccountTypeCode.json"
+    },
+    "AccountSubType": {
+      "$ref": "OBExternalAccountSubTypeCode.json"
+    },
+    "Description": {
+      "$ref": "Description.json"
+    },
+    "Nickname": {
+      "$ref": "Nickname.json"
+    },
+    "OpeningDate": {
+      "$ref": "OpeningDate.json"
+    },
+    "MaturityDate": {
+      "$ref": "MaturityDate.json"
+    }
+  },
+  "description": "Unambiguous identification of the account to which credit and debit entries are made.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

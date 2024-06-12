@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "Transaction": {
+      "type": "array",
+      "items": {
+        "$ref": "OBTransaction.json"
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

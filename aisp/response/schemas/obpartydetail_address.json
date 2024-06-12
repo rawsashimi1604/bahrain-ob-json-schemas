@@ -1,0 +1,42 @@
+{
+  "required": [
+    "Country"
+  ],
+  "type": "object",
+  "properties": {
+    "AddressType": {
+      "$ref": "OBAddressTypeCode.json"
+    },
+    "AddressLine": {
+      "maxItems": 5,
+      "minItems": 0,
+      "type": "array",
+      "items": {
+        "maxLength": 70,
+        "minLength": 1,
+        "type": "string",
+        "description": "Information that locates and identifies a specific address, as defined by postal services, that is presented in free format text."
+      }
+    },
+    "StreetName": {
+      "$ref": "StreetName.json"
+    },
+    "BuildingNumber": {
+      "$ref": "BuildingNumber.json"
+    },
+    "PostCode": {
+      "$ref": "PostCode.json"
+    },
+    "TownName": {
+      "$ref": "TownName.json"
+    },
+    "CountrySubDivision": {
+      "$ref": "CountrySubDivision.json"
+    },
+    "Country": {
+      "$ref": "CountryCode.json"
+    }
+  },
+  "description": "Postal address of a party.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

@@ -1,0 +1,121 @@
+{
+  "type": "object",
+  "required": [
+    "Data"
+  ],
+  "properties": {
+    "Data": {
+      "type": "object",
+      "properties": {
+        "Offer": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "AccountId"
+            ],
+            "properties": {
+              "AccountId": {
+                "$ref": "AccountId.json"
+              },
+              "OfferId": {
+                "description": "A unique and immutable identifier used to identify the offer resource. This identifier has no meaning to the account owner.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 40
+              },
+              "OfferType": {
+                "description": "Offer type, in a coded form.",
+                "type": "string",
+                "enum": [
+                  "BalanceTransfer",
+                  "LimitIncrease",
+                  "MoneyTransfer",
+                  "Other",
+                  "PromotionalRate"
+                ]
+              },
+              "Description": {
+                "description": "Further details of the offer.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "StartDateTime": {
+                "description": "Date and time at which the offer starts.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+                "type": "string",
+                "format": "date-time"
+              },
+              "EndDateTime": {
+                "description": "Date and time at which the offer ends.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+                "type": "string",
+                "format": "date-time"
+              },
+              "Rate": {
+                "description": "Rate associated with the offer type.",
+                "type": "string",
+                "pattern": "^(-?\\d{1,3}){1}(\\.\\d{1,4}){0,1}$"
+              },
+              "Value": {
+                "description": "Value associated with the offer type.",
+                "type": "integer"
+              },
+              "Term": {
+                "description": "Further details of the term of the offer.",
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "URL": {
+                "description": "URL (Uniform Resource Locator) where documentation on the offer can be found",
+                "type": "string",
+                "format": "uri",
+                "minLength": 1,
+                "maxLength": 256
+              },
+              "Amount": {
+                "type": "object",
+                "required": [
+                  "Amount",
+                  "Currency"
+                ],
+                "description": "Amount of money associated with the offer type.",
+                "properties": {
+                  "Amount": {
+                    "$ref": "OBActiveCurrencyAndAmount.json"
+                  },
+                  "Currency": {
+                    "$ref": "ActiveOrHistoricCurrencyCodeMaintenanceAgency.json"
+                  }
+                }
+              },
+              "Fee": {
+                "type": "object",
+                "required": [
+                  "Amount",
+                  "Currency"
+                ],
+                "description": "Fee associated with the offer type.",
+                "properties": {
+                  "Amount": {
+                    "$ref": "OBActiveCurrencyAndAmount.json"
+                  },
+                  "Currency": {
+                    "$ref": "ActiveOrHistoricCurrencyCodeMaintenanceAgency.json"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Links": {
+      "$ref": "Links.json"
+    },
+    "Meta": {
+      "$ref": "Meta.json"
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

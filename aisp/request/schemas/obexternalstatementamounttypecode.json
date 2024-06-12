@@ -1,0 +1,31 @@
+{
+  "description": "Amount type, in a coded form.",
+  "type": "string",
+  "x-namespaced-enum": [
+    "BH.OBF.ArrearsClosingBalance",
+    "BH.OBF.AvailableBalance",
+    "BH.OBF.AverageBalanceWhenInCredit",
+    "BH.OBF.AverageBalanceWhenInDebit",
+    "BH.OBF.AverageDailyBalance",
+    "BH.OBF.BalanceTransferClosingBalance",
+    "BH.OBF.CashClosingBalance",
+    "BH.OBF.ClosingBalance",
+    "BH.OBF.CreditLimit",
+    "BH.OBF.CurrentPayment",
+    "BH.OBF.DirectDebitPaymentDue",
+    "BH.OBF.FSCSInsurance",
+    "BH.OBF.MinimumPaymentDue",
+    "BH.OBF.PendingTransactionsBalance",
+    "BH.OBF.PreviousClosingBalance",
+    "BH.OBF.PreviousPayment",
+    "BH.OBF.PurchaseClosingBalance",
+    "BH.OBF.StartingBalance",
+    "BH.OBF.TotalAdjustments",
+    "BH.OBF.TotalCashAdvances",
+    "BH.OBF.TotalCharges",
+    "BH.OBF.TotalCredits",
+    "BH.OBF.TotalDebits",
+    "BH.OBF.TotalPurchases"
+  ],
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

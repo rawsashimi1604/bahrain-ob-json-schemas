@@ -1,0 +1,200 @@
+{
+  "type": "object",
+  "required": [
+    "Data"
+  ],
+  "description": "Supplementary account info associated with the Account",
+  "properties": {
+    "Data": {
+      "type": "object",
+      "properties": {
+        "ReadAccount": {
+          "type": "object",
+          "description": "Account Information",
+          "required": [
+            "AccountId",
+            "DateTime"
+          ],
+          "properties": {
+            "AccountID": {
+              "description": "A unique and immutable identifier used to identify the account resource. This identifier has no meaning to the account owner.",
+              "type": "string"
+            },
+            "AccountOpeningDate": {
+              "description": "Account opening Date and Time",
+              "type": "string",
+              "format": "date-time"
+            },
+            "ReadCASAInfo": {
+              "type": "object",
+              "description": "CASA information",
+              "required": [
+                "Rate"
+              ],
+              "properties": {
+                "LienAmount": {
+                  "description": "Lien amount marked",
+                  "type": "string"
+                },
+                "Rate": {
+                  "description": "Rate charged for the account (where it is charged in terms of a rate rather than an amount)",
+                  "type": "string"
+                },
+                "JointHolderName": {
+                  "description": "List of joint account holder name",
+                  "type": "string"
+                }
+              }
+            },
+            "ReadDepositInfo": {
+              "type": "object",
+              "description": "Deposit information",
+              "required": [
+                "Rate",
+                "InitialDepositAmount",
+                "DepositFrequency",
+                "MaturityAmount",
+                "MaturityDate"
+              ],
+              "properties": {
+                "Rate": {
+                  "description": "Interest rate / profit rate for islamic banks",
+                  "type": "string"
+                },
+                "InitialDepositAmount": {
+                  "description": "Initial deposit amount",
+                  "type": "string"
+                },
+                "DepositFrequency": {
+                  "description": "How frequently the deposit is made to the Account.",
+                  "type": "string",
+                  "x-namespaced-enum": [
+                    "BH.OBF.Annually",
+                    "BH.OBF.Quarterly",
+                    "BH.OBF.StatementMonthly",
+                    "BH.OBF.Weekly",
+                    "BH.OBF.Daily"
+                  ]
+                },
+                "MaturityAmount": {
+                  "description": "Maturity Amount",
+                  "type": "string"
+                },
+                "MaturityDate": {
+                  "description": "Maturity Date",
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "JointHolderName": {
+                  "description": "List of joint account holder name",
+                  "type": "string"
+                }
+              }
+            },
+            "ReadLoanMortgageInfo": {
+              "type": "object",
+              "description": "Loan Mortgage information",
+              "required": [
+                "Rate",
+                "LoanAmount",
+                "DisbursedAmount",
+                "OutstandingLoanAmount",
+                "Numberofinstallments",
+                "LoanFrequency"
+              ],
+              "properties": {
+                "Rate": {
+                  "description": "Interest rate / profit rate for islamic banks",
+                  "type": "string"
+                },
+                "LoanAmount": {
+                  "description": "Initial Loan Amount",
+                  "type": "string"
+                },
+                "DisbursedAmount": {
+                  "description": "Disbursed Amount till date",
+                  "type": "string"
+                },
+                "OutstandingLoanAmount": {
+                  "description": "Outstanding Loan Amount",
+                  "type": "string"
+                },
+                "Numberofinstallments": {
+                  "description": "Number of installments",
+                  "type": "string"
+                },
+                "LoanFrequency": {
+                  "description": "How frequently the instalment is applied to the Account.",
+                  "type": "string",
+                  "x-namespaced-enum": [
+                    "BH.OBF.Annually",
+                    "BH.OBF.Quarterly",
+                    "BH.OBF.StatementMonthly",
+                    "BH.OBF.Weekly",
+                    "BH.OBF.Daily"
+                  ]
+                },
+                "JointHolderName": {
+                  "description": "List of joint account holder name",
+                  "type": "string"
+                }
+              }
+            },
+            "ReadCreditCardInfo": {
+              "type": "object",
+              "description": "Credit Card information",
+              "required": [
+                "Rate",
+                "CardLimit"
+              ],
+              "properties": {
+                "Rate": {
+                  "description": "Interest rate / profit rate for islamic banks",
+                  "type": "string"
+                },
+                "CardLimit": {
+                  "description": "Card Limit",
+                  "type": "string"
+                },
+                "GracePeriod": {
+                  "description": "The duration after the due date during which the payment can be received withour penalty",
+                  "type": "string"
+                },
+                "URL": {
+                  "description": "Uniform resource locator of the specified product",
+                  "type": "string"
+                }
+              }
+            },
+            "ReadEWalletInfo": {
+              "type": "object",
+              "description": "EWallet information",
+              "required": [
+                "Charge",
+                "ChargeFrequency"
+              ],
+              "properties": {
+                "Charge": {
+                  "description": "",
+                  "type": "string"
+                },
+                "ChargeFrequency": {
+                  "description": "How frequently the fee is applied to the Account.",
+                  "type": "string",
+                  "x-namespaced-enum": [
+                    "BH.OBF.Annually",
+                    "BH.OBF.Quarterly",
+                    "BH.OBF.StatementMonthly",
+                    "BH.OBF.Weekly",
+                    "BH.OBF.Daily"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

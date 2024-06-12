@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "required": [
+    "CreditDebitIndicator",
+    "Type",
+    "Amount"
+  ],
+  "description": "Set of elements used to define the balance as a numerical representation of the net increases and decreases in an account after a transaction entry is applied to the account.",
+  "properties": {
+    "CreditDebitIndicator": {
+      "$ref": "OBCreditDebitCode.json"
+    },
+    "Type": {
+      "$ref": "OBBalanceTypeCode.json"
+    },
+    "Amount": {
+      "type": "object",
+      "required": [
+        "Amount",
+        "Currency"
+      ],
+      "description": "Amount of money of the cash balance after a transaction entry is applied to the account..",
+      "properties": {
+        "Amount": {
+          "$ref": "OBActiveCurrencyAndAmount.json"
+        },
+        "Currency": {
+          "$ref": "ActiveOrHistoricCurrencyCode.json"
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

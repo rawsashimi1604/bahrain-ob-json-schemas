@@ -1,0 +1,7 @@
+{
+  "description": "The nickname of the account, assigned by the account owner in order to provide an additional means of identification of the account.",
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 70,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

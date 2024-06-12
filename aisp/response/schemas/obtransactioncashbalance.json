@@ -1,0 +1,21 @@
+{
+  "required": [
+    "Amount",
+    "CreditDebitIndicator",
+    "Type"
+  ],
+  "type": "object",
+  "properties": {
+    "CreditDebitIndicator": {
+      "$ref": "OBCreditDebitCode.json"
+    },
+    "Type": {
+      "$ref": "OBBalanceTypeCode.json"
+    },
+    "Amount": {
+      "$ref": "OBTransactionCashBalance_Amount.json"
+    }
+  },
+  "description": "Set of elements used to define the balance as a numerical representation of the net increases and decreases in an account after a transaction entry is applied to the account.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

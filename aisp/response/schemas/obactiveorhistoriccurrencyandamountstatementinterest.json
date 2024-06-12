@@ -1,0 +1,17 @@
+{
+  "required": [
+    "Amount",
+    "Currency"
+  ],
+  "type": "object",
+  "properties": {
+    "Amount": {
+      "$ref": "OBActiveCurrencyAndAmount.json"
+    },
+    "Currency": {
+      "$ref": "ActiveOrHistoricCurrencyCodeMaintenanceAgency.json"
+    }
+  },
+  "description": "Amount of money associated with the statement interest amount type.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

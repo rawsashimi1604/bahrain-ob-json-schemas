@@ -1,0 +1,27 @@
+{
+  "required": [
+    "CardLimit",
+    "Rate"
+  ],
+  "type": "object",
+  "properties": {
+    "Rate": {
+      "type": "string",
+      "description": "Interest rate / profit rate for islamic banks"
+    },
+    "CardLimit": {
+      "type": "string",
+      "description": "Card Limit"
+    },
+    "GracePeriod": {
+      "type": "string",
+      "description": "The duration after the due date during which the payment can be received withour penalty"
+    },
+    "URL": {
+      "type": "string",
+      "description": "Uniform resource locator of the specified product"
+    }
+  },
+  "description": "Credit Card information",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

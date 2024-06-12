@@ -1,0 +1,17 @@
+{
+  "required": [
+    "Rate",
+    "Type"
+  ],
+  "type": "object",
+  "properties": {
+    "Rate": {
+      "$ref": "Rate.json"
+    },
+    "Type": {
+      "$ref": "OBExternalStatementRateTypeCode.json"
+    }
+  },
+  "description": "Set of elements used to provide details of a generic rate related to the statement resource.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

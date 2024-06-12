@@ -1,0 +1,7 @@
+{
+  "maxLength": 210,
+  "minLength": 1,
+  "type": "string",
+  "description": "Unique identifier for the transaction within an servicing institution. This identifier is both unique and immutable.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

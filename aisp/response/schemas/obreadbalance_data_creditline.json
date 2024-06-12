@@ -1,0 +1,28 @@
+{
+  "required": [
+    "Included"
+  ],
+  "type": "object",
+  "properties": {
+    "Included": {
+      "type": "boolean",
+      "description": "Indicates whether or not the credit line is included in the balance of the account.\nUsage: If not present, credit line is not included in the balance amount of the account."
+    },
+    "Type": {
+      "type": "string",
+      "description": "Limit type, in a coded form.",
+      "enum": [
+        "Available",
+        "Credit",
+        "Emergency",
+        "Pre-Agreed",
+        "Temporary"
+      ]
+    },
+    "Amount": {
+      "$ref": "OBReadBalance_Data_Amount_1.json"
+    }
+  },
+  "description": "Set of elements used to provide details on the credit line.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

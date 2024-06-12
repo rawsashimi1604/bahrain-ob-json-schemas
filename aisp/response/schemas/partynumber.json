@@ -1,0 +1,7 @@
+{
+  "maxLength": 35,
+  "minLength": 1,
+  "type": "string",
+  "description": "Number assigned by an agent to identify its customer.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

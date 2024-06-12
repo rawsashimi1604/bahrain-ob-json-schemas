@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "Party": {
+      "type": "array",
+      "items": {
+        "$ref": "OBPartyDetail.json"
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

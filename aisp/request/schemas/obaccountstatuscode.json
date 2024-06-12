@@ -1,0 +1,12 @@
+{
+  "description": "Specifies the status of account resource in code form.",
+  "type": "string",
+  "enum": [
+    "Deleted",
+    "Disabled",
+    "Enabled",
+    "Pending",
+    "ProForma"
+  ],
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

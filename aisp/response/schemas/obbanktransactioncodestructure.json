@@ -1,0 +1,23 @@
+{
+  "required": [
+    "Code",
+    "SubCode"
+  ],
+  "type": "object",
+  "properties": {
+    "Code": {
+      "maxLength": 4,
+      "minLength": 1,
+      "type": "string",
+      "description": "Specifies the family within a domain."
+    },
+    "SubCode": {
+      "maxLength": 4,
+      "minLength": 1,
+      "type": "string",
+      "description": "Specifies the sub-product family within a specific family."
+    }
+  },
+  "description": "Set of elements used to fully identify the type of underlying transaction resulting in an entry.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

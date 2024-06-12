@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "OffersOnTheCard": {
+      "type": "string",
+      "description": "Some cards have great offers and discounts if used with a particular vendor, website or company. Also banks have tie ups with offices, educational institutions etc. and offer them special rates"
+    },
+    "RewardType": {
+      "type": "string",
+      "description": "Some cards are specifically made to suit customers spending habits. For e.g. travel, aviation, lifestyle, shopping, cashback etc."
+    },
+    "RewardsProgram": {
+      "type": "string",
+      "description": "Rewards program offered by Banks including cashback and redeemable options. Fuel charge waivers and airport lounge access will also be covered here"
+    },
+    "JoiningGiftsOrBonus": {
+      "type": "string",
+      "description": "To get customers to apply for their card, banks offer welcome gifts and bonuses. This could be some latest gadget or bonus points and miles."
+    },
+    "OtherBenefits": {
+      "type": "string",
+      "description": "Additional benefits if any"
+    }
+  },
+  "description": "'List of Benefits offered by this product'                   ",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

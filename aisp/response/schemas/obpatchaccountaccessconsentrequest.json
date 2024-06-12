@@ -1,0 +1,12 @@
+{
+  "required": [
+    "Data"
+  ],
+  "type": "object",
+  "properties": {
+    "Data": {
+      "$ref": "OBPatchAccountAccessConsentRequest_Data.json"
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

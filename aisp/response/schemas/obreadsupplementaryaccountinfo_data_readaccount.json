@@ -1,0 +1,35 @@
+{
+  "required": [
+    "AccountId",
+    "DateTime"
+  ],
+  "type": "object",
+  "properties": {
+    "AccountID": {
+      "type": "string",
+      "description": "A unique and immutable identifier used to identify the account resource. This identifier has no meaning to the account owner."
+    },
+    "AccountOpeningDate": {
+      "type": "string",
+      "description": "Account opening Date and Time",
+      "format": "date-time"
+    },
+    "ReadCASAInfo": {
+      "$ref": "OBReadSupplementaryAccountInfo_Data_ReadAccount_ReadCASAInfo.json"
+    },
+    "ReadDepositInfo": {
+      "$ref": "OBReadSupplementaryAccountInfo_Data_ReadAccount_ReadDepositInfo.json"
+    },
+    "ReadLoanMortgageInfo": {
+      "$ref": "OBReadSupplementaryAccountInfo_Data_ReadAccount_ReadLoanMortgageInfo.json"
+    },
+    "ReadCreditCardInfo": {
+      "$ref": "OBReadSupplementaryAccountInfo_Data_ReadAccount_ReadCreditCardInfo.json"
+    },
+    "ReadEWalletInfo": {
+      "$ref": "OBReadSupplementaryAccountInfo_Data_ReadAccount_ReadEWalletInfo.json"
+    }
+  },
+  "description": "Account Information",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

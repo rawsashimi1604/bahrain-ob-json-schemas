@@ -1,0 +1,22 @@
+{
+  "required": [
+    "Code"
+  ],
+  "type": "object",
+  "properties": {
+    "Code": {
+      "maxLength": 35,
+      "minLength": 1,
+      "type": "string",
+      "description": "Proprietary bank transaction code to identify the underlying transaction."
+    },
+    "Issuer": {
+      "maxLength": 35,
+      "minLength": 1,
+      "type": "string",
+      "description": "Identification of the issuer of the proprietary bank transaction code."
+    }
+  },
+  "description": "Set of elements to fully identify a proprietary bank transaction code.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

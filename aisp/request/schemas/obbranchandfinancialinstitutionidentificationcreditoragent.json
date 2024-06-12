@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "description": "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\nThis is the servicer of the beneficiary account.",
+  "properties": {
+    "SchemeName": {
+      "$ref": "OBExternalFinancialInstitutionIdentificationCode.json"
+    },
+    "Identification": {
+      "$ref": "ServicingInstitutionIdentification.json"
+    },
+    "Name": {
+      "$ref": "NameAgent.json"
+    },
+    "PostalAddress": {
+      "$ref": "OBPostalAddress.json"
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

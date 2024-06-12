@@ -1,0 +1,50 @@
+{
+  "required": [
+    "DisbursedAmount",
+    "LoanAmount",
+    "LoanFrequency",
+    "Numberofinstallments",
+    "OutstandingLoanAmount",
+    "Rate"
+  ],
+  "type": "object",
+  "properties": {
+    "Rate": {
+      "type": "string",
+      "description": "Interest rate / profit rate for islamic banks"
+    },
+    "LoanAmount": {
+      "type": "string",
+      "description": "Initial Loan Amount"
+    },
+    "DisbursedAmount": {
+      "type": "string",
+      "description": "Disbursed Amount till date"
+    },
+    "OutstandingLoanAmount": {
+      "type": "string",
+      "description": "Outstanding Loan Amount"
+    },
+    "Numberofinstallments": {
+      "type": "string",
+      "description": "Number of installments"
+    },
+    "LoanFrequency": {
+      "type": "string",
+      "description": "How frequently the instalment is applied to the Account.",
+      "x-namespaced-enum": [
+        "BH.OBF.Annually",
+        "BH.OBF.Quarterly",
+        "BH.OBF.StatementMonthly",
+        "BH.OBF.Weekly",
+        "BH.OBF.Daily"
+      ]
+    },
+    "JointHolderName": {
+      "type": "string",
+      "description": "List of joint account holder name"
+    }
+  },
+  "description": "Loan Mortgage information",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

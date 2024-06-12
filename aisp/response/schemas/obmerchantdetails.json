@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "properties": {
+    "MerchantName": {
+      "maxLength": 350,
+      "minLength": 1,
+      "type": "string",
+      "description": "Name by which the merchant is known."
+    },
+    "MerchantCategoryCode": {
+      "maxLength": 4,
+      "minLength": 3,
+      "type": "string",
+      "description": "Category code conform to ISO 18245, related to the type of services or goods the merchant provides for the transaction."
+    }
+  },
+  "description": "Details of the merchant involved in the transaction.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

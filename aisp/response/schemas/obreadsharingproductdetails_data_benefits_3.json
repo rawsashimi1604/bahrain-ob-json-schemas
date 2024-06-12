@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "SIPOptions": {
+      "type": "string",
+      "description": "This covers the broader systematic investment plan option that a customer can opt for"
+    },
+    "QuickerInvestmentWithdrawal": {
+      "type": "string",
+      "description": "Customer can withdraw the investments within 24 hours of the request submitted"
+    },
+    "MinimumInvestment": {
+      "type": "string",
+      "description": "This describes the minimum annual investment required to keep the account active"
+    },
+    "AutoPaySetup": {
+      "type": "string",
+      "description": "One stop pay"
+    },
+    "OtherBenefits": {
+      "type": "string",
+      "description": "Additional benefits if any"
+    }
+  },
+  "description": "'List of Benefits offered by this product'                   ",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

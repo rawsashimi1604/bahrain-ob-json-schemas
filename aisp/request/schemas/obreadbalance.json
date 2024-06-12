@@ -1,0 +1,113 @@
+{
+  "type": "object",
+  "required": [
+    "Data"
+  ],
+  "properties": {
+    "Data": {
+      "type": "object",
+      "required": [
+        "Balance"
+      ],
+      "properties": {
+        "Balance": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "Set of elements used to define the balance details.",
+            "required": [
+              "AccountId",
+              "CreditDebitIndicator",
+              "Type",
+              "DateTime",
+              "Amount"
+            ],
+            "properties": {
+              "AccountId": {
+                "$ref": "AccountId.json"
+              },
+              "CreditDebitIndicator": {
+                "$ref": "OBCreditDebitCode.json"
+              },
+              "Type": {
+                "$ref": "OBBalanceTypeCode.json"
+              },
+              "DateTime": {
+                "description": "Indicates the date (and time) of the balance.All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2020-04-05T10:43:07+03:00",
+                "type": "string",
+                "format": "date-time"
+              },
+              "Amount": {
+                "type": "object",
+                "required": [
+                  "Amount",
+                  "Currency"
+                ],
+                "description": "Amount of money of the cash balance.",
+                "properties": {
+                  "Amount": {
+                    "$ref": "OBActiveCurrencyAndAmount.json"
+                  },
+                  "Currency": {
+                    "$ref": "ActiveOrHistoricCurrencyCode.json"
+                  }
+                }
+              },
+              "CreditLine": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "description": "Set of elements used to provide details on the credit line.",
+                  "required": [
+                    "Included"
+                  ],
+                  "properties": {
+                    "Included": {
+                      "description": "Indicates whether or not the credit line is included in the balance of the account.\nUsage: If not present, credit line is not included in the balance amount of the account.",
+                      "type": "boolean"
+                    },
+                    "Type": {
+                      "description": "Limit type, in a coded form.",
+                      "type": "string",
+                      "enum": [
+                        "Available",
+                        "Credit",
+                        "Emergency",
+                        "Pre-Agreed",
+                        "Temporary"
+                      ]
+                    },
+                    "Amount": {
+                      "type": "object",
+                      "required": [
+                        "Amount",
+                        "Currency"
+                      ],
+                      "description": "Amount of money of the credit line.",
+                      "properties": {
+                        "Amount": {
+                          "$ref": "OBActiveCurrencyAndAmount.json"
+                        },
+                        "Currency": {
+                          "$ref": "ActiveOrHistoricCurrencyCode.json"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "Links": {
+      "$ref": "Links.json"
+    },
+    "Meta": {
+      "$ref": "Meta.json"
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

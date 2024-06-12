@@ -21,4 +21,4 @@ def update_schema_version(directory, new_version):
                         print(f"Updated $schema version in {file_path}")
 
 if __name__ == "__main__":
-    update_schema_version("pisp", "https://json-schema.org/draft-07/schema")
+    update_schema_version("aisp", "https://json-schema.org/draft-07/schema")

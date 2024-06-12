@@ -1,0 +1,14 @@
+{
+  "required": [
+    "ATM"
+  ],
+  "type": "object",
+  "properties": {
+    "ATM": {
+      "$ref": "OBReadSharingProductDetails_Data_ATM.json"
+    }
+  },
+  "description": "'List of ATM'",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

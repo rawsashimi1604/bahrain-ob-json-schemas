@@ -1,0 +1,16 @@
+{
+  "type": "object",
+  "properties": {
+    "Name": {
+      "type": "string",
+      "description": "Long name associated with the specified location category"
+    },
+    "Description": {
+      "type": "string",
+      "description": "Description to describe the purpose of the location category"
+    }
+  },
+  "description": "Information that describes the OtherLocationCategory.",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

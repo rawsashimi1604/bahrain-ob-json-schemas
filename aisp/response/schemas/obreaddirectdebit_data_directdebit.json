@@ -1,0 +1,50 @@
+{
+  "required": [
+    "AccountId",
+    "MandateIdentification",
+    "Name"
+  ],
+  "type": "object",
+  "properties": {
+    "AccountId": {
+      "$ref": "AccountId.json"
+    },
+    "DirectDebitId": {
+      "$ref": "DirectDebitId.json"
+    },
+    "MandateIdentification": {
+      "$ref": "MandateIdentification.json"
+    },
+    "DirectDebitStatusCode": {
+      "$ref": "OBExternalDirectDebitStatusCode.json"
+    },
+    "Name": {
+      "$ref": "NameServiceUser.json"
+    },
+    "PreviousPaymentDateTime": {
+      "$ref": "PreviousPaymentDateTime.json"
+    },
+    "Frequency": {
+      "type": "string",
+      "description": "Regularity with which direct debit instructions are to be created and processed.",
+      "x-namespaced-enum": [
+        "BH.OBF.Annual",
+        "BH.OBF.Daily",
+        "BH.OBF.Fortnightly",
+        "BH.OBF.HalfYearly",
+        "BH.OBF.Monthly",
+        "BH.OBF.NotKnown",
+        "BH.OBF.Quarterly",
+        "BH.OBF.Weekly"
+      ]
+    },
+    "PreviousPaymentAmount": {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmount.json"
+    },
+    "SupplementaryData": {
+      "$ref": "OBSupplementaryData.json"
+    }
+  },
+  "description": "Account to or from which a cash entry is made.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

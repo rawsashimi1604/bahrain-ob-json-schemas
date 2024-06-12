@@ -1,0 +1,619 @@
+{
+  "oneOf": [
+    {
+      "$ref": "AccountId.json"
+    },
+    {
+      "$ref": "TransactionId.json"
+    },
+    {
+      "$ref": "BeneficiaryId.json"
+    },
+    {
+      "$ref": "DirectDebitId.json"
+    },
+    {
+      "$ref": "StandingOrderId.json"
+    },
+    {
+      "$ref": "PartyId.json"
+    },
+    {
+      "$ref": "PartyNumber.json"
+    },
+    {
+      "$ref": "PhoneNumber.json"
+    },
+    {
+      "$ref": "MobileNumber.json"
+    },
+    {
+      "$ref": "EmailAddress.json"
+    },
+    {
+      "$ref": "ActiveOrHistoricCurrencyCode.json"
+    },
+    {
+      "$ref": "ActiveOrHistoricCurrencyCodeMaintenanceAgency.json"
+    },
+    {
+      "$ref": "AddressLine.json"
+    },
+    {
+      "$ref": "BookingDateTime.json"
+    },
+    {
+      "$ref": "OBActiveCurrencyAndAmount.json"
+    },
+    {
+      "$ref": "Description.json"
+    },
+    {
+      "$ref": "DescriptionStatement.json"
+    },
+    {
+      "$ref": "DescriptionStatementInterest.json"
+    },
+    {
+      "$ref": "OBAccountStatusCode.json"
+    },
+    {
+      "$ref": "OBBalanceTypeCode.json"
+    },
+    {
+      "$ref": "OBExternalAccountTypeCode.json"
+    },
+    {
+      "$ref": "OBExternalAccountSubTypeCode.json"
+    },
+    {
+      "$ref": "CreationDateTime.json"
+    },
+    {
+      "$ref": "StartDateTime.json"
+    },
+    {
+      "$ref": "EndDateTime.json"
+    },
+    {
+      "$ref": "StatusUpdateDateTime.json"
+    },
+    {
+      "$ref": "Links.json"
+    },
+    {
+      "$ref": "Meta.json"
+    },
+    {
+      "$ref": "MaturityDate.json"
+    },
+    {
+      "$ref": "Nickname.json"
+    },
+    {
+      "$ref": "Name.json"
+    },
+    {
+      "$ref": "NameAgent.json"
+    },
+    {
+      "$ref": "NameServiceUser.json"
+    },
+    {
+      "$ref": "NameParty.json"
+    },
+    {
+      "$ref": "FullLegalName.json"
+    },
+    {
+      "$ref": "ISODateTime.json"
+    },
+    {
+      "$ref": "Identification.json"
+    },
+    {
+      "$ref": "IdentificationFinancialInstitution.json"
+    },
+    {
+      "$ref": "ServicingInstitutionIdentification.json"
+    },
+    {
+      "$ref": "OpeningDate.json"
+    },
+    {
+      "$ref": "OBAccountAccessConsentResponse.json"
+    },
+    {
+      "$ref": "OBPatchAccountAccessConsentRequest.json"
+    },
+    {
+      "$ref": "OBAccountAccessConsentRequest.json"
+    },
+    {
+      "$ref": "OBReadAccount.json"
+    },
+    {
+      "$ref": "OBReadBalance.json"
+    },
+    {
+      "$ref": "OBReadTransaction.json"
+    },
+    {
+      "$ref": "OBError.json"
+    },
+    {
+      "$ref": "OBReadDataTransaction.json"
+    },
+    {
+      "$ref": "OBTransaction.json"
+    },
+    {
+      "$ref": "OBTransactionBasic.json"
+    },
+    {
+      "$ref": "OBTransactionDetail.json"
+    },
+    {
+      "$ref": "OBBankTransactionCodeStructure.json"
+    },
+    {
+      "$ref": "OBTransactionCashBalance.json"
+    },
+    {
+      "$ref": "ProprietaryBankTransactionCodeStructure.json"
+    },
+    {
+      "$ref": "OBTransactionCardInstrument.json"
+    },
+    {
+      "$ref": "OBErrorResponse.json"
+    },
+    {
+      "$ref": "OBExternalAccountIdentificationCode.json"
+    },
+    {
+      "$ref": "OBExternalFinancialInstitutionIdentificationCode.json"
+    },
+    {
+      "$ref": "OBCreditDebitCode.json"
+    },
+    {
+      "$ref": "OBCreditDebitCodeAmount.json"
+    },
+    {
+      "$ref": "OBCreditDebitCodeTransaction.json"
+    },
+    {
+      "$ref": "OBEntryStatusCode.json"
+    },
+    {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmount.json"
+    },
+    {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountInstructed.json"
+    },
+    {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountTransaction.json"
+    },
+    {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountTransactionCharges.json"
+    },
+    {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountStatement.json"
+    },
+    {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountStatementFeeType.json"
+    },
+    {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountStatementInterest.json"
+    },
+    {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountType.json"
+    },
+    {
+      "$ref": "OBAccount.json"
+    },
+    {
+      "$ref": "OBAccountBasic.json"
+    },
+    {
+      "$ref": "OBAccountDetail.json"
+    },
+    {
+      "$ref": "OBBranchAndFinancialInstitutionIdentification.json"
+    },
+    {
+      "$ref": "OBBranchAndFinancialInstitutionIdentificationCreditor.json"
+    },
+    {
+      "$ref": "OBBranchAndFinancialInstitutionIdentificationDebtor.json"
+    },
+    {
+      "$ref": "OBBranchAndFinancialInstitutionIdentificationCreditorAgent.json"
+    },
+    {
+      "$ref": "OBBranchAndFinancialInstitutionIdentificationCreditorAgentStandingOrder.json"
+    },
+    {
+      "$ref": "OBBranchAndFinancialInstitutionIdentificationCreditorAgentFutureDatedPayments.json"
+    },
+    {
+      "$ref": "OBMerchantDetails.json"
+    },
+    {
+      "$ref": "OBCurrencyExchange.json"
+    },
+    {
+      "$ref": "TransactionReference.json"
+    },
+    {
+      "$ref": "TransactionInformation.json"
+    },
+    {
+      "$ref": "StatementReference.json"
+    },
+    {
+      "$ref": "ValueDateTime.json"
+    },
+    {
+      "$ref": "OBSupplementaryData.json"
+    },
+    {
+      "$ref": "OBCashCreditorAccount.json"
+    },
+    {
+      "$ref": "OBCashDebitorAccount.json"
+    },
+    {
+      "$ref": "OBReadBeneficiary.json"
+    },
+    {
+      "$ref": "OBBeneficiaryTypeCode.json"
+    },
+    {
+      "$ref": "OBBeneficiary.json"
+    },
+    {
+      "$ref": "OBBeneficiaryBasic.json"
+    },
+    {
+      "$ref": "OBBeneficiaryDetail.json"
+    },
+    {
+      "$ref": "Reference.json"
+    },
+    {
+      "$ref": "OBCashAccount.json"
+    },
+    {
+      "$ref": "OBCashAccountStandingOrder.json"
+    },
+    {
+      "$ref": "OBCashAccountFutureDatedPayment.json"
+    },
+    {
+      "$ref": "OBReadDirectDebit.json"
+    },
+    {
+      "$ref": "MandateIdentification.json"
+    },
+    {
+      "$ref": "OBExternalDirectDebitStatusCode.json"
+    },
+    {
+      "$ref": "PreviousPaymentDateTime.json"
+    },
+    {
+      "$ref": "DateTime.json"
+    },
+    {
+      "$ref": "OBPostalAddress.json"
+    },
+    {
+      "$ref": "OBAddressTypeCode.json"
+    },
+    {
+      "$ref": "StreetName.json"
+    },
+    {
+      "$ref": "TownName.json"
+    },
+    {
+      "$ref": "BuildingNumber.json"
+    },
+    {
+      "$ref": "PostCode.json"
+    },
+    {
+      "$ref": "CountryCode.json"
+    },
+    {
+      "$ref": "CountrySubDivision.json"
+    },
+    {
+      "$ref": "Frequency.json"
+    },
+    {
+      "$ref": "FinalPaymentDateTime.json"
+    },
+    {
+      "$ref": "FirstPaymentDateTime.json"
+    },
+    {
+      "$ref": "NextPaymentDateTime.json"
+    },
+    {
+      "$ref": "LastPaymentDateTime.json"
+    },
+    {
+      "$ref": "NumberOfPayments.json"
+    },
+    {
+      "$ref": "OBExternalStandingOrderStatusCode.json"
+    },
+    {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountFirstStandingOrder.json"
+    },
+    {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountNextStandingOrder.json"
+    },
+    {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountLastStandingOrder.json"
+    },
+    {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountFinalStandingOrder.json"
+    },
+    {
+      "$ref": "OBReadStandingOrder.json"
+    },
+    {
+      "$ref": "OBStandingOrder.json"
+    },
+    {
+      "$ref": "OBStandingOrderBasic.json"
+    },
+    {
+      "$ref": "OBStandingOrderDetail.json"
+    },
+    {
+      "$ref": "OBReadOffer.json"
+    },
+    {
+      "$ref": "OBExternalPartyTypeCode.json"
+    },
+    {
+      "$ref": "OBPartyRelationships.json"
+    },
+    {
+      "$ref": "OBExternalLegalStructureTypeCode.json"
+    },
+    {
+      "$ref": "OBExternalAccountRoleCode.json"
+    },
+    {
+      "$ref": "OBReadParties.json"
+    },
+    {
+      "$ref": "OBPartyDetail.json"
+    },
+    {
+      "$ref": "OBReadParty.json"
+    },
+    {
+      "$ref": "FutureDatedPaymentDateTime.json"
+    },
+    {
+      "$ref": "FutureDatedPaymentId.json"
+    },
+    {
+      "$ref": "OBExternalFutureDatedTypeCode.json"
+    },
+    {
+      "$ref": "DebtorReference.json"
+    },
+    {
+      "$ref": "OBReadFutureDatedPayment.json"
+    },
+    {
+      "$ref": "OBFutureDatedPayment.json"
+    },
+    {
+      "$ref": "OBFutureDatedPaymentBasic.json"
+    },
+    {
+      "$ref": "OBFutureDatedPaymentDetail.json"
+    },
+    {
+      "$ref": "StatementId.json"
+    },
+    {
+      "$ref": "OBRate.json"
+    },
+    {
+      "$ref": "OBRatePercentage.json"
+    },
+    {
+      "$ref": "OBExternalStatementTypeCode.json"
+    },
+    {
+      "$ref": "OBExternalStatementValueTypeCode.json"
+    },
+    {
+      "$ref": "OBExternalStatementBenefitTypeCode.json"
+    },
+    {
+      "$ref": "OBExternalStatementDateTimeTypeCode.json"
+    },
+    {
+      "$ref": "OBExternalStatementFeeFrequencyCode.json"
+    },
+    {
+      "$ref": "OBExternalStatementFeeRateTypeCode.json"
+    },
+    {
+      "$ref": "OBExternalStatementFeeTypeCode.json"
+    },
+    {
+      "$ref": "OBExternalStatementInterestFrequencyCode.json"
+    },
+    {
+      "$ref": "OBExternalStatementInterestRateTypeCode.json"
+    },
+    {
+      "$ref": "OBExternalStatementInterestTypeCode.json"
+    },
+    {
+      "$ref": "OBExternalStatementRateTypeCode.json"
+    },
+    {
+      "$ref": "OBExternalStatementAmountTypeCode.json"
+    },
+    {
+      "$ref": "Rate.json"
+    },
+    {
+      "$ref": "Value.json"
+    },
+    {
+      "$ref": "OBReadStatement.json"
+    },
+    {
+      "$ref": "OBReadDataStatement.json"
+    },
+    {
+      "$ref": "OBStatement.json"
+    },
+    {
+      "$ref": "OBStatementBasic.json"
+    },
+    {
+      "$ref": "OBStatementDetail.json"
+    },
+    {
+      "$ref": "File.json"
+    },
+    {
+      "$ref": "OBReadSupplementaryAccountInfo.json"
+    },
+    {
+      "$ref": "OBAccountAccessConsentResponse_Data.json"
+    },
+    {
+      "$ref": "OBPatchAccountAccessConsentRequest_Data.json"
+    },
+    {
+      "$ref": "OBAccountAccessConsentRequest_Data.json"
+    },
+    {
+      "$ref": "OBReadAccount_Data.json"
+    },
+    {
+      "$ref": "OBReadBalance_Data_Amount.json"
+    },
+    {
+      "$ref": "OBReadBalance_Data_Amount_1.json"
+    },
+    {
+      "$ref": "OBReadBalance_Data_CreditLine.json"
+    },
+    {
+      "$ref": "OBReadBalance_Data_Balance.json"
+    },
+    {
+      "$ref": "OBReadBalance_Data.json"
+    },
+    {
+      "$ref": "OBTransactionCashBalance_Amount.json"
+    },
+    {
+      "$ref": "OBAccountDetail_Account.json"
+    },
+    {
+      "$ref": "OBCurrencyExchange_InstructedAmount.json"
+    },
+    {
+      "$ref": "OBReadBeneficiary_Data.json"
+    },
+    {
+      "$ref": "OBReadDirectDebit_Data_DirectDebit.json"
+    },
+    {
+      "$ref": "OBReadDirectDebit_Data.json"
+    },
+    {
+      "$ref": "OBReadStandingOrder_Data.json"
+    },
+    {
+      "$ref": "OBReadOffer_Data_Amount.json"
+    },
+    {
+      "$ref": "OBReadOffer_Data_Fee.json"
+    },
+    {
+      "$ref": "OBReadOffer_Data_Offer.json"
+    },
+    {
+      "$ref": "OBReadOffer_Data.json"
+    },
+    {
+      "$ref": "OBPartyRelationships_Account.json"
+    },
+    {
+      "$ref": "OBReadParties_Data.json"
+    },
+    {
+      "$ref": "OBPartyDetail_Address.json"
+    },
+    {
+      "$ref": "OBReadParty_Data.json"
+    },
+    {
+      "$ref": "OBReadFutureDatedPayment_Data.json"
+    },
+    {
+      "$ref": "OBStatementBasic_StatementBenefit.json"
+    },
+    {
+      "$ref": "OBStatementBasic_StatementFee.json"
+    },
+    {
+      "$ref": "OBStatementBasic_StatementInterest.json"
+    },
+    {
+      "$ref": "OBStatementBasic_StatementDateTime.json"
+    },
+    {
+      "$ref": "OBStatementBasic_StatementRate.json"
+    },
+    {
+      "$ref": "OBStatementBasic_StatementValue.json"
+    },
+    {
+      "$ref": "OBStatementDetail_StatementInterest.json"
+    },
+    {
+      "$ref": "OBStatementDetail_StatementAmount.json"
+    },
+    {
+      "$ref": "OBReadSupplementaryAccountInfo_Data_ReadAccount_ReadCASAInfo.json"
+    },
+    {
+      "$ref": "OBReadSupplementaryAccountInfo_Data_ReadAccount_ReadDepositInfo.json"
+    },
+    {
+      "$ref": "OBReadSupplementaryAccountInfo_Data_ReadAccount_ReadLoanMortgageInfo.json"
+    },
+    {
+      "$ref": "OBReadSupplementaryAccountInfo_Data_ReadAccount_ReadCreditCardInfo.json"
+    },
+    {
+      "$ref": "OBReadSupplementaryAccountInfo_Data_ReadAccount_ReadEWalletInfo.json"
+    },
+    {
+      "$ref": "OBReadSupplementaryAccountInfo_Data_ReadAccount.json"
+    },
+    {
+      "$ref": "OBReadSupplementaryAccountInfo_Data.json"
+    }
+  ]
+}

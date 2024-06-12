@@ -1,0 +1,50 @@
+{
+  "type": "object",
+  "properties": {
+    "CreditCards": {
+      "type": "array",
+      "items": {
+        "$ref": "OBReadSharingProductDetails_Data_CreditCards.json"
+      }
+    },
+    "Loans": {
+      "type": "array",
+      "items": {
+        "$ref": "OBReadSharingProductDetails_Data_Loans.json"
+      }
+    },
+    "CASA": {
+      "type": "array",
+      "items": {
+        "$ref": "OBReadSharingProductDetails_Data_CASA.json"
+      }
+    },
+    "Investment": {
+      "type": "array",
+      "items": {
+        "$ref": "OBReadSharingProductDetails_Data_Investment.json"
+      }
+    },
+    "FundTransferServices": {
+      "type": "array",
+      "items": {
+        "$ref": "OBReadSharingProductDetails_Data_FundTransferServices.json"
+      }
+    },
+    "OBATM": {
+      "type": "array",
+      "items": {
+        "$ref": "OBReadSharingProductDetails_Data_OBATM.json"
+      }
+    },
+    "OBBranch": {
+      "type": "array",
+      "items": {
+        "$ref": "OBReadSharingProductDetails_Data_OBBranch.json"
+      }
+    }
+  },
+  "description": "Aligning with the read write specs structure.",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

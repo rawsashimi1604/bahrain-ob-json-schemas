@@ -1,0 +1,16 @@
+{
+  "required": [
+    "Balance"
+  ],
+  "type": "object",
+  "properties": {
+    "Balance": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "$ref": "OBReadBalance_Data_Balance.json"
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

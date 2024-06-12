@@ -1,0 +1,17 @@
+{
+  "required": [
+    "DateTime",
+    "Type"
+  ],
+  "type": "object",
+  "properties": {
+    "DateTime": {
+      "$ref": "DateTime.json"
+    },
+    "Type": {
+      "$ref": "OBExternalStatementDateTimeTypeCode.json"
+    }
+  },
+  "description": "Set of elements used to provide details of a generic date time for the statement resource.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

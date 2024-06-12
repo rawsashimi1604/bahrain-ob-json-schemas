@@ -1,0 +1,7 @@
+{
+  "description": "Unique identifier for the statement resource within an servicing institution. This identifier is both unique and immutable.",
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 40,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

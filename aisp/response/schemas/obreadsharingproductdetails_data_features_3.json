@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "Currency": {
+      "type": "string",
+      "description": "Payment and transaction currency as applicable on the selected Investment type"
+    },
+    "MinInvestmentRequirement": {
+      "type": "string",
+      "description": "Minimum investment required for opening the investment account in XYZD"
+    },
+    "HandlingFees/Supplementary": {
+      "type": "string",
+      "description": "Account handling fees applicable for products in XYZD excluding taxes per annum"
+    },
+    "AnnualFees": {
+      "type": "string",
+      "description": "Recurring fees and charges payable periodically in XYZD excluding of taxes"
+    },
+    "InvestmentTenure": {
+      "type": "string",
+      "description": "Duration of investment period in months"
+    },
+    "DepositRate": {
+      "type": "string",
+      "description": "Interest rate applicable for deposits only"
+    },
+    "HistoricInvestmentRate": {
+      "type": "string",
+      "description": "This covers the historic rates that are gained by the investors in the selected fund"
+    }
+  },
+  "description": "'List of product features'                   ",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

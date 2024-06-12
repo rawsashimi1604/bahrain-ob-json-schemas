@@ -1,0 +1,17 @@
+{
+  "type": "string",
+  "description": "Statement rate type, in a coded form.",
+  "x-namespaced-enum": [
+    "BH.OBF.AnnualBalanceTransfer",
+    "BH.OBF.AnnualBalanceTransferAfterPromo",
+    "BH.OBF.AnnualBalanceTransferPromo",
+    "BH.OBF.AnnualCash",
+    "BH.OBF.AnnualPurchase",
+    "BH.OBF.AnnualPurchaseAfterPromo",
+    "BH.OBF.AnnualPurchasePromo",
+    "BH.OBF.MonthlyBalanceTransfer",
+    "BH.OBF.MonthlyCash",
+    "BH.OBF.MonthlyPurchase"
+  ],
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

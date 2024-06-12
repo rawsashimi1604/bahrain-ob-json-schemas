@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "properties": {
+    "BonusPack": {
+      "type": "string",
+      "description": "Free Priority/ Premium/ Easy Banking plan with credit card, 360\u00b0 reward and welcome offers"
+    },
+    "FreeMortgageValueAssessment": {
+      "type": "string",
+      "description": "Free assessment of the value of the mortgage"
+    },
+    "AutoPaySetup": {
+      "type": "string",
+      "description": "One stop pay"
+    },
+    "E-cheque": {
+      "type": "string",
+      "description": "option of e cheque clearance"
+    },
+    "EarlyEMIPaymentOptions": {
+      "type": "string",
+      "description": "Benefit of early payment options"
+    },
+    "OtherBenefits": {
+      "type": "string",
+      "description": "Additional benefits if any"
+    }
+  },
+  "description": "'List of Benefits offered by this product'                   ",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

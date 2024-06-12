@@ -1,0 +1,55 @@
+{
+  "required": [
+    "AccountId",
+    "Frequency"
+  ],
+  "type": "object",
+  "properties": {
+    "AccountId": {
+      "$ref": "AccountId.json"
+    },
+    "StandingOrderId": {
+      "$ref": "StandingOrderId.json"
+    },
+    "Frequency": {
+      "$ref": "Frequency.json"
+    },
+    "Reference": {
+      "$ref": "Reference.json"
+    },
+    "FirstPaymentDateTime": {
+      "$ref": "FirstPaymentDateTime.json"
+    },
+    "NextPaymentDateTime": {
+      "$ref": "NextPaymentDateTime.json"
+    },
+    "LastPaymentDateTime": {
+      "$ref": "LastPaymentDateTime.json"
+    },
+    "FinalPaymentDateTime": {
+      "$ref": "FinalPaymentDateTime.json"
+    },
+    "NumberOfPayments": {
+      "$ref": "NumberOfPayments.json"
+    },
+    "StandingOrderStatusCode": {
+      "$ref": "OBExternalStandingOrderStatusCode.json"
+    },
+    "FirstPaymentAmount": {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountFirstStandingOrder.json"
+    },
+    "NextPaymentAmount": {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountNextStandingOrder.json"
+    },
+    "LastPaymentAmount": {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountLastStandingOrder.json"
+    },
+    "FinalPaymentAmount": {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountFinalStandingOrder.json"
+    },
+    "SupplementaryData": {
+      "$ref": "OBSupplementaryData.json"
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

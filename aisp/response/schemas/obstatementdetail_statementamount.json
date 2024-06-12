@@ -1,0 +1,21 @@
+{
+  "required": [
+    "Amount",
+    "CreditDebitIndicator",
+    "Type"
+  ],
+  "type": "object",
+  "properties": {
+    "CreditDebitIndicator": {
+      "$ref": "OBCreditDebitCodeAmount.json"
+    },
+    "Type": {
+      "$ref": "OBExternalStatementAmountTypeCode.json"
+    },
+    "Amount": {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountType.json"
+    }
+  },
+  "description": "Set of elements used to provide details of a generic amount for the statement resource.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

@@ -1,0 +1,190 @@
+{
+  "type": "object",
+  "description": "Provides further details on a statement resource.",
+  "required": [
+    "AccountId",
+    "Type",
+    "StartDateTime",
+    "EndDateTime",
+    "CreationDateTime"
+  ],
+  "properties": {
+    "AccountId": {
+      "$ref": "AccountId.json"
+    },
+    "StatementId": {
+      "$ref": "StatementId.json"
+    },
+    "StatementReference": {
+      "$ref": "StatementReference.json"
+    },
+    "Type": {
+      "$ref": "OBExternalStatementTypeCode.json"
+    },
+    "StartDateTime": {
+      "$ref": "StartDateTime.json"
+    },
+    "EndDateTime": {
+      "$ref": "EndDateTime.json"
+    },
+    "CreationDateTime": {
+      "$ref": "CreationDateTime.json"
+    },
+    "StatementDescription": {
+      "type": "array",
+      "items": {
+        "description": "Other descriptions that may be available for the statement resource.",
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500
+      }
+    },
+    "StatementBenefit": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Set of elements used to provide details of a benefit or reward amount for the statement resource.",
+        "required": [
+          "Type",
+          "Amount"
+        ],
+        "properties": {
+          "Type": {
+            "$ref": "OBExternalStatementBenefitTypeCode.json"
+          },
+          "Amount": {
+            "$ref": "OBActiveOrHistoricCurrencyAndAmountStatement.json"
+          }
+        }
+      }
+    },
+    "StatementFee": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Set of elements used to provide details of a fee for the statement resource.",
+        "required": [
+          "CreditDebitIndicator",
+          "Type",
+          "Amount"
+        ],
+        "properties": {
+          "Description": {
+            "$ref": "DescriptionStatement.json"
+          },
+          "CreditDebitIndicator": {
+            "$ref": "OBCreditDebitCodeAmount.json"
+          },
+          "Type": {
+            "$ref": "OBExternalStatementFeeTypeCode.json"
+          },
+          "Rate": {
+            "$ref": "OBRate.json"
+          },
+          "RateType": {
+            "$ref": "OBExternalStatementFeeRateTypeCode.json"
+          },
+          "Frequency": {
+            "$ref": "OBExternalStatementFeeFrequencyCode.json"
+          },
+          "Amount": {
+            "$ref": "OBActiveOrHistoricCurrencyAndAmountStatementFeeType.json"
+          }
+        }
+      }
+    },
+    "StatementInterest": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Set of elements used to provide details of a generic interest amount related to the statement resource.",
+        "required": [
+          "CreditDebitIndicator",
+          "Type",
+          "Amount"
+        ],
+        "properties": {
+          "Description": {
+            "$ref": "DescriptionStatementInterest.json"
+          },
+          "CreditDebitIndicator": {
+            "$ref": "OBCreditDebitCodeAmount.json"
+          },
+          "Type": {
+            "$ref": "OBExternalStatementInterestTypeCode.json"
+          },
+          "Rate": {
+            "$ref": "OBRatePercentage.json"
+          },
+          "RateType": {
+            "$ref": "OBExternalStatementInterestRateTypeCode.json"
+          },
+          "Frequency": {
+            "$ref": "OBExternalStatementInterestFrequencyCode.json"
+          },
+          "Amount": {
+            "$ref": "OBActiveOrHistoricCurrencyAndAmountStatementInterest.json"
+          }
+        }
+      }
+    },
+    "StatementDateTime": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Set of elements used to provide details of a generic date time for the statement resource.",
+        "required": [
+          "DateTime",
+          "Type"
+        ],
+        "properties": {
+          "DateTime": {
+            "$ref": "DateTime.json"
+          },
+          "Type": {
+            "$ref": "OBExternalStatementDateTimeTypeCode.json"
+          }
+        }
+      }
+    },
+    "StatementRate": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Set of elements used to provide details of a generic rate related to the statement resource.",
+        "required": [
+          "Rate",
+          "Type"
+        ],
+        "properties": {
+          "Rate": {
+            "$ref": "Rate.json"
+          },
+          "Type": {
+            "$ref": "OBExternalStatementRateTypeCode.json"
+          }
+        }
+      }
+    },
+    "StatementValue": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Set of elements used to provide details of a generic number value related to the statement resource.",
+        "required": [
+          "Value",
+          "Type"
+        ],
+        "properties": {
+          "Value": {
+            "$ref": "Value.json"
+          },
+          "Type": {
+            "$ref": "OBExternalStatementValueTypeCode.json"
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

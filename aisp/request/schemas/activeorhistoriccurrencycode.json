@@ -1,0 +1,6 @@
+{
+  "description": "Identification of the currency in which the account is held. \nUsage: Currency should only be used in case one and the same account number covers several currencies\nand the initiating party needs to identify which currency needs to be used for settlement on the account.",
+  "type": "string",
+  "pattern": "^[A-Z]{3,3}$",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

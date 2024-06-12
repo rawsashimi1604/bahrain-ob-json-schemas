@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "properties": {
+    "AddressLine": {
+      "maxItems": 2,
+      "minItems": 0,
+      "type": "array",
+      "items": {
+        "maxLength": 70,
+        "minLength": 1,
+        "type": "string",
+        "description": "Information that locates and identifies a specific address, as defined by postal services, that is presented in free format text."
+      }
+    },
+    "StreetName": {
+      "maxLength": 70,
+      "minLength": 1,
+      "type": "string",
+      "description": "Name of a street."
+    },
+    "BuildingNumber": {
+      "maxLength": 16,
+      "minLength": 1,
+      "type": "string",
+      "description": "Number that identifies the position of a building on a street."
+    },
+    "PostCode": {
+      "maxLength": 16,
+      "minLength": 1,
+      "type": "string",
+      "description": "Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail."
+    },
+    "TownName": {
+      "maxLength": 35,
+      "minLength": 1,
+      "type": "string",
+      "description": "Name of a built-up area, with defined boundaries, and a local government."
+    },
+    "CountrySubDivision": {
+      "maxLength": 35,
+      "minLength": 1,
+      "type": "string",
+      "description": "Identifies a subdivision of a country such as state, region, county."
+    },
+    "Country": {
+      "pattern": "^[A-Z]{2,2}$",
+      "type": "string",
+      "description": "Nation with its own government, occupying a particular territory."
+    },
+    "GeoLocation": {
+      "$ref": "OBReadSharingProductDetails_Data_ATM_Location_PostalAddress_GeoLocation.json"
+    }
+  },
+  "description": "Information that locates and identifies a specific address, as defined by postal services or in free format text.",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

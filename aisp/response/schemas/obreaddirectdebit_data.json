@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "DirectDebit": {
+      "type": "array",
+      "items": {
+        "$ref": "OBReadDirectDebit_Data_DirectDebit.json"
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

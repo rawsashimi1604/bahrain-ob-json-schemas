@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": [
+    "AccountId",
+    "ScheduledPaymentDateTime",
+    "ScheduledType",
+    "InstructedAmount"
+  ],
+  "properties": {
+    "AccountId": {
+      "$ref": "AccountId.json"
+    },
+    "FutureDatedPaymentId": {
+      "$ref": "FutureDatedPaymentId.json"
+    },
+    "FutureDatedPaymentDateTime": {
+      "$ref": "FutureDatedPaymentDateTime.json"
+    },
+    "FutureDatedType": {
+      "$ref": "OBExternalFutureDatedTypeCode.json"
+    },
+    "Reference": {
+      "$ref": "Reference.json"
+    },
+    "DebtorReference": {
+      "$ref": "DebtorReference.json"
+    },
+    "InstructedAmount": {
+      "$ref": "OBActiveOrHistoricCurrencyAndAmountInstructed.json"
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

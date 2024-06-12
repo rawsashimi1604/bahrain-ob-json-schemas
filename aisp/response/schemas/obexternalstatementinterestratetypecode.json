@@ -1,0 +1,12 @@
+{
+  "type": "string",
+  "description": "Description that may be available for the statement Interest rate type.",
+  "x-namespaced-enum": [
+    "BH.OBF.BOEBaseRate",
+    "BH.OBF.FixedRate",
+    "BH.OBF.Gross",
+    "BH.OBF.LoanProviderBaseRate",
+    "BH.OBF.Net"
+  ],
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

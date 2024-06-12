@@ -1,0 +1,7 @@
+{
+  "maxLength": 70,
+  "minLength": 1,
+  "type": "string",
+  "description": "Name by which a party is known and which is usually used to identify that party.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

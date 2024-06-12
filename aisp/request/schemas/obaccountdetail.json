@@ -1,0 +1,69 @@
+{
+  "type": "object",
+  "description": "Unambiguous identification of the account to which credit and debit entries are made.",
+  "required": [
+    "AccountId",
+    "Currency",
+    "AccountType",
+    "AccountSubType",
+    "Account"
+  ],
+  "properties": {
+    "AccountId": {
+      "$ref": "AccountId.json"
+    },
+    "Status": {
+      "$ref": "OBAccountStatusCode.json"
+    },
+    "StatusUpdateDateTime": {
+      "$ref": "StatusUpdateDateTime.json"
+    },
+    "Currency": {
+      "$ref": "ActiveOrHistoricCurrencyCode.json"
+    },
+    "AccountType": {
+      "$ref": "OBExternalAccountTypeCode.json"
+    },
+    "AccountSubType": {
+      "$ref": "OBExternalAccountSubTypeCode.json"
+    },
+    "Description": {
+      "$ref": "Description.json"
+    },
+    "Nickname": {
+      "$ref": "Nickname.json"
+    },
+    "OpeningDate": {
+      "$ref": "OpeningDate.json"
+    },
+    "MaturityDate": {
+      "$ref": "MaturityDate.json"
+    },
+    "Account": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Provides the details to identify an account.",
+        "required": [
+          "SchemeName",
+          "Identification"
+        ],
+        "properties": {
+          "SchemeName": {
+            "$ref": "OBExternalAccountIdentificationCode.json"
+          },
+          "Identification": {
+            "$ref": "Identification.json"
+          },
+          "Name": {
+            "$ref": "Name.json"
+          }
+        }
+      }
+    },
+    "Servicer": {
+      "$ref": "OBBranchAndFinancialInstitutionIdentification.json"
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

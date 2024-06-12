@@ -1,0 +1,20 @@
+{
+  "required": [
+    "Description",
+    "Name"
+  ],
+  "type": "object",
+  "properties": {
+    "Name": {
+      "type": "string",
+      "description": "Name of the Accessibility."
+    },
+    "Description": {
+      "type": "string",
+      "description": "Description of the specified Accessibility."
+    }
+  },
+  "description": "Information that describes the OtherAccessibility.",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

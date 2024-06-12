@@ -1,0 +1,6 @@
+{
+  "pattern": "^[A-Z]{2,2}$",
+  "type": "string",
+  "description": "Nation with its own government, occupying a particular territory.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

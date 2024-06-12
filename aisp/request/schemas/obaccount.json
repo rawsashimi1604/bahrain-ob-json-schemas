@@ -1,0 +1,12 @@
+{
+  "oneOf": [
+    {
+      "$ref": "OBAccountBasic.json"
+    },
+    {
+      "$ref": "OBAccountDetail.json"
+    }
+  ],
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "type": "object"
+}

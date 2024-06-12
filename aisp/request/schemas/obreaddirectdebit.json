@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "required": [
+    "Data"
+  ],
+  "properties": {
+    "Data": {
+      "type": "object",
+      "properties": {
+        "DirectDebit": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "description": "Account to or from which a cash entry is made.",
+            "required": [
+              "AccountId",
+              "MandateIdentification",
+              "Name"
+            ],
+            "properties": {
+              "AccountId": {
+                "$ref": "AccountId.json"
+              },
+              "DirectDebitId": {
+                "$ref": "DirectDebitId.json"
+              },
+              "MandateIdentification": {
+                "$ref": "MandateIdentification.json"
+              },
+              "DirectDebitStatusCode": {
+                "$ref": "OBExternalDirectDebitStatusCode.json"
+              },
+              "Name": {
+                "$ref": "NameServiceUser.json"
+              },
+              "PreviousPaymentDateTime": {
+                "$ref": "PreviousPaymentDateTime.json"
+              },
+              "Frequency": {
+                "description": "Regularity with which direct debit instructions are to be created and processed.",
+                "type": "string",
+                "x-namespaced-enum": [
+                  "BH.OBF.Annual",
+                  "BH.OBF.Daily",
+                  "BH.OBF.Fortnightly",
+                  "BH.OBF.HalfYearly",
+                  "BH.OBF.Monthly",
+                  "BH.OBF.NotKnown",
+                  "BH.OBF.Quarterly",
+                  "BH.OBF.Weekly"
+                ]
+              },
+              "PreviousPaymentAmount": {
+                "$ref": "OBActiveOrHistoricCurrencyAndAmount.json"
+              },
+              "SupplementaryData": {
+                "$ref": "OBSupplementaryData.json"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Links": {
+      "$ref": "Links.json"
+    },
+    "Meta": {
+      "$ref": "Meta.json"
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

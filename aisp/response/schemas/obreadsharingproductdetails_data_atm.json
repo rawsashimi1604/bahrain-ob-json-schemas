@@ -1,0 +1,79 @@
+{
+  "type": "object",
+  "properties": {
+    "Identification": {
+      "type": "string",
+      "description": "Unique and unambiguous identification of a branch of a financial institution"
+    },
+    "ATMServices": {
+      "type": "string",
+      "description": "Describes the type of transaction available for a customer on an ATM.",
+      "enum": [
+        "Balance",
+        "BillPayments",
+        "CashDeposits",
+        "CharityDonation",
+        "ChequeDeposits",
+        "CashWithdrawal",
+        "EnvelopeDeposit",
+        "FastCash",
+        "MobileBankingRegistration",
+        "MobilePaymentRegistration",
+        "MobilePhoneTopUp",
+        "OrderStatement",
+        "Other",
+        "PINActivation",
+        "PINChange",
+        "PINUnblock",
+        "MiniStatement"
+      ]
+    },
+    "Access24HoursIndicator": {
+      "maxLength": 350,
+      "minLength": 1,
+      "type": "string",
+      "description": "Indicates that the ATM is available for use by customers 24 hours per day"
+    },
+    "Accessibility": {
+      "type": "string",
+      "description": "Indicates Types of Accessibility",
+      "enum": [
+        "AudioCashMachine",
+        "AutomaticDoors",
+        "ExternalRamp",
+        "InductionLoop",
+        "InternalRamp",
+        "LevelAccess",
+        "LowerLevelCounter",
+        "Other",
+        "WheelchairAccess"
+      ]
+    },
+    "SupportedLanguages": {
+      "maxLength": 40,
+      "minLength": 1,
+      "type": "string",
+      "description": "Identification of the language name according to the ISO 639-1 codes. The type is validated by the list of values coded with two alphabetic characters, defined in the standard"
+    },
+    "SupportedCurrencies": {
+      "type": "string",
+      "description": "All ISO 4217 defined currency  supported by the ATM"
+    },
+    "MinimumPossibleAmount": {
+      "type": "string",
+      "description": "Minimum amount allowed for a transaction in the service"
+    },
+    "OtherAccessibility": {
+      "$ref": "OBReadSharingProductDetails_Data_ATM_OtherAccessibility.json"
+    },
+    "OtherATMServices": {
+      "$ref": "OBReadSharingProductDetails_Data_ATM_OtherATMServices.json"
+    },
+    "Location": {
+      "$ref": "OBReadSharingProductDetails_Data_ATM_Location.json"
+    }
+  },
+  "description": "Environment of the ATM.",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

@@ -1,0 +1,7 @@
+{
+  "maxLength": 210,
+  "minLength": 1,
+  "type": "string",
+  "description": "Unique reference for the transaction. This reference is optionally populated, and may as an example be the FPID in the Faster Payments context.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

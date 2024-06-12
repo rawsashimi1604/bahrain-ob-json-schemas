@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "RelationshipManager": {
+      "type": "string",
+      "description": "This covers the benefits of availing RM under few conditions"
+    },
+    "ODprotection": {
+      "type": "string",
+      "description": "Enjoy Current Account Overdraft Protection for clearing cheques"
+    },
+    "MinBalance": {
+      "type": "string",
+      "description": "This describes the minimum balance required to keep the account active"
+    },
+    "AutoPaySetup": {
+      "type": "string",
+      "description": "One stop pay"
+    },
+    "MultipleDebitCards": {
+      "type": "string",
+      "description": "This includes details of add on debit cards where a account holder can apply for add-on cards for his/her employees under the same account"
+    },
+    "E-cheque": {
+      "type": "string",
+      "description": "Option of e cheque clearance"
+    },
+    "OtherBenefits": {
+      "type": "string",
+      "description": "Additional benefits if any"
+    }
+  },
+  "description": "'List of Benefits offered by this product'                   ",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

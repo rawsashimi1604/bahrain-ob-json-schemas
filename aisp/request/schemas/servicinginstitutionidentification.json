@@ -1,0 +1,7 @@
+{
+  "description": "Unique and unambiguous identification of the servicing institution.",
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 35,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

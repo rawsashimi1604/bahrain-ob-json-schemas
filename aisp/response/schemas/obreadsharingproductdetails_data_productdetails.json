@@ -1,0 +1,52 @@
+{
+  "required": [
+    "CategoryCode",
+    "CategoryName",
+    "ProductCode",
+    "ProductDescription",
+    "Segment",
+    "SubProductCode"
+  ],
+  "type": "object",
+  "properties": {
+    "CategoryName": {
+      "type": "string",
+      "description": "Producty category name used by ASPSPs"
+    },
+    "CategoryCode": {
+      "maxLength": 40,
+      "minLength": 1,
+      "type": "string",
+      "description": "Product category code used by ASPSPs"
+    },
+    "ProductDescription": {
+      "maxLength": 350,
+      "minLength": 1,
+      "type": "string",
+      "description": "A brief description of the product"
+    },
+    "ProductCode": {
+      "maxLength": 40,
+      "minLength": 1,
+      "type": "string",
+      "description": "Product Code for Banks operational purpose"
+    },
+    "SubProductCode": {
+      "maxLength": 40,
+      "minLength": 1,
+      "type": "string",
+      "description": "Sub-Product Code for Banks operational purpose"
+    },
+    "ProductURL": {
+      "type": "string",
+      "description": "Product URL"
+    },
+    "Segment": {
+      "type": "string",
+      "description": "Product segment such as lifestyle, travel, reward points, etc."
+    }
+  },
+  "description": "Product details associated with the all product categories.",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

@@ -1,0 +1,14 @@
+{
+  "description": "Specifies the statement fee type requested",
+  "type": "string",
+  "x-namespaced-enum": [
+    "BH.OBF.Daily",
+    "BH.OBF.HalfYearly",
+    "BH.OBF.Monthly",
+    "BH.OBF.PerStatementDate",
+    "BH.OBF.Quarterly",
+    "BH.OBF.Weekly",
+    "BH.OBF.Yearly"
+  ],
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

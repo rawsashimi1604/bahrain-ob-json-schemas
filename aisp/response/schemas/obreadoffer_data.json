@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "Offer": {
+      "type": "array",
+      "items": {
+        "$ref": "OBReadOffer_Data_Offer.json"
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

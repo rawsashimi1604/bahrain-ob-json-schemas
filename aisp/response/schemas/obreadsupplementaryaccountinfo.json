@@ -1,0 +1,13 @@
+{
+  "required": [
+    "Data"
+  ],
+  "type": "object",
+  "properties": {
+    "Data": {
+      "$ref": "OBReadSupplementaryAccountInfo_Data.json"
+    }
+  },
+  "description": "Supplementary account info associated with the Account",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

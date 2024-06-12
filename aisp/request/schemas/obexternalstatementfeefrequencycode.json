@@ -1,0 +1,13 @@
+{
+  "description": "How frequently the fee is applied to the Account.",
+  "type": "string",
+  "x-namespaced-enum": [
+    "BH.OBF.ChargingPeriod",
+    "BH.OBF.PerTransactionAmount",
+    "BH.OBF.PerTransactionPercentage",
+    "BH.OBF.Quarterly",
+    "BH.OBF.StatementMonthly",
+    "BH.OBF.Weekly"
+  ],
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

@@ -1,0 +1,64 @@
+{
+  "type": "object",
+  "properties": {
+    "Identification": {
+      "type": "string",
+      "description": "Unique and unambiguous identification of a branch of a financial institution"
+    },
+    "Name": {
+      "maxLength": 40,
+      "minLength": 1,
+      "type": "string",
+      "description": "Name by which a branch is known and which is usually used to identify that branch"
+    },
+    "Type": {
+      "type": "string",
+      "description": "Codeset to indicate if a branch is physically in 1 location or is mobile",
+      "enum": [
+        "Mobile",
+        "Physical"
+      ]
+    },
+    "Accessibility": {
+      "type": "string",
+      "description": "Accessibility is the ability and ease a customer can access a service, good, associate, or facility. Features which make the Bank accessible to disabled people",
+      "enum": [
+        "AutomaticDoors",
+        "AudioCashMachine",
+        "ExternalRamp",
+        "HelpingHandUnit",
+        "InductionLoop",
+        "InternalRamp",
+        "LevelAccess",
+        "LowerLevelCounter",
+        "Other",
+        "WheelchairAccess"
+      ]
+    },
+    "SupportedLanguages": {
+      "maxLength": 40,
+      "minLength": 1,
+      "type": "string",
+      "description": "Identification of the language name according to the ISO 639-1 codes. The type is validated by the list of values coded with two alphabetic characters, defined in the standard"
+    },
+    "SupportedCurrencies": {
+      "type": "string",
+      "description": "All ISO 4217 defined currency  supported by the Branch"
+    },
+    "OtherAccessibility": {
+      "$ref": "OBReadSharingProductDetails_Data_ATM_OtherAccessibility.json"
+    },
+    "OtherServiceandFacility": {
+      "$ref": "OBReadSharingProductDetails_Data_Branch_OtherServiceandFacility.json"
+    },
+    "ContactInfo": {
+      "$ref": "OBReadSharingProductDetails_Data_Branch_ContactInfo.json"
+    },
+    "PostalAddress": {
+      "$ref": "OBReadSharingProductDetails_Data_ATM_Location_PostalAddress.json"
+    }
+  },
+  "description": "Associated Branch details.",
+  "example": null,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

@@ -1,0 +1,13 @@
+{
+  "required": [
+    "Data"
+  ],
+  "type": "object",
+  "properties": {
+    "Data": {
+      "$ref": "OBReadSharingProductDetails_Data.json"
+    }
+  },
+  "description": "Returns a collection of Sharing Product details.",
+  "$schema": "https://json-schema.org/draft-07/schema"
+}

@@ -1,0 +1,7 @@
+{
+  "description": "The account name is the name or names of the account owner(s) represented at an account level, as displayed by the ASPSP's online channels.\nNote, the account name is not the product name or the nickname of the account.",
+  "type": "string",
+  "minLength": 1,
+  "maxLength": 70,
+  "$schema": "https://json-schema.org/draft-07/schema"
+}
